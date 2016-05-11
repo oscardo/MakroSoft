@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MakroSoftDB2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="PKAuditoria" />
+    </Key>
+    <Property Name="PKAuditoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Accion" Type="text" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Bodega">
+    <Key>
+      <PropertyRef Name="PKBodega" />
+    </Key>
+    <Property Name="PKBodega" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" />
+    <Property Name="NombreBodega" Type="nchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nchar" MaxLength="50" />
+    <Property Name="Responsable1" Type="nchar" MaxLength="50" />
+    <Property Name="Responsable2" Type="nchar" MaxLength="50" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="PKCliente" />
+    </Key>
+    <Property Name="PKCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NombreCliente" Type="nchar" MaxLength="50" />
+    <Property Name="Nit" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" />
+    <Property Name="Direccion" Type="nchar" MaxLength="50" />
+    <Property Name="NombreRepLegal" Type="nchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Correo_Electronico" Type="nchar" MaxLength="50" />
+    <Property Name="PaginaWeb" Type="nchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="PKCompras" />
+    </Key>
+    <Property Name="PKCompras" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKProveedor" Type="int" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" />
+    <Property Name="Fecha_Compra" Type="datetime" />
+    <Property Name="Observaciones" Type="nchar" MaxLength="200" />
+    <Property Name="Garantia" Type="nchar" MaxLength="50" />
+    <Property Name="Exterdida_Garantia" Type="nchar" MaxLength="50" />
+    <Property Name="Factura_Compra" Type="nchar" MaxLength="50" />
+    <Property Name="Ruta_Fotografia" Type="nchar" MaxLength="256" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Valor_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SubTotal" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cantidad_Recibida" Type="int" />
+    <Property Name="Saldo" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Descuento" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="PKDepartamento" />
+    </Key>
+    <Property Name="PKDepartamento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NombreDepartamento" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="DetalleVenta_Remision">
+    <Key>
+      <PropertyRef Name="PKDetalleVenta_Remision" />
+    </Key>
+    <Property Name="PKDetalleVenta_Remision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dependencia" Type="nchar" MaxLength="50" />
+    <Property Name="Contactar" Type="nchar" MaxLength="50" />
+    <Property Name="Fecha_Entrada" Type="datetime" />
+    <Property Name="Direccion" Type="nchar" MaxLength="50" />
+    <Property Name="Piso" Type="nchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nchar" MaxLength="15" />
+    <Property Name="Fecha_Salida" Type="datetime" />
+    <Property Name="CPU" Type="bit" />
+    <Property Name="NCPU" Type="nchar" MaxLength="50" />
+    <Property Name="Monitor" Type="bit" />
+    <Property Name="NMonitor" Type="nchar" MaxLength="50" />
+    <Property Name="Impresora" Type="bit" />
+    <Property Name="NImpresora" Type="nchar" MaxLength="50" />
+    <Property Name="DVD" Type="bit" />
+    <Property Name="NDVD" Type="nchar" MaxLength="50" />
+    <Property Name="DiscoDuro" Type="bit" />
+    <Property Name="NDiscoDuro" Type="nchar" MaxLength="50" />
+    <Property Name="Teclado" Type="bit" />
+    <Property Name="NTeclado" Type="nchar" MaxLength="50" />
+    <Property Name="Mouse" Type="bit" />
+    <Property Name="NMouse" Type="nchar" MaxLength="50" />
+    <Property Name="Scanner" Type="bit" />
+    <Property Name="NScanner" Type="nchar" MaxLength="50" />
+    <Property Name="Office" Type="bit" />
+    <Property Name="NOffice" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Office" Type="nchar" MaxLength="50" />
+    <Property Name="Memoria" Type="bit" />
+    <Property Name="NMemoria" Type="nchar" MaxLength="50" />
+    <Property Name="Sistema_Operativo" Type="bit" />
+    <Property Name="NSistema_Operativo" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_SO" Type="nchar" MaxLength="50" />
+    <Property Name="Correo" Type="bit" />
+    <Property Name="Correo_Electronico" Type="nchar" MaxLength="50" />
+    <Property Name="Antivirus" Type="bit" />
+    <Property Name="NVAntivirus" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Antivirus" Type="nchar" MaxLength="50" />
+    <Property Name="Conexion_Red" Type="bit" />
+    <Property Name="Otro" Type="bit" />
+    <Property Name="Otros_NoReferenciado" Type="nchar" MaxLength="50" />
+    <Property Name="Nombre_Reporta" Type="nchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nchar" MaxLength="200" />
+    <Property Name="Descripcion_Detallada" Type="nchar" MaxLength="200" />
+    <Property Name="Preventivo" Type="bit" />
+    <Property Name="Correctivo" Type="bit" />
+    <Property Name="Observaciones" Type="nchar" MaxLength="1000" />
+    <Property Name="Fecha_Sistema" Type="datetime" />
+    <Property Name="Valor_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Retencion_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Valor_Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA_Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SubTotal" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Retencion_Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="PKEquipo" />
+    </Key>
+    <Property Name="PKEquipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKCompras" Type="int" />
+    <Property Name="FKTipo" Type="int" Nullable="false" />
+    <Property Name="FKFabricante" Type="int" />
+    <Property Name="FKProcesador" Type="int" />
+    <Property Name="FKCliente" Type="int" />
+    <Property Name="Sistema_Operativo" Type="nchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nchar" MaxLength="50" />
+    <Property Name="Serial" Type="nchar" MaxLength="50" />
+    <Property Name="Board" Type="nchar" MaxLength="50" />
+    <Property Name="RAM" Type="nchar" MaxLength="10" />
+    <Property Name="DiscoDuro" Type="nchar" MaxLength="10" />
+    <Property Name="Mouse" Type="nchar" MaxLength="10" />
+    <Property Name="Clave_Windows" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Office" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Antivirus" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Otros" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Otros2" Type="nchar" MaxLength="50" />
+    <Property Name="Clave_Otros3" Type="nchar" MaxLength="30" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="PKEstado" />
+    </Key>
+    <Property Name="PKEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Fabricante">
+    <Key>
+      <PropertyRef Name="PKFabricante" />
+    </Key>
+    <Property Name="PKFabricante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fabricante" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Inventario">
+    <Key>
+      <PropertyRef Name="PKInventario" />
+    </Key>
+    <Property Name="PKInventario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKTransaccion" Type="int" />
+    <Property Name="FKProveedor" Type="int" />
+    <Property Name="FKBodega" Type="int" Nullable="false" />
+    <Property Name="FKDetalle_VentaRemision" Type="int" />
+    <Property Name="FKEquipo" Type="int" />
+    <Property Name="Factura_Compra" Type="nchar" MaxLength="50" />
+    <Property Name="Ruta_Fotografia" Type="nchar" MaxLength="256" />
+    <Property Name="Fecha_Factura" Type="datetime" />
+    <Property Name="Fecha_Sistema" Type="datetime" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Valor_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Subtotal" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Observaciones" Type="nchar" MaxLength="200" />
+    <Property Name="Cantidad_Recibida" Type="int" />
+    <Property Name="Fecha_Mmto" Type="datetime" />
+    <Property Name="Planilla_Mmto" Type="nchar" MaxLength="10" />
+    <Property Name="Actvo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Mantenimiento">
+    <Key>
+      <PropertyRef Name="PKMantenimiento" />
+    </Key>
+    <Property Name="PKMantenimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKEquipo" Type="int" />
+    <Property Name="FKTecnico" Type="int" />
+    <Property Name="FKEstado" Type="int" />
+    <Property Name="Planilla_Mmto" Type="nchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Fecha_Sistema" Type="datetime" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Municipio">
+    <Key>
+      <PropertyRef Name="PKMunicipio" />
+    </Key>
+    <Property Name="PKMunicipio" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="NombreMunicipio" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Procesador">
+    <Key>
+      <PropertyRef Name="PKProcesador" />
+    </Key>
+    <Property Name="PKProcesador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreProcesador" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="PKProveedor" />
+    </Key>
+    <Property Name="PKProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" />
+    <Property Name="NombreProveedor" Type="nchar" MaxLength="50" />
+    <Property Name="Nit" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Telefono2" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" />
+    <Property Name="NombreContacto" Type="nchar" MaxLength="50" />
+    <Property Name="NombreContacto2" Type="nchar" MaxLength="50" />
+    <Property Name="Servicios" Type="nchar" MaxLength="200" />
+    <Property Name="CorreoElectronico" Type="nchar" MaxLength="50" />
+    <Property Name="Paginaweb" Type="nchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Remisiones">
+    <Key>
+      <PropertyRef Name="PKRemisiones" />
+    </Key>
+    <Property Name="PKRemisiones" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKCliente" Type="int" Nullable="false" />
+    <Property Name="FKProveedor" Type="int" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" />
+    <Property Name="FKDetalle_Venta_Remision" Type="int" />
+    <Property Name="Fecha_Inicio" Type="datetime" />
+    <Property Name="Fecha_Fin" Type="datetime" />
+    <Property Name="Fecha_Sistema" Type="datetime" Nullable="false" />
+    <Property Name="Valor_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA_Unidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Valor_Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Subtotal" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Total" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="FVenta" Type="nchar" MaxLength="50" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Diferencia" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Diferencia_Precio" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="PKRol" />
+    </Key>
+    <Property Name="PKRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rol" Type="nchar" MaxLength="15" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tecnico">
+    <Key>
+      <PropertyRef Name="PKTecnico" />
+    </Key>
+    <Property Name="PKTecnico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="PKTipo" />
+    </Key>
+    <Property Name="PKTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="PKTipoDocumento" />
+    </Key>
+    <Property Name="PKTipoDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoDocumento" Type="nchar" MaxLength="20" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Transaccion">
+    <Key>
+      <PropertyRef Name="PKTransaccion" />
+    </Key>
+    <Property Name="PKTransaccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKEquipo" Type="int" Nullable="false" />
+    <Property Name="FKRemision" Type="int" />
+    <Property Name="FKVentas" Type="int" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="PKUsuario" />
+    </Key>
+    <Property Name="PKUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" />
+    <Property Name="FKRol" Type="int" />
+    <Property Name="NombreUsuario" Type="nchar" MaxLength="20" />
+    <Property Name="Password" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Ubicacion" Type="nchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="CorreoElectronico" Type="nchar" MaxLength="50" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Vendedor">
+    <Key>
+      <PropertyRef Name="PKVendedor" />
+    </Key>
+    <Property Name="PKVendedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKDepartamento" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FKMunicipio" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FKTipoDocumento" Type="int" />
+    <Property Name="NombrePersona" Type="nchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nchar" MaxLength="50" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" />
+    <Property Name="Fotografia" Type="nchar" MaxLength="256" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Notas" Type="nchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="PKVentas" />
+    </Key>
+    <Property Name="PKVentas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FKVendedor" Type="int" />
+    <Property Name="FKTipoDocumento" Type="int" />
+    <Property Name="FKDetalleVenta_Remision" Type="int" />
+    <Property Name="NombreReferencia" Type="nchar" MaxLength="50" />
+    <Property Name="Nit" Type="nchar" MaxLength="50" />
+    <Property Name="Cedula" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono1" Type="nchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="nchar" MaxLength="15" />
+    <Property Name="Celular" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <Association Name="FK_Bodega_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Bodega">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bodega_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Bodega">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="PKProveedor" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="PKCliente" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="PKFabricante" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKFabricante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Procesador">
+    <End Role="Procesador" Type="Self.Procesador" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesador">
+        <PropertyRef Name="PKProcesador" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKProcesador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Tipo">
+    <End Role="Tipo" Type="Self.Tipo" Multiplicity="1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo">
+        <PropertyRef Name="PKTipo" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Bodega">
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bodega">
+        <PropertyRef Name="PKBodega" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKBodega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKDetalle_VentaRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="PKProveedor" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Transaccion">
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaccion">
+        <PropertyRef Name="PKTransaccion" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKTransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="PKEstado" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Tecnico">
+    <End Role="Tecnico" Type="Self.Tecnico" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tecnico">
+        <PropertyRef Name="PKTecnico" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKTecnico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Municipio_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Municipio">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKDetalle_Venta_Remision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Remisiones">
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="0..1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remisiones">
+        <PropertyRef Name="PKRemisiones" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Ventas">
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="0..1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="PKVentas" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKVentas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="PKRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="0..1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="PKTipoDocumento" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKDetalleVenta_Remision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="PKTipoDocumento" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="PKVendedor" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Repeticiones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tabla" Type="nchar" Mode="In" />
+    <Parameter Name="NumRepeticiones" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="MakroSoftDB2ModelStoreContainer">
+    <EntitySet Name="Auditoria" EntityType="Self.Auditoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bodega" EntityType="Self.Bodega" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compras" EntityType="Self.Compras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleVenta_Remision" EntityType="Self.DetalleVenta_Remision" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipo" EntityType="Self.Equipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fabricante" EntityType="Self.Fabricante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventario" EntityType="Self.Inventario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mantenimiento" EntityType="Self.Mantenimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Municipio" EntityType="Self.Municipio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Procesador" EntityType="Self.Procesador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Remisiones" EntityType="Self.Remisiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tecnico" EntityType="Self.Tecnico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaccion" EntityType="Self.Transaccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendedor" EntityType="Self.Vendedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Bodega_Departamento" Association="Self.FK_Bodega_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Bodega" EntitySet="Bodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bodega_Municipio" Association="Self.FK_Bodega_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Bodega" EntitySet="Bodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Departamento" Association="Self.FK_Cliente_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Municipio" Association="Self.FK_Cliente_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Departamento" Association="Self.FK_Compras_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Municipio" Association="Self.FK_Compras_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Proveedor" Association="Self.FK_Compras_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Cliente" Association="Self.FK_Equipo_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Fabricante" Association="Self.FK_Equipo_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Procesador" Association="Self.FK_Equipo_Procesador">
+      <End Role="Procesador" EntitySet="Procesador" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Tipo" Association="Self.FK_Equipo_Tipo">
+      <End Role="Tipo" EntitySet="Tipo" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Bodega" Association="Self.FK_Inventario_Bodega">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_DetalleVenta_Remision" Association="Self.FK_Inventario_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Equipo" Association="Self.FK_Inventario_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Proveedor" Association="Self.FK_Inventario_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Transaccion" Association="Self.FK_Inventario_Transaccion">
+      <End Role="Transaccion" EntitySet="Transaccion" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Equipo" Association="Self.FK_Mantenimiento_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Estado" Association="Self.FK_Mantenimiento_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Tecnico" Association="Self.FK_Mantenimiento_Tecnico">
+      <End Role="Tecnico" EntitySet="Tecnico" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Municipio_Departamento" Association="Self.FK_Municipio_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Municipio" EntitySet="Municipio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Departamento" Association="Self.FK_Proveedor_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Municipio" Association="Self.FK_Proveedor_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_Departamento" Association="Self.FK_Remisiones_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_DetalleVenta_Remision" Association="Self.FK_Remisiones_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_Municipio" Association="Self.FK_Remisiones_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Equipo" Association="Self.FK_Transaccion_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Remisiones" Association="Self.FK_Transaccion_Remisiones">
+      <End Role="Remisiones" EntitySet="Remisiones" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Ventas" Association="Self.FK_Transaccion_Ventas">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Departamento" Association="Self.FK_Usuario_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Municipio" Association="Self.FK_Usuario_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Roles" Association="Self.FK_Usuario_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_Departamento" Association="Self.FK_Vendedor_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_Municipio" Association="Self.FK_Vendedor_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_TipoDocumento" Association="Self.FK_Vendedor_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_DetalleVenta_Remision" Association="Self.FK_Ventas_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_TipoDocumento" Association="Self.FK_Ventas_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_Vendedor" Association="Self.FK_Ventas_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

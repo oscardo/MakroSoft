@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MakroSoftDB2ModelStoreContainer" CdmEntityContainer="MakroSoftDB2Entities">
+    <EntitySetMapping Name="Auditoria">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Auditoria">
+        <MappingFragment StoreEntitySet="Auditoria">
+          <ScalarProperty Name="PKAuditoria" ColumnName="PKAuditoria" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bodega">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Bodega">
+        <MappingFragment StoreEntitySet="Bodega">
+          <ScalarProperty Name="PKBodega" ColumnName="PKBodega" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="NombreBodega" ColumnName="NombreBodega" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Responsable1" ColumnName="Responsable1" />
+          <ScalarProperty Name="Responsable2" ColumnName="Responsable2" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="PKCliente" ColumnName="PKCliente" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NombreRepLegal" ColumnName="NombreRepLegal" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Correo_Electronico" ColumnName="Correo_Electronico" />
+          <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compras">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Compras">
+        <MappingFragment StoreEntitySet="Compras">
+          <ScalarProperty Name="PKCompras" ColumnName="PKCompras" />
+          <ScalarProperty Name="FKProveedor" ColumnName="FKProveedor" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="Fecha_Compra" ColumnName="Fecha_Compra" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Garantia" ColumnName="Garantia" />
+          <ScalarProperty Name="Exterdida_Garantia" ColumnName="Exterdida_Garantia" />
+          <ScalarProperty Name="Factura_Compra" ColumnName="Factura_Compra" />
+          <ScalarProperty Name="Ruta_Fotografia" ColumnName="Ruta_Fotografia" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Valor_Unidad" ColumnName="Valor_Unidad" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Cantidad_Recibida" ColumnName="Cantidad_Recibida" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="PKDepartamento" ColumnName="PKDepartamento" />
+          <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVenta_Remision">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.DetalleVenta_Remision">
+        <MappingFragment StoreEntitySet="DetalleVenta_Remision">
+          <ScalarProperty Name="PKDetalleVenta_Remision" ColumnName="PKDetalleVenta_Remision" />
+          <ScalarProperty Name="Dependencia" ColumnName="Dependencia" />
+          <ScalarProperty Name="Contactar" ColumnName="Contactar" />
+          <ScalarProperty Name="Fecha_Entrada" ColumnName="Fecha_Entrada" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Piso" ColumnName="Piso" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fecha_Salida" ColumnName="Fecha_Salida" />
+          <ScalarProperty Name="CPU" ColumnName="CPU" />
+          <ScalarProperty Name="NCPU" ColumnName="NCPU" />
+          <ScalarProperty Name="Monitor" ColumnName="Monitor" />
+          <ScalarProperty Name="NMonitor" ColumnName="NMonitor" />
+          <ScalarProperty Name="Impresora" ColumnName="Impresora" />
+          <ScalarProperty Name="NImpresora" ColumnName="NImpresora" />
+          <ScalarProperty Name="DVD" ColumnName="DVD" />
+          <ScalarProperty Name="NDVD" ColumnName="NDVD" />
+          <ScalarProperty Name="DiscoDuro" ColumnName="DiscoDuro" />
+          <ScalarProperty Name="NDiscoDuro" ColumnName="NDiscoDuro" />
+          <ScalarProperty Name="Teclado" ColumnName="Teclado" />
+          <ScalarProperty Name="NTeclado" ColumnName="NTeclado" />
+          <ScalarProperty Name="Mouse" ColumnName="Mouse" />
+          <ScalarProperty Name="NMouse" ColumnName="NMouse" />
+          <ScalarProperty Name="Scanner" ColumnName="Scanner" />
+          <ScalarProperty Name="NScanner" ColumnName="NScanner" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="NOffice" ColumnName="NOffice" />
+          <ScalarProperty Name="Clave_Office" ColumnName="Clave_Office" />
+          <ScalarProperty Name="Memoria" ColumnName="Memoria" />
+          <ScalarProperty Name="NMemoria" ColumnName="NMemoria" />
+          <ScalarProperty Name="Sistema_Operativo" ColumnName="Sistema_Operativo" />
+          <ScalarProperty Name="NSistema_Operativo" ColumnName="NSistema_Operativo" />
+          <ScalarProperty Name="Clave_SO" ColumnName="Clave_SO" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Correo_Electronico" ColumnName="Correo_Electronico" />
+          <ScalarProperty Name="Antivirus" ColumnName="Antivirus" />
+          <ScalarProperty Name="NVAntivirus" ColumnName="NVAntivirus" />
+          <ScalarProperty Name="Clave_Antivirus" ColumnName="Clave_Antivirus" />
+          <ScalarProperty Name="Conexion_Red" ColumnName="Conexion_Red" />
+          <ScalarProperty Name="Otro" ColumnName="Otro" />
+          <ScalarProperty Name="Otros_NoReferenciado" ColumnName="Otros_NoReferenciado" />
+          <ScalarProperty Name="Nombre_Reporta" ColumnName="Nombre_Reporta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Descripcion_Detallada" ColumnName="Descripcion_Detallada" />
+          <ScalarProperty Name="Preventivo" ColumnName="Preventivo" />
+          <ScalarProperty Name="Correctivo" ColumnName="Correctivo" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Fecha_Sistema" ColumnName="Fecha_Sistema" />
+          <ScalarProperty Name="Valor_Unidad" ColumnName="Valor_Unidad" />
+          <ScalarProperty Name="IVA_Unidad" ColumnName="IVA_Unidad" />
+          <ScalarProperty Name="Retencion_Unidad" ColumnName="Retencion_Unidad" />
+          <ScalarProperty Name="Valor_Total" ColumnName="Valor_Total" />
+          <ScalarProperty Name="IVA_Total" ColumnName="IVA_Total" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="Retencion_Total" ColumnName="Retencion_Total" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipo">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Equipo">
+        <MappingFragment StoreEntitySet="Equipo">
+          <ScalarProperty Name="PKEquipo" ColumnName="PKEquipo" />
+          <ScalarProperty Name="FKCompras" ColumnName="FKCompras" />
+          <ScalarProperty Name="FKTipo" ColumnName="FKTipo" />
+          <ScalarProperty Name="FKFabricante" ColumnName="FKFabricante" />
+          <ScalarProperty Name="FKProcesador" ColumnName="FKProcesador" />
+          <ScalarProperty Name="FKCliente" ColumnName="FKCliente" />
+          <ScalarProperty Name="Sistema_Operativo" ColumnName="Sistema_Operativo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Board" ColumnName="Board" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="DiscoDuro" ColumnName="DiscoDuro" />
+          <ScalarProperty Name="Mouse" ColumnName="Mouse" />
+          <ScalarProperty Name="Clave_Windows" ColumnName="Clave_Windows" />
+          <ScalarProperty Name="Clave_Office" ColumnName="Clave_Office" />
+          <ScalarProperty Name="Clave_Antivirus" ColumnName="Clave_Antivirus" />
+          <ScalarProperty Name="Clave_Otros" ColumnName="Clave_Otros" />
+          <ScalarProperty Name="Clave_Otros2" ColumnName="Clave_Otros2" />
+          <ScalarProperty Name="Clave_Otros3" ColumnName="Clave_Otros3" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="PKEstado" ColumnName="PKEstado" />
+          <ScalarProperty Name="Estado1" ColumnName="Estado" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fabricante">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Fabricante">
+        <MappingFragment StoreEntitySet="Fabricante">
+          <ScalarProperty Name="PKFabricante" ColumnName="PKFabricante" />
+          <ScalarProperty Name="Fabricante1" ColumnName="Fabricante" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventario">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Inventario">
+        <MappingFragment StoreEntitySet="Inventario">
+          <ScalarProperty Name="PKInventario" ColumnName="PKInventario" />
+          <ScalarProperty Name="FKTransaccion" ColumnName="FKTransaccion" />
+          <ScalarProperty Name="FKProveedor" ColumnName="FKProveedor" />
+          <ScalarProperty Name="FKBodega" ColumnName="FKBodega" />
+          <ScalarProperty Name="FKDetalle_VentaRemision" ColumnName="FKDetalle_VentaRemision" />
+          <ScalarProperty Name="FKEquipo" ColumnName="FKEquipo" />
+          <ScalarProperty Name="Factura_Compra" ColumnName="Factura_Compra" />
+          <ScalarProperty Name="Ruta_Fotografia" ColumnName="Ruta_Fotografia" />
+          <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+          <ScalarProperty Name="Fecha_Sistema" ColumnName="Fecha_Sistema" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Valor_Unidad" ColumnName="Valor_Unidad" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Cantidad_Recibida" ColumnName="Cantidad_Recibida" />
+          <ScalarProperty Name="Fecha_Mmto" ColumnName="Fecha_Mmto" />
+          <ScalarProperty Name="Planilla_Mmto" ColumnName="Planilla_Mmto" />
+          <ScalarProperty Name="Actvo" ColumnName="Actvo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mantenimiento">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Mantenimiento">
+        <MappingFragment StoreEntitySet="Mantenimiento">
+          <ScalarProperty Name="PKMantenimiento" ColumnName="PKMantenimiento" />
+          <ScalarProperty Name="FKEquipo" ColumnName="FKEquipo" />
+          <ScalarProperty Name="FKTecnico" ColumnName="FKTecnico" />
+          <ScalarProperty Name="FKEstado" ColumnName="FKEstado" />
+          <ScalarProperty Name="Planilla_Mmto" ColumnName="Planilla_Mmto" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Fecha_Sistema" ColumnName="Fecha_Sistema" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Municipio">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Municipio">
+        <MappingFragment StoreEntitySet="Municipio">
+          <ScalarProperty Name="PKMunicipio" ColumnName="PKMunicipio" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="NombreMunicipio" ColumnName="NombreMunicipio" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Procesador">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Procesador">
+        <MappingFragment StoreEntitySet="Procesador">
+          <ScalarProperty Name="PKProcesador" ColumnName="PKProcesador" />
+          <ScalarProperty Name="NombreProcesador" ColumnName="NombreProcesador" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="PKProveedor" ColumnName="PKProveedor" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="NombreProveedor" ColumnName="NombreProveedor" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="NombreContacto" ColumnName="NombreContacto" />
+          <ScalarProperty Name="NombreContacto2" ColumnName="NombreContacto2" />
+          <ScalarProperty Name="Servicios" ColumnName="Servicios" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Paginaweb" ColumnName="Paginaweb" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remisiones">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Remisiones">
+        <MappingFragment StoreEntitySet="Remisiones">
+          <ScalarProperty Name="PKRemisiones" ColumnName="PKRemisiones" />
+          <ScalarProperty Name="FKCliente" ColumnName="FKCliente" />
+          <ScalarProperty Name="FKProveedor" ColumnName="FKProveedor" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="FKDetalle_Venta_Remision" ColumnName="FKDetalle_Venta_Remision" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="Fecha_Sistema" ColumnName="Fecha_Sistema" />
+          <ScalarProperty Name="Valor_Unidad" ColumnName="Valor_Unidad" />
+          <ScalarProperty Name="IVA_Unidad" ColumnName="IVA_Unidad" />
+          <ScalarProperty Name="Valor_Total" ColumnName="Valor_Total" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="FVenta" ColumnName="FVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+          <ScalarProperty Name="Diferencia_Precio" ColumnName="Diferencia_Precio" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="PKRol" ColumnName="PKRol" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tecnico">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Tecnico">
+        <MappingFragment StoreEntitySet="Tecnico">
+          <ScalarProperty Name="PKTecnico" ColumnName="PKTecnico" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="PKTipo" ColumnName="PKTipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="PKTipoDocumento" ColumnName="PKTipoDocumento" />
+          <ScalarProperty Name="TipoDocumento1" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaccion">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Transaccion">
+        <MappingFragment StoreEntitySet="Transaccion">
+          <ScalarProperty Name="PKTransaccion" ColumnName="PKTransaccion" />
+          <ScalarProperty Name="FKEquipo" ColumnName="FKEquipo" />
+          <ScalarProperty Name="FKRemision" ColumnName="FKRemision" />
+          <ScalarProperty Name="FKVentas" ColumnName="FKVentas" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="PKUsuario" ColumnName="PKUsuario" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="FKRol" ColumnName="FKRol" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendedor">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Vendedor">
+        <MappingFragment StoreEntitySet="Vendedor">
+          <ScalarProperty Name="PKVendedor" ColumnName="PKVendedor" />
+          <ScalarProperty Name="FKDepartamento" ColumnName="FKDepartamento" />
+          <ScalarProperty Name="FKMunicipio" ColumnName="FKMunicipio" />
+          <ScalarProperty Name="FKTipoDocumento" ColumnName="FKTipoDocumento" />
+          <ScalarProperty Name="NombrePersona" ColumnName="NombrePersona" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Fotografia" ColumnName="Fotografia" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="MakroSoftDB2Model.Ventas">
+        <MappingFragment StoreEntitySet="Ventas">
+          <ScalarProperty Name="PKVentas" ColumnName="PKVentas" />
+          <ScalarProperty Name="FKVendedor" ColumnName="FKVendedor" />
+          <ScalarProperty Name="FKTipoDocumento" ColumnName="FKTipoDocumento" />
+          <ScalarProperty Name="FKDetalleVenta_Remision" ColumnName="FKDetalleVenta_Remision" />
+          <ScalarProperty Name="NombreReferencia" ColumnName="NombreReferencia" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Repeticiones" FunctionName="MakroSoftDB2Model.Store.Repeticiones" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MakroSoftDB2Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MakroSoftDB2Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MakroSoftDB2Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MakroSoftDB2Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MakroSoftDB2Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MakroSoftDB2Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MakroSoftDB2Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MakroSoftDB2Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MakroSoftDB2Model.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

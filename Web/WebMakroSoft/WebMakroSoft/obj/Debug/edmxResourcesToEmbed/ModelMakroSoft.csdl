@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MakroSoftDB2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="PKAuditoria" />
+    </Key>
+    <Property Name="PKAuditoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Accion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Bodega">
+    <Key>
+      <PropertyRef Name="PKBodega" />
+    </Key>
+    <Property Name="PKBodega" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NombreBodega" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Responsable1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Responsable2" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Bodega_Departamento" FromRole="Bodega" ToRole="Departamento" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Bodega_Municipio" FromRole="Bodega" ToRole="Municipio" />
+    <NavigationProperty Name="Inventario" Relationship="Self.FK_Inventario_Bodega" FromRole="Bodega" ToRole="Inventario" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="PKCliente" />
+    </Key>
+    <Property Name="PKCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NombreCliente" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Nit" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="NombreRepLegal" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Correo_Electronico" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="PaginaWeb" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Cliente_Departamento" FromRole="Cliente" ToRole="Departamento" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Cliente_Municipio" FromRole="Cliente" ToRole="Municipio" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Equipo_Cliente" FromRole="Cliente" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="PKCompras" />
+    </Key>
+    <Property Name="PKCompras" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKProveedor" Type="Int32" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Compra" Type="DateTime" Precision="3" />
+    <Property Name="Observaciones" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Garantia" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Exterdida_Garantia" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Factura_Compra" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Ruta_Fotografia" Type="String" MaxLength="256" FixedLength="true" Unicode="true" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="Valor_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Cantidad_Recibida" Type="Int32" />
+    <Property Name="Saldo" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Descuento" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Compras_Departamento" FromRole="Compras" ToRole="Departamento" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Compras_Municipio" FromRole="Compras" ToRole="Municipio" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Compras_Proveedor" FromRole="Compras" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="PKDepartamento" />
+    </Key>
+    <Property Name="PKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NombreDepartamento" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Bodega" Relationship="Self.FK_Bodega_Departamento" FromRole="Departamento" ToRole="Bodega" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Cliente_Departamento" FromRole="Departamento" ToRole="Cliente" />
+    <NavigationProperty Name="Compras" Relationship="Self.FK_Compras_Departamento" FromRole="Departamento" ToRole="Compras" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Municipio_Departamento" FromRole="Departamento" ToRole="Municipio" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Proveedor_Departamento" FromRole="Departamento" ToRole="Proveedor" />
+    <NavigationProperty Name="Remisiones" Relationship="Self.FK_Remisiones_Departamento" FromRole="Departamento" ToRole="Remisiones" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Departamento" FromRole="Departamento" ToRole="Usuario" />
+    <NavigationProperty Name="Vendedor" Relationship="Self.FK_Vendedor_Departamento" FromRole="Departamento" ToRole="Vendedor" />
+  </EntityType>
+  <EntityType Name="DetalleVenta_Remision">
+    <Key>
+      <PropertyRef Name="PKDetalleVenta_Remision" />
+    </Key>
+    <Property Name="PKDetalleVenta_Remision" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Dependencia" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Contactar" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Entrada" Type="DateTime" Precision="3" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Piso" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Salida" Type="DateTime" Precision="3" />
+    <Property Name="CPU" Type="Boolean" />
+    <Property Name="NCPU" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Monitor" Type="Boolean" />
+    <Property Name="NMonitor" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Impresora" Type="Boolean" />
+    <Property Name="NImpresora" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DVD" Type="Boolean" />
+    <Property Name="NDVD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="DiscoDuro" Type="Boolean" />
+    <Property Name="NDiscoDuro" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Teclado" Type="Boolean" />
+    <Property Name="NTeclado" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Mouse" Type="Boolean" />
+    <Property Name="NMouse" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Scanner" Type="Boolean" />
+    <Property Name="NScanner" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Office" Type="Boolean" />
+    <Property Name="NOffice" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Office" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Memoria" Type="Boolean" />
+    <Property Name="NMemoria" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Sistema_Operativo" Type="Boolean" />
+    <Property Name="NSistema_Operativo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_SO" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Correo" Type="Boolean" />
+    <Property Name="Correo_Electronico" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Antivirus" Type="Boolean" />
+    <Property Name="NVAntivirus" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Antivirus" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Conexion_Red" Type="Boolean" />
+    <Property Name="Otro" Type="Boolean" />
+    <Property Name="Otros_NoReferenciado" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Nombre_Reporta" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Descripcion_Detallada" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Preventivo" Type="Boolean" />
+    <Property Name="Correctivo" Type="Boolean" />
+    <Property Name="Observaciones" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Sistema" Type="DateTime" Precision="3" />
+    <Property Name="Valor_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Retencion_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Valor_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Retencion_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Inventario" Relationship="Self.FK_Inventario_DetalleVenta_Remision" FromRole="DetalleVenta_Remision" ToRole="Inventario" />
+    <NavigationProperty Name="Remisiones" Relationship="Self.FK_Remisiones_DetalleVenta_Remision" FromRole="DetalleVenta_Remision" ToRole="Remisiones" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FK_Ventas_DetalleVenta_Remision" FromRole="DetalleVenta_Remision" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="PKEquipo" />
+    </Key>
+    <Property Name="PKEquipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompras" Type="Int32" />
+    <Property Name="FKTipo" Type="Int32" Nullable="false" />
+    <Property Name="FKFabricante" Type="Int32" />
+    <Property Name="FKProcesador" Type="Int32" />
+    <Property Name="FKCliente" Type="Int32" />
+    <Property Name="Sistema_Operativo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Serial" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Board" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="RAM" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DiscoDuro" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Mouse" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Windows" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Office" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Antivirus" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Otros" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Otros2" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Clave_Otros3" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Equipo_Cliente" FromRole="Equipo" ToRole="Cliente" />
+    <NavigationProperty Name="Fabricante" Relationship="Self.FK_Equipo_Fabricante" FromRole="Equipo" ToRole="Fabricante" />
+    <NavigationProperty Name="Procesador" Relationship="Self.FK_Equipo_Procesador" FromRole="Equipo" ToRole="Procesador" />
+    <NavigationProperty Name="Tipo" Relationship="Self.FK_Equipo_Tipo" FromRole="Equipo" ToRole="Tipo" />
+    <NavigationProperty Name="Inventario" Relationship="Self.FK_Inventario_Equipo" FromRole="Equipo" ToRole="Inventario" />
+    <NavigationProperty Name="Mantenimiento" Relationship="Self.FK_Mantenimiento_Equipo" FromRole="Equipo" ToRole="Mantenimiento" />
+    <NavigationProperty Name="Transaccion" Relationship="Self.FK_Transaccion_Equipo" FromRole="Equipo" ToRole="Transaccion" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="PKEstado" />
+    </Key>
+    <Property Name="PKEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Mantenimiento" Relationship="Self.FK_Mantenimiento_Estado" FromRole="Estado" ToRole="Mantenimiento" />
+  </EntityType>
+  <EntityType Name="Fabricante">
+    <Key>
+      <PropertyRef Name="PKFabricante" />
+    </Key>
+    <Property Name="PKFabricante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fabricante1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Equipo_Fabricante" FromRole="Fabricante" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="Inventario">
+    <Key>
+      <PropertyRef Name="PKInventario" />
+    </Key>
+    <Property Name="PKInventario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKTransaccion" Type="Int32" />
+    <Property Name="FKProveedor" Type="Int32" />
+    <Property Name="FKBodega" Type="Int32" Nullable="false" />
+    <Property Name="FKDetalle_VentaRemision" Type="Int32" />
+    <Property Name="FKEquipo" Type="Int32" />
+    <Property Name="Factura_Compra" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Ruta_Fotografia" Type="String" MaxLength="256" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Factura" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Sistema" Type="DateTime" Precision="3" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="Valor_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Subtotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Observaciones" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Cantidad_Recibida" Type="Int32" />
+    <Property Name="Fecha_Mmto" Type="DateTime" Precision="3" />
+    <Property Name="Planilla_Mmto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Actvo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Bodega" Relationship="Self.FK_Inventario_Bodega" FromRole="Inventario" ToRole="Bodega" />
+    <NavigationProperty Name="DetalleVenta_Remision" Relationship="Self.FK_Inventario_DetalleVenta_Remision" FromRole="Inventario" ToRole="DetalleVenta_Remision" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Inventario_Equipo" FromRole="Inventario" ToRole="Equipo" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Inventario_Proveedor" FromRole="Inventario" ToRole="Proveedor" />
+    <NavigationProperty Name="Transaccion" Relationship="Self.FK_Inventario_Transaccion" FromRole="Inventario" ToRole="Transaccion" />
+  </EntityType>
+  <EntityType Name="Mantenimiento">
+    <Key>
+      <PropertyRef Name="PKMantenimiento" />
+    </Key>
+    <Property Name="PKMantenimiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKEquipo" Type="Int32" />
+    <Property Name="FKTecnico" Type="Int32" />
+    <Property Name="FKEstado" Type="Int32" />
+    <Property Name="Planilla_Mmto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Sistema" Type="DateTime" Precision="3" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Mantenimiento_Equipo" FromRole="Mantenimiento" ToRole="Equipo" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK_Mantenimiento_Estado" FromRole="Mantenimiento" ToRole="Estado" />
+    <NavigationProperty Name="Tecnico" Relationship="Self.FK_Mantenimiento_Tecnico" FromRole="Mantenimiento" ToRole="Tecnico" />
+  </EntityType>
+  <EntityType Name="Municipio">
+    <Key>
+      <PropertyRef Name="PKMunicipio" />
+    </Key>
+    <Property Name="PKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NombreMunicipio" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Bodega" Relationship="Self.FK_Bodega_Municipio" FromRole="Municipio" ToRole="Bodega" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Cliente_Municipio" FromRole="Municipio" ToRole="Cliente" />
+    <NavigationProperty Name="Compras" Relationship="Self.FK_Compras_Municipio" FromRole="Municipio" ToRole="Compras" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Municipio_Departamento" FromRole="Municipio" ToRole="Departamento" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Proveedor_Municipio" FromRole="Municipio" ToRole="Proveedor" />
+    <NavigationProperty Name="Remisiones" Relationship="Self.FK_Remisiones_Municipio" FromRole="Municipio" ToRole="Remisiones" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Municipio" FromRole="Municipio" ToRole="Usuario" />
+    <NavigationProperty Name="Vendedor" Relationship="Self.FK_Vendedor_Municipio" FromRole="Municipio" ToRole="Vendedor" />
+  </EntityType>
+  <EntityType Name="Procesador">
+    <Key>
+      <PropertyRef Name="PKProcesador" />
+    </Key>
+    <Property Name="PKProcesador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreProcesador" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Equipo_Procesador" FromRole="Procesador" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="PKProveedor" />
+    </Key>
+    <Property Name="PKProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NombreProveedor" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Nit" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="NombreContacto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="NombreContacto2" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Servicios" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Paginaweb" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Compras" Relationship="Self.FK_Compras_Proveedor" FromRole="Proveedor" ToRole="Compras" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Proveedor_Departamento" FromRole="Proveedor" ToRole="Departamento" />
+    <NavigationProperty Name="Inventario" Relationship="Self.FK_Inventario_Proveedor" FromRole="Proveedor" ToRole="Inventario" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Proveedor_Municipio" FromRole="Proveedor" ToRole="Municipio" />
+  </EntityType>
+  <EntityType Name="Remisiones">
+    <Key>
+      <PropertyRef Name="PKRemisiones" />
+    </Key>
+    <Property Name="PKRemisiones" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCliente" Type="Int32" Nullable="false" />
+    <Property Name="FKProveedor" Type="Int32" Nullable="false" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKDetalle_Venta_Remision" Type="Int32" />
+    <Property Name="Fecha_Inicio" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Fin" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Sistema" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Valor_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA_Unidad" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Valor_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Subtotal" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IVA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FVenta" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Cantidad" Type="Int32" />
+    <Property Name="Diferencia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Diferencia_Precio" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Remisiones_Departamento" FromRole="Remisiones" ToRole="Departamento" />
+    <NavigationProperty Name="DetalleVenta_Remision" Relationship="Self.FK_Remisiones_DetalleVenta_Remision" FromRole="Remisiones" ToRole="DetalleVenta_Remision" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Remisiones_Municipio" FromRole="Remisiones" ToRole="Municipio" />
+    <NavigationProperty Name="Transaccion" Relationship="Self.FK_Transaccion_Remisiones" FromRole="Remisiones" ToRole="Transaccion" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="PKRol" />
+    </Key>
+    <Property Name="PKRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rol" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Roles" FromRole="Roles" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tecnico">
+    <Key>
+      <PropertyRef Name="PKTecnico" />
+    </Key>
+    <Property Name="PKTecnico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Mantenimiento" Relationship="Self.FK_Mantenimiento_Tecnico" FromRole="Tecnico" ToRole="Mantenimiento" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="PKTipo" />
+    </Key>
+    <Property Name="PKTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Equipo_Tipo" FromRole="Tipo" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="PKTipoDocumento" />
+    </Key>
+    <Property Name="PKTipoDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoDocumento1" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Vendedor" Relationship="Self.FK_Vendedor_TipoDocumento" FromRole="TipoDocumento" ToRole="Vendedor" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FK_Ventas_TipoDocumento" FromRole="TipoDocumento" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Transaccion">
+    <Key>
+      <PropertyRef Name="PKTransaccion" />
+    </Key>
+    <Property Name="PKTransaccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKEquipo" Type="Int32" Nullable="false" />
+    <Property Name="FKRemision" Type="Int32" />
+    <Property Name="FKVentas" Type="Int32" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK_Transaccion_Equipo" FromRole="Transaccion" ToRole="Equipo" />
+    <NavigationProperty Name="Inventario" Relationship="Self.FK_Inventario_Transaccion" FromRole="Transaccion" ToRole="Inventario" />
+    <NavigationProperty Name="Remisiones" Relationship="Self.FK_Transaccion_Remisiones" FromRole="Transaccion" ToRole="Remisiones" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FK_Transaccion_Ventas" FromRole="Transaccion" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="PKUsuario" />
+    </Key>
+    <Property Name="PKUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="FKRol" Type="Int32" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ubicacion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Usuario_Departamento" FromRole="Usuario" ToRole="Departamento" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Usuario_Municipio" FromRole="Usuario" ToRole="Municipio" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Usuario_Roles" FromRole="Usuario" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="Vendedor">
+    <Key>
+      <PropertyRef Name="PKVendedor" />
+    </Key>
+    <Property Name="PKVendedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKDepartamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FKMunicipio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FKTipoDocumento" Type="Int32" />
+    <Property Name="NombrePersona" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Fotografia" Type="String" MaxLength="256" FixedLength="true" Unicode="true" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Notas" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK_Vendedor_Departamento" FromRole="Vendedor" ToRole="Departamento" />
+    <NavigationProperty Name="Municipio" Relationship="Self.FK_Vendedor_Municipio" FromRole="Vendedor" ToRole="Municipio" />
+    <NavigationProperty Name="TipoDocumento" Relationship="Self.FK_Vendedor_TipoDocumento" FromRole="Vendedor" ToRole="TipoDocumento" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FK_Ventas_Vendedor" FromRole="Vendedor" ToRole="Ventas" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="PKVentas" />
+    </Key>
+    <Property Name="PKVentas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKVendedor" Type="Int32" />
+    <Property Name="FKTipoDocumento" Type="Int32" />
+    <Property Name="FKDetalleVenta_Remision" Type="Int32" />
+    <Property Name="NombreReferencia" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Nit" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Cedula" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono1" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DetalleVenta_Remision" Relationship="Self.FK_Ventas_DetalleVenta_Remision" FromRole="Ventas" ToRole="DetalleVenta_Remision" />
+    <NavigationProperty Name="TipoDocumento" Relationship="Self.FK_Ventas_TipoDocumento" FromRole="Ventas" ToRole="TipoDocumento" />
+    <NavigationProperty Name="Transaccion" Relationship="Self.FK_Transaccion_Ventas" FromRole="Ventas" ToRole="Transaccion" />
+    <NavigationProperty Name="Vendedor" Relationship="Self.FK_Ventas_Vendedor" FromRole="Ventas" ToRole="Vendedor" />
+  </EntityType>
+  <Association Name="FK_Bodega_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Bodega">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bodega_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Bodega">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Bodega">
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bodega">
+        <PropertyRef Name="PKBodega" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKBodega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="PKCliente" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="PKProveedor" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="FKProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Municipio_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Municipio">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_Departamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="PKDepartamento" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKDetalle_VentaRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKDetalle_Venta_Remision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_DetalleVenta_Remision">
+    <End Role="DetalleVenta_Remision" Type="Self.DetalleVenta_Remision" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleVenta_Remision">
+        <PropertyRef Name="PKDetalleVenta_Remision" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKDetalleVenta_Remision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Fabricante">
+    <End Role="Fabricante" Type="Self.Fabricante" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fabricante">
+        <PropertyRef Name="PKFabricante" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKFabricante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Procesador">
+    <End Role="Procesador" Type="Self.Procesador" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesador">
+        <PropertyRef Name="PKProcesador" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKProcesador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipo_Tipo">
+    <End Role="Tipo" Type="Self.Tipo" Multiplicity="1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo">
+        <PropertyRef Name="PKTipo" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="FKTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Equipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="PKEquipo" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="PKEstado" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="PKProveedor" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Transaccion">
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="0..1" />
+    <End Role="Inventario" Type="Self.Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaccion">
+        <PropertyRef Name="PKTransaccion" />
+      </Principal>
+      <Dependent Role="Inventario">
+        <PropertyRef Name="FKTransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mantenimiento_Tecnico">
+    <End Role="Tecnico" Type="Self.Tecnico" Multiplicity="0..1" />
+    <End Role="Mantenimiento" Type="Self.Mantenimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tecnico">
+        <PropertyRef Name="PKTecnico" />
+      </Principal>
+      <Dependent Role="Mantenimiento">
+        <PropertyRef Name="FKTecnico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remisiones_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Remisiones">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_Municipio">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="PKMunicipio" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Remisiones">
+    <End Role="Remisiones" Type="Self.Remisiones" Multiplicity="0..1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remisiones">
+        <PropertyRef Name="PKRemisiones" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKRemision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="PKRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="FKRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedor_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="0..1" />
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="PKTipoDocumento" />
+      </Principal>
+      <Dependent Role="Vendedor">
+        <PropertyRef Name="FKTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="PKTipoDocumento" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaccion_Ventas">
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="0..1" />
+    <End Role="Transaccion" Type="Self.Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="PKVentas" />
+      </Principal>
+      <Dependent Role="Transaccion">
+        <PropertyRef Name="FKVentas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ventas_Vendedor">
+    <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="0..1" />
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedor">
+        <PropertyRef Name="PKVendedor" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="FKVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MakroSoftDB2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Auditoria" EntityType="Self.Auditoria" />
+    <EntitySet Name="Bodega" EntityType="Self.Bodega" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Compras" EntityType="Self.Compras" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+    <EntitySet Name="DetalleVenta_Remision" EntityType="Self.DetalleVenta_Remision" />
+    <EntitySet Name="Equipo" EntityType="Self.Equipo" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" />
+    <EntitySet Name="Fabricante" EntityType="Self.Fabricante" />
+    <EntitySet Name="Inventario" EntityType="Self.Inventario" />
+    <EntitySet Name="Mantenimiento" EntityType="Self.Mantenimiento" />
+    <EntitySet Name="Municipio" EntityType="Self.Municipio" />
+    <EntitySet Name="Procesador" EntityType="Self.Procesador" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
+    <EntitySet Name="Remisiones" EntityType="Self.Remisiones" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Tecnico" EntityType="Self.Tecnico" />
+    <EntitySet Name="Tipo" EntityType="Self.Tipo" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" />
+    <EntitySet Name="Transaccion" EntityType="Self.Transaccion" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Vendedor" EntityType="Self.Vendedor" />
+    <EntitySet Name="Ventas" EntityType="Self.Ventas" />
+    <AssociationSet Name="FK_Bodega_Departamento" Association="Self.FK_Bodega_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Bodega" EntitySet="Bodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bodega_Municipio" Association="Self.FK_Bodega_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Bodega" EntitySet="Bodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Bodega" Association="Self.FK_Inventario_Bodega">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Departamento" Association="Self.FK_Cliente_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Municipio" Association="Self.FK_Cliente_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Cliente" Association="Self.FK_Equipo_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Departamento" Association="Self.FK_Compras_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Municipio" Association="Self.FK_Compras_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Proveedor" Association="Self.FK_Compras_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Municipio_Departamento" Association="Self.FK_Municipio_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Municipio" EntitySet="Municipio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Departamento" Association="Self.FK_Proveedor_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_Departamento" Association="Self.FK_Remisiones_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Departamento" Association="Self.FK_Usuario_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_Departamento" Association="Self.FK_Vendedor_Departamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_DetalleVenta_Remision" Association="Self.FK_Inventario_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_DetalleVenta_Remision" Association="Self.FK_Remisiones_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_DetalleVenta_Remision" Association="Self.FK_Ventas_DetalleVenta_Remision">
+      <End Role="DetalleVenta_Remision" EntitySet="DetalleVenta_Remision" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Fabricante" Association="Self.FK_Equipo_Fabricante">
+      <End Role="Fabricante" EntitySet="Fabricante" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Procesador" Association="Self.FK_Equipo_Procesador">
+      <End Role="Procesador" EntitySet="Procesador" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipo_Tipo" Association="Self.FK_Equipo_Tipo">
+      <End Role="Tipo" EntitySet="Tipo" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Equipo" Association="Self.FK_Inventario_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Equipo" Association="Self.FK_Mantenimiento_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Equipo" Association="Self.FK_Transaccion_Equipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Estado" Association="Self.FK_Mantenimiento_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Proveedor" Association="Self.FK_Inventario_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Transaccion" Association="Self.FK_Inventario_Transaccion">
+      <End Role="Transaccion" EntitySet="Transaccion" />
+      <End Role="Inventario" EntitySet="Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mantenimiento_Tecnico" Association="Self.FK_Mantenimiento_Tecnico">
+      <End Role="Tecnico" EntitySet="Tecnico" />
+      <End Role="Mantenimiento" EntitySet="Mantenimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Municipio" Association="Self.FK_Proveedor_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remisiones_Municipio" Association="Self.FK_Remisiones_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Remisiones" EntitySet="Remisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Municipio" Association="Self.FK_Usuario_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_Municipio" Association="Self.FK_Vendedor_Municipio">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Remisiones" Association="Self.FK_Transaccion_Remisiones">
+      <End Role="Remisiones" EntitySet="Remisiones" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Roles" Association="Self.FK_Usuario_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedor_TipoDocumento" Association="Self.FK_Vendedor_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Vendedor" EntitySet="Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_TipoDocumento" Association="Self.FK_Ventas_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaccion_Ventas" Association="Self.FK_Transaccion_Ventas">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Transaccion" EntitySet="Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ventas_Vendedor" Association="Self.FK_Ventas_Vendedor">
+      <End Role="Vendedor" EntitySet="Vendedor" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <FunctionImport Name="Repeticiones">
+      <Parameter Name="Tabla" Mode="In" Type="String" />
+      <Parameter Name="NumRepeticiones" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(MakroSoftDB2Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(MakroSoftDB2Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

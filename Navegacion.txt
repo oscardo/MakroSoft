@@ -1,0 +1,120 @@
+-Servicios 1
+Compras									101
+	CrearCompras						10101
+	LeerCompras							100102
+	ActualizarCompras					100103
+	EliminarCompras						100104
+Cliente
+	CrearCliente
+	LeerCliente
+	ActualizarCliente
+	EliminarCliente
+Equipo
+	CrearEquipo
+	LeerEquipo
+	ActualizarEquipo
+	EliminarEquipo
+Mantenimiento
+	CrearMmto
+	LeerMmto
+	ActualizarMmto
+	EliminarMmto
+Remisiones
+	CrearRemis
+	LeerRemis
+	ActualizarRemis
+	EliminarRemis
+Ventas
+	CrearVentas
+	LeerVentas
+	ActualizarVentas
+	EliminarVentas
+
+-Inventario
+Inventario
+	CrearInven
+	LeerInven
+	ActualizarInven
+	EliminarInven
+Bodega
+	CrearBodega
+	LeerBodega
+	ActualizarBodega
+	EliminarBodega
+Proveedor
+	CrearProveedor
+	LeerProveedor
+	ActualizarProveedor
+	EliminarProveedor
+
+
+-Estado
+Estado
+	CrearEstado
+	LeerEstado
+	ActualizarEstado
+	EliminarEstado
+Tecnico
+	CrearTecnico
+	LeerTecnico
+	ActualizarTecnico
+	EliminarTecnico
+Tipo
+	CrearTipo
+	LeerTipo
+	ActualizarTipo
+	EliminarTipo
+Transaccion
+	CrearTrans
+	LeerTrans
+	ActualizarTrans
+	EliminarTrans
+Vendedor
+	CrearVendedor
+	LeerVendedor
+	ActualizarVendedor
+	EliminarVendedor
+Fabricante
+	CrearFabricante
+	LeerFabricante
+	ActualizarFabricante
+	EliminarFabricante
+Procesador
+	CrearProcesador
+	LeerProcesador
+	ActualizarProcesador
+	EliminarProcesador
+
+-Parametros
+TipoDocumento
+	CrearTDocumento
+	LeerTDocumento
+	ActualizarTDocumento
+	EliminarTDocumento
+Departamento
+	CrearDMento
+	LeerDMento
+	ActualizarDMento
+	EliminarDMento
+Municipio
+	CrearMunic
+	LeerMunic
+	ActualizarMunic
+	EliminarMunic
+Usuario
+	CrearUsuario
+	LeerUsuario
+	ActualizarUsuario
+	EliminarUsuario
+Navegacion
+	CrearNav
+	LeerNav
+	ActualizarNav
+	EliminarNav
+Roles
+	CrearRol
+	LeerRol
+	ActualizarRol
+	EliminarRol
+Auditoria
+	Leer
