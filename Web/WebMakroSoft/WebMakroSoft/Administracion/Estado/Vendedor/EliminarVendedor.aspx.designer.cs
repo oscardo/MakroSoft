@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebMakroSoft.Administracion.Estado.Fabricante
+namespace WebMakroSoft.Administracion.Estado.Vendedor
 {
 
 
-    public partial class ActualizarFabricante
+    public partial class EliminarVendedor
     {
     }
 }

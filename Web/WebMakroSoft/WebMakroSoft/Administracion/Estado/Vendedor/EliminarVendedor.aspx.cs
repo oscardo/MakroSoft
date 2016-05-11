@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebMakroSoft.Administracion.Estado.Fabricante
+namespace WebMakroSoft.Administracion.Estado.Vendedor
 {
-    public partial class ActualizarFabricante : System.Web.UI.Page
+    public partial class EliminarVendedor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

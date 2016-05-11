@@ -207,7 +207,6 @@
     <Content Include="Administracion\Estado\Estado\EliminarEstado.aspx" />
     <Content Include="Administracion\Estado\Estado\Estados.aspx" />
     <Content Include="Administracion\Estado\Estado\LeerEstado.aspx" />
-    <Content Include="Administracion\Estado\Estado\ActualizarFabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\CrearFabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx" />
@@ -235,6 +234,7 @@
     <Content Include="Administracion\Estado\Transaccion\Transaccion.aspx" />
     <Content Include="Administracion\Estado\Vendedor\ActualizarVendedor.aspx" />
     <Content Include="Administracion\Estado\Vendedor\CrearVendedor.aspx" />
+    <Content Include="Administracion\Estado\Vendedor\EliminarVendedor.aspx" />
     <Content Include="Administracion\Estado\Vendedor\LeerVendedor.aspx" />
     <Content Include="Administracion\Estado\Vendedor\Vendedor.aspx" />
     <Content Include="Administracion\Inventario\Bodega\ActualizarBodega.aspx" />
@@ -336,7 +336,6 @@
       <DependentUpon>ModelMakroSoft.edmx</DependentUpon>
     </Content>
     <Content Include="Interno.Master" />
-    <Content Include="Administracion\Estado\Vendedor\EliminarVendedor.sitemap" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ModelMakroSoft.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -553,13 +552,6 @@
     <Compile Include="Administracion\Estado\Estado\LeerEstado.aspx.designer.cs">
       <DependentUpon>LeerEstado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estado\Estado\ActualizarFabricante.aspx.cs">
-      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administracion\Estado\Estado\ActualizarFabricante.aspx.designer.cs">
-      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx.cs">
       <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -748,6 +740,13 @@
     </Compile>
     <Compile Include="Administracion\Estado\Vendedor\CrearVendedor.aspx.designer.cs">
       <DependentUpon>CrearVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\EliminarVendedor.aspx.cs">
+      <DependentUpon>EliminarVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\EliminarVendedor.aspx.designer.cs">
+      <DependentUpon>EliminarVendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Estado\Vendedor\LeerVendedor.aspx.cs">
       <DependentUpon>LeerVendedor.aspx</DependentUpon>
