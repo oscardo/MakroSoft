@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/Administracion/Servicios/Servicios.aspx" title="Servicios"  description="Servicios">
+        <siteMapNode url="/Administracion/Servicios/Compras/Compras.aspx" title="Compras"  description="Compras" />
+        <siteMapNode url="/Administracion/Servicios/Compras/CrearCompras.aspx" title="Crear Compras"  description="Crear Compras" />
+      <siteMapNode url="/Administracion/Servicios/Compras/Compra1s.aspx" title="Compras"  description="Compras" />
+        <siteMapNode url="/Administracion/Servicios/Compras/Cre1arCompras.aspx" title="Crear Compras"  description="Crear Compras" />
+      <siteMapNode url="/Administracion/Servicios/Compras/Compr2as.aspx" title="Compras"  description="Compras" />
+        <siteMapNode url="/Administracion/Servicios/Compras/C2rearCompras.aspx" title="Crear Compras"  description="Crear Compras" />
+  <siteMapNode url="oowerwerdodod" title="Estado" description="sdkdkdk">
+  <siteMapNode url="jdadsasdjjd"  tittle="Estado" description="mdmd">
+   <siteMapNode url="werwerwerwer" title="Crear Estado" description="kldkdk"></siteMapNode>
+   <siteMapNode url="msdfdkkdd" title="Modeficar Estado" description="kldkdk"></siteMapNode>
+   <siteMapNode url="mdgfgfgfgfkkdd" title="Lista Estado" description="kldkdk"></siteMapNode>
+   <siteMapNode url="mdkdffdkdd" title="elimimar Estado" description="kldkdk"></siteMapNode>
+  </siteMapNode>
+  </siteMapNode>  
+  </siteMapNode>
+    
+</siteMap>

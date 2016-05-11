@@ -1,22 +1,19 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Interno.Master.cs" Inherits="WebMakroSoft.SiteMaster" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Interno.master.cs" Inherits="WebMakroSoft.Interno" %>
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - MakroSoft</title>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 </head>
 <body>
-    <form runat="server">
+
+        <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -50,30 +47,202 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li>
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem Text="Servicios" Value="Servicios" NavigateUrl="~/Administracion/Servicios/Servicios.aspx">
+                        <asp:MenuItem Text="Compra" Value="Compra" NavigateUrl="~/Administracion/Servicios/Compras/Compras.aspx">
+                            <asp:MenuItem Text="Crear Compras" Value="CrearCompras" NavigateUrl="~/Administracion/Servicios/Compras/CrearCompras.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Leer Compras" Value="LeerCompras"  NavigateUrl="~/Administracion/Servicios/Compras/LeerCompras.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Actualizar Compras" Value="ActualizarCompras"  NavigateUrl="~/Administracion/Servicios/Compras/ActualizarCompras.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Eliminar Compras" Value="EliminarCompras"  NavigateUrl="~/Administracion/Servicios/Compras/EliminarCompras.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Cliente" Value="Cliente" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearClientes" Value="CrearClientes" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerClientes" Value="LeerClientes"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarClientes" Value="ActualizarClientes"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarClientes" Value="EliminarClientes"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Equipo" Value="Equipo" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearEquipos" Value="CrearEquipos" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerEquipos" Value="LeerEquipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarEquipos" Value="ActualizarEquipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarEquipos" Value="EliminarEquipos"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Mantenimiento" Value="Mantenimiento" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearMmtos" Value="CrearMmtos" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerMmtos" Value="LeerMmtos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarMmtos" Value="ActualizarMmtos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarMmtos" Value="EliminarMmtos"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Remisión" Value="Remisión" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearRemis" Value="CrearRemis" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerRemis" Value="LeerRemis"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarRemis" Value="ActualizarRemis"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarRemis" Value="EliminarRemis"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Ventas" Value="Ventas" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearVentass" Value="CrearVentass" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerVentass" Value="LeerVentass"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarVentass" Value="ActualizarVentass"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarVentass" Value="EliminarVentass"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                    </asp:MenuItem>
+
+                    <asp:MenuItem Text="Inventario" Value="Inventario" NavigateUrl="#">
+                        <asp:MenuItem Text="Inventario" Value="Inventario" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearInven" Value="CrearInven" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerInven" Value="LeerInven" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarInven" Value="ActualizarInven" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarInven" Value="EliminarInven" NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Equipo" Value="Equipo" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearEquipos" Value="CrearEquipos" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerEquipos" Value="LeerEquipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarEquipos" Value="ActualizarEquipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarEquipos" Value="EliminarEquipos"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Bodega" Value="Bodega" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearBodegas" Value="CrearBodegas" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerBodegas" Value="LeerBodegas"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarBodegas" Value="ActualizarBodegas"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarBodegas" Value="EliminarBodegas"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Proveedor" Value="Proveedor" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearProveedors" Value="CrearProveedors" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerProveedors" Value="LeerProveedors"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarProveedors" Value="ActualizarProveedors"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarProveedors" Value="EliminarProveedors"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+
+
+                    <asp:MenuItem Text="Estado" Value="Estado" NavigateUrl="#">
+                        <asp:MenuItem Text="Estado" Value="Estado" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearEstado" Value="CrearEstado" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerEstado" Value="LeerInven" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarEstado" Value="ActualizarEstado" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarEstado" Value="EliminarEstado" NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Tecnicos" Value="Tecnicos" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearTecnicos" Value="CrearTecnicos" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerTecnicos" Value="LeerTecnicos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarTecnicos" Value="ActualizarTecnicos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarTecnicos" Value="EliminarTecnicos"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Tipo" Value="Tipo" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearTipos" Value="CrearTipos" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerTipos" Value="LeerTipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarTipos" Value="ActualizarTipos"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarTipos" Value="EliminarTipos"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Transacción" Value="Transacción" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearTrans" Value="CrearTrans" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerTrans" Value="LeerTrans"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarTrans" Value="ActualizarTrans"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarTrans" Value="EliminarTrans"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Vendedor" Value="Vendedor" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearVendedor" Value="CrearVendedor" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerVendedor" Value="LeerVendedor"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarVendedor" Value="ActualizarVendedor"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarVendedor" Value="EliminarVendedor"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Fabricante" Value="Fabricante" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearFabricante" Value="CrearFabricante" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerFabricante" Value="LeerFabricante"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarFabricante" Value="ActualizarFabricante"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarFabricante" Value="EliminarFabricante"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Procesador" Value="Procesador" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearProcesador" Value="CrearProcesador" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerProcesador" Value="LeerProcesador"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarProcesador" Value="ActualizarProcesador"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarProcesador" Value="EliminarProcesador"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
                         
-                    aqui va algo
-                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <!--<li><a runat="server" href="~/Account/Register">Register</a></li> -->
-                                <li><a runat="server" href="~/Account/Login">Ingreso</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manejo de cuenta">Hola, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log Off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                    </asp:MenuItem>
+
+
+                    <asp:MenuItem Text="Parametros" Value="Parametros" NavigateUrl="#">
+                        <asp:MenuItem Text="TipoDocumento" Value="TipoDocumento" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearTDocumento" Value="CrearTDocumento" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerTDocumento" Value="LeerTDocumento"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarTDocumento" Value="ActualizarTDocumento"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarTDocumento" Value="EliminarTDocumento"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Departamento" Value="Departamento" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearDMento" Value="CrearDMento" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerDMento" Value="LeerDMento"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarDMento" Value="ActualizarDMento"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarDMento" Value="EliminarDMento"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Municipio" Value="Municipio" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearMunic" Value="CrearMunic" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerMunic" Value="LeerMunic"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarMunic" Value="ActualizarMunic"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarMunic" Value="EliminarMunic"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Usuario" Value="Usuario" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearUsuario" Value="CrearUsuario" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerUsuario" Value="LeerUsuario"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarUsuario" Value="ActualizarUsuario"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarUsuario" Value="EliminarUsuario"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Navegación" Value="Navegación" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearNav" Value="CrearNav" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerNav" Value="LeerNav"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarNav" Value="ActualizarNav"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarNav" Value="EliminarNav"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Roles" Value="Roles" NavigateUrl="#">
+                            <asp:MenuItem Text="CrearRoles" Value="CrearRoles" NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="LeerRoles" Value="LeerRoles"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="ActualizarRoles" Value="ActualizarRoles"  NavigateUrl="#"></asp:MenuItem>
+                            <asp:MenuItem Text="EliminarRoles" Value="EliminarRoles"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Auditoria" Value="Auditoria" NavigateUrl="#">
+                            <asp:MenuItem Text="LeerAuditoria" Value="LeerAuditoria"  NavigateUrl="#"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+
+                    <asp:MenuItem Text="Ayuda" Value="Ayuda" NavigateUrl="#"> 
+                        <asp:MenuItem Text="Ayuda" Value="Ayuda" NavigateUrl="#"></asp:MenuItem>
+                        <asp:MenuItem Text="Contacto" Value="Contacto" NavigateUrl="#"></asp:MenuItem>
+                    </asp:MenuItem>
+
+                </Items>
+            </asp:Menu>
+
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
@@ -81,5 +250,7 @@
             </footer>
         </div>
     </form>
+
 </body>
 </html>
+

@@ -74,6 +74,5 @@ C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSof
 C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\obj\Debug\WebMakroSoft.csprojResolveAssemblyReference.cache
 C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\obj\Debug\WebMakroSoft.dll
 C:\Users\E2522\Documents\GitHub\MakroSoft\MakroSoft\Web\WebMakroSoft\WebMakroSoft\obj\Debug\WebMakroSoft.pdb

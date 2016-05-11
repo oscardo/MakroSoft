@@ -201,6 +201,121 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Administracion\Default.aspx" />
+    <Content Include="Administracion\Estado\EstadosD.aspx" />
+    <Content Include="Administracion\Estado\Estado\ActualizarEstado.aspx" />
+    <Content Include="Administracion\Estado\Estado\CrearEstado.aspx" />
+    <Content Include="Administracion\Estado\Estado\EliminarEstado.aspx" />
+    <Content Include="Administracion\Estado\Estado\Estados.aspx" />
+    <Content Include="Administracion\Estado\Estado\LeerEstado.aspx" />
+    <Content Include="Administracion\Estado\Estado\ActualizarFabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\CrearFabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\Fabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\LeerFabricante.aspx" />
+    <Content Include="Administracion\Estado\Procesador\ActualizarProcesador.aspx" />
+    <Content Include="Administracion\Estado\Procesador\CrearProcesador.aspx" />
+    <Content Include="Administracion\Estado\Procesador\EliminarProcesador.aspx" />
+    <Content Include="Administracion\Estado\Procesador\LeerProcesador.aspx" />
+    <Content Include="Administracion\Estado\Procesador\Procesador.aspx" />
+    <Content Include="Administracion\Estado\Tecnico\ActualizarTecnico.aspx" />
+    <Content Include="Administracion\Estado\Tecnico\CrearTecnico.aspx" />
+    <Content Include="Administracion\Estado\Tecnico\EliminarTecnico.aspx" />
+    <Content Include="Administracion\Estado\Tecnico\LeerTecnico.aspx" />
+    <Content Include="Administracion\Estado\Tecnico\Tecnico.aspx" />
+    <Content Include="Administracion\Estado\Tipo\ActualizarTipo.aspx" />
+    <Content Include="Administracion\Estado\Tipo\CrearTipo.aspx" />
+    <Content Include="Administracion\Estado\Tipo\EliminarTipo.aspx" />
+    <Content Include="Administracion\Estado\Tipo\LeerTipo.aspx" />
+    <Content Include="Administracion\Estado\Tipo\Tipo.aspx" />
+    <Content Include="Administracion\Estado\Transaccion\ActualizarTrans.aspx" />
+    <Content Include="Administracion\Estado\Transaccion\CrearTrans.aspx" />
+    <Content Include="Administracion\Estado\Transaccion\EliminarTrans.aspx" />
+    <Content Include="Administracion\Estado\Transaccion\LeerTrans.aspx" />
+    <Content Include="Administracion\Estado\Transaccion\Transaccion.aspx" />
+    <Content Include="Administracion\Estado\Vendedor\ActualizarVendedor.aspx" />
+    <Content Include="Administracion\Estado\Vendedor\CrearVendedor.aspx" />
+    <Content Include="Administracion\Estado\Vendedor\LeerVendedor.aspx" />
+    <Content Include="Administracion\Estado\Vendedor\Vendedor.aspx" />
+    <Content Include="Administracion\Inventario\Bodega\ActualizarBodega.aspx" />
+    <Content Include="Administracion\Inventario\Bodega\Bodega.aspx" />
+    <Content Include="Administracion\Inventario\Bodega\CrearBodega.aspx" />
+    <Content Include="Administracion\Inventario\Bodega\EliminarBodega.aspx" />
+    <Content Include="Administracion\Inventario\Bodega\LeerBodega.aspx" />
+    <Content Include="Administracion\Inventario\InventariosD.aspx" />
+    <Content Include="Administracion\Inventario\Inventario\ActualizarInven.aspx" />
+    <Content Include="Administracion\Inventario\Inventario\CrearInven.aspx" />
+    <Content Include="Administracion\Inventario\Inventario\EliminarInven.aspx" />
+    <Content Include="Administracion\Inventario\Inventario\Inventarios.aspx" />
+    <Content Include="Administracion\Inventario\Inventario\LeerInven.aspx" />
+    <Content Include="Administracion\Inventario\Proveedor\ActualizarProveedor.aspx" />
+    <Content Include="Administracion\Inventario\Proveedor\CrearProveedor.aspx" />
+    <Content Include="Administracion\Inventario\Proveedor\EliminarProveedor.aspx" />
+    <Content Include="Administracion\Inventario\Proveedor\LeerProveedor.aspx" />
+    <Content Include="Administracion\Inventario\Proveedor\Proveedor.aspx" />
+    <Content Include="Administracion\Parametros\Auditoria\Auditoria.aspx" />
+    <Content Include="Administracion\Parametros\Departamento\ActualizarDMento.aspx" />
+    <Content Include="Administracion\Parametros\Departamento\CrearDMento.aspx" />
+    <Content Include="Administracion\Parametros\Departamento\Departamento.aspx" />
+    <Content Include="Administracion\Parametros\Departamento\EliminarDMento.aspx" />
+    <Content Include="Administracion\Parametros\Departamento\LeerDMento.aspx" />
+    <Content Include="Administracion\Parametros\Municipio\ActualizarMunic.aspx" />
+    <Content Include="Administracion\Parametros\Municipio\CrearMunic.aspx" />
+    <Content Include="Administracion\Parametros\Municipio\EliminarMunic.aspx" />
+    <Content Include="Administracion\Parametros\Municipio\LeerMunic.aspx" />
+    <Content Include="Administracion\Parametros\Municipio\Municipio.aspx" />
+    <Content Include="Administracion\Parametros\Navegacion\ActualizarNav.aspx" />
+    <Content Include="Administracion\Parametros\Navegacion\CrearNav.aspx" />
+    <Content Include="Administracion\Parametros\Navegacion\EliminarNav.aspx" />
+    <Content Include="Administracion\Parametros\Navegacion\LeerNav.aspx" />
+    <Content Include="Administracion\Parametros\Navegacion\Navegacion.aspx" />
+    <Content Include="Administracion\Parametros\Parametros.aspx" />
+    <Content Include="Administracion\Parametros\Roles\ActualizarRol.aspx" />
+    <Content Include="Administracion\Parametros\Roles\CrearRol.aspx" />
+    <Content Include="Administracion\Parametros\Roles\EliminarRol.aspx" />
+    <Content Include="Administracion\Parametros\Roles\LeerRol.aspx" />
+    <Content Include="Administracion\Parametros\Roles\Roles.aspx" />
+    <Content Include="Administracion\Parametros\TipoDocumento\ActualizarTDocumento.aspx" />
+    <Content Include="Administracion\Parametros\TipoDocumento\CrearTDocumento.aspx" />
+    <Content Include="Administracion\Parametros\TipoDocumento\EliminarTDocumento.aspx" />
+    <Content Include="Administracion\Parametros\TipoDocumento\LeerTDocumento.aspx" />
+    <Content Include="Administracion\Parametros\TipoDocumento\TipoDocumento.aspx" />
+    <Content Include="Administracion\Parametros\Usuario\ActualizarUsuario.aspx" />
+    <Content Include="Administracion\Parametros\Usuario\CrearUsuario.aspx" />
+    <Content Include="Administracion\Parametros\Usuario\EliminarUsuario.aspx" />
+    <Content Include="Administracion\Parametros\Usuario\LeerUsuario.aspx" />
+    <Content Include="Administracion\Parametros\Usuario\Usuario.aspx" />
+    <Content Include="Administracion\Servicios\Cliente\ActualizarCliente.aspx" />
+    <Content Include="Administracion\Servicios\Cliente\Cliente.aspx" />
+    <Content Include="Administracion\Servicios\Cliente\CrearCliente.aspx" />
+    <Content Include="Administracion\Servicios\Cliente\EliminarCliente.aspx" />
+    <Content Include="Administracion\Servicios\Cliente\LeerCliente.aspx" />
+    <Content Include="Administracion\Servicios\Compras\ActualizarCompras.aspx" />
+    <Content Include="Administracion\Servicios\Compras\Compras.aspx" />
+    <Content Include="Administracion\Servicios\Compras\CrearCompras.aspx" />
+    <Content Include="Administracion\Servicios\Compras\EliminarCompras.aspx" />
+    <Content Include="Administracion\Servicios\Compras\LeerCompras.aspx" />
+    <Content Include="Administracion\Servicios\Equipo\ActualizarEquipo.aspx" />
+    <Content Include="Administracion\Servicios\Equipo\CrearEquipo.aspx" />
+    <Content Include="Administracion\Servicios\Equipo\EliminarEquipo.aspx" />
+    <Content Include="Administracion\Servicios\Equipo\Equipo.aspx" />
+    <Content Include="Administracion\Servicios\Equipo\LeerEquipo.aspx" />
+    <Content Include="Administracion\Servicios\Mantenimiento\ActualizarMmto.aspx" />
+    <Content Include="Administracion\Servicios\Mantenimiento\CrearMmto.aspx" />
+    <Content Include="Administracion\Servicios\Mantenimiento\EliminarMmto.aspx" />
+    <Content Include="Administracion\Servicios\Mantenimiento\LeerMmto.aspx" />
+    <Content Include="Administracion\Servicios\Mantenimiento\Mantenimiento.aspx" />
+    <Content Include="Administracion\Servicios\Remisiones\ActualizarRemis.aspx" />
+    <Content Include="Administracion\Servicios\Remisiones\CrearRemis.aspx" />
+    <Content Include="Administracion\Servicios\Remisiones\EliminarRemis.aspx" />
+    <Content Include="Administracion\Servicios\Remisiones\LeerRemis.aspx" />
+    <Content Include="Administracion\Servicios\Remisiones\Remisiones.aspx" />
+    <Content Include="Administracion\Servicios\Servicios.aspx" />
+    <Content Include="Administracion\Servicios\Ventas\ActualizarVentas.aspx" />
+    <Content Include="Administracion\Servicios\Ventas\CrearVentas.aspx" />
+    <Content Include="Administracion\Servicios\Ventas\EliminarVentas.aspx" />
+    <Content Include="Administracion\Servicios\Ventas\LeerVentas.aspx" />
+    <Content Include="Administracion\Servicios\Ventas\Ventas.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -220,6 +335,8 @@
     <Content Include="ModelMakroSoft.edmx.diagram">
       <DependentUpon>ModelMakroSoft.edmx</DependentUpon>
     </Content>
+    <Content Include="Interno.Master" />
+    <Content Include="Administracion\Estado\Vendedor\EliminarVendedor.sitemap" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ModelMakroSoft.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -279,6 +396,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -393,6 +511,811 @@
     <Compile Include="Administracion\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Estado\EstadosD.aspx.cs">
+      <DependentUpon>EstadosD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\EstadosD.aspx.designer.cs">
+      <DependentUpon>EstadosD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\ActualizarEstado.aspx.cs">
+      <DependentUpon>ActualizarEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\ActualizarEstado.aspx.designer.cs">
+      <DependentUpon>ActualizarEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\CrearEstado.aspx.cs">
+      <DependentUpon>CrearEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\CrearEstado.aspx.designer.cs">
+      <DependentUpon>CrearEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\EliminarEstado.aspx.cs">
+      <DependentUpon>EliminarEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\EliminarEstado.aspx.designer.cs">
+      <DependentUpon>EliminarEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\Estados.aspx.cs">
+      <DependentUpon>Estados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\Estados.aspx.designer.cs">
+      <DependentUpon>Estados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\LeerEstado.aspx.cs">
+      <DependentUpon>LeerEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\LeerEstado.aspx.designer.cs">
+      <DependentUpon>LeerEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\ActualizarFabricante.aspx.cs">
+      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\ActualizarFabricante.aspx.designer.cs">
+      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx.cs">
+      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx.designer.cs">
+      <DependentUpon>ActualizarFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\CrearFabricante.aspx.cs">
+      <DependentUpon>CrearFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\CrearFabricante.aspx.designer.cs">
+      <DependentUpon>CrearFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx.cs">
+      <DependentUpon>EliminarFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx.designer.cs">
+      <DependentUpon>EliminarFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\Fabricante.aspx.cs">
+      <DependentUpon>Fabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\Fabricante.aspx.designer.cs">
+      <DependentUpon>Fabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\LeerFabricante.aspx.cs">
+      <DependentUpon>LeerFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\LeerFabricante.aspx.designer.cs">
+      <DependentUpon>LeerFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\ActualizarProcesador.aspx.cs">
+      <DependentUpon>ActualizarProcesador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\ActualizarProcesador.aspx.designer.cs">
+      <DependentUpon>ActualizarProcesador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\CrearProcesador.aspx.cs">
+      <DependentUpon>CrearProcesador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\CrearProcesador.aspx.designer.cs">
+      <DependentUpon>CrearProcesador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\EliminarProcesador.aspx.cs">
+      <DependentUpon>EliminarProcesador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\EliminarProcesador.aspx.designer.cs">
+      <DependentUpon>EliminarProcesador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\LeerProcesador.aspx.cs">
+      <DependentUpon>LeerProcesador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\LeerProcesador.aspx.designer.cs">
+      <DependentUpon>LeerProcesador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\Procesador.aspx.cs">
+      <DependentUpon>Procesador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Procesador\Procesador.aspx.designer.cs">
+      <DependentUpon>Procesador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\ActualizarTecnico.aspx.cs">
+      <DependentUpon>ActualizarTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\ActualizarTecnico.aspx.designer.cs">
+      <DependentUpon>ActualizarTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\CrearTecnico.aspx.cs">
+      <DependentUpon>CrearTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\CrearTecnico.aspx.designer.cs">
+      <DependentUpon>CrearTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\EliminarTecnico.aspx.cs">
+      <DependentUpon>EliminarTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\EliminarTecnico.aspx.designer.cs">
+      <DependentUpon>EliminarTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\LeerTecnico.aspx.cs">
+      <DependentUpon>LeerTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\LeerTecnico.aspx.designer.cs">
+      <DependentUpon>LeerTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\Tecnico.aspx.cs">
+      <DependentUpon>Tecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tecnico\Tecnico.aspx.designer.cs">
+      <DependentUpon>Tecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\ActualizarTipo.aspx.cs">
+      <DependentUpon>ActualizarTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\ActualizarTipo.aspx.designer.cs">
+      <DependentUpon>ActualizarTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\CrearTipo.aspx.cs">
+      <DependentUpon>CrearTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\CrearTipo.aspx.designer.cs">
+      <DependentUpon>CrearTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\EliminarTipo.aspx.cs">
+      <DependentUpon>EliminarTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\EliminarTipo.aspx.designer.cs">
+      <DependentUpon>EliminarTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\LeerTipo.aspx.cs">
+      <DependentUpon>LeerTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\LeerTipo.aspx.designer.cs">
+      <DependentUpon>LeerTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\Tipo.aspx.cs">
+      <DependentUpon>Tipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Tipo\Tipo.aspx.designer.cs">
+      <DependentUpon>Tipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\ActualizarTrans.aspx.cs">
+      <DependentUpon>ActualizarTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\ActualizarTrans.aspx.designer.cs">
+      <DependentUpon>ActualizarTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\CrearTrans.aspx.cs">
+      <DependentUpon>CrearTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\CrearTrans.aspx.designer.cs">
+      <DependentUpon>CrearTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\EliminarTrans.aspx.cs">
+      <DependentUpon>EliminarTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\EliminarTrans.aspx.designer.cs">
+      <DependentUpon>EliminarTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\LeerTrans.aspx.cs">
+      <DependentUpon>LeerTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\LeerTrans.aspx.designer.cs">
+      <DependentUpon>LeerTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\Transaccion.aspx.cs">
+      <DependentUpon>Transaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Transaccion\Transaccion.aspx.designer.cs">
+      <DependentUpon>Transaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\ActualizarVendedor.aspx.cs">
+      <DependentUpon>ActualizarVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\ActualizarVendedor.aspx.designer.cs">
+      <DependentUpon>ActualizarVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\CrearVendedor.aspx.cs">
+      <DependentUpon>CrearVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\CrearVendedor.aspx.designer.cs">
+      <DependentUpon>CrearVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\LeerVendedor.aspx.cs">
+      <DependentUpon>LeerVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\LeerVendedor.aspx.designer.cs">
+      <DependentUpon>LeerVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\Vendedor.aspx.cs">
+      <DependentUpon>Vendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Vendedor\Vendedor.aspx.designer.cs">
+      <DependentUpon>Vendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\ActualizarBodega.aspx.cs">
+      <DependentUpon>ActualizarBodega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\ActualizarBodega.aspx.designer.cs">
+      <DependentUpon>ActualizarBodega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\Bodega.aspx.cs">
+      <DependentUpon>Bodega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\Bodega.aspx.designer.cs">
+      <DependentUpon>Bodega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\CrearBodega.aspx.cs">
+      <DependentUpon>CrearBodega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\CrearBodega.aspx.designer.cs">
+      <DependentUpon>CrearBodega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\EliminarBodega.aspx.cs">
+      <DependentUpon>EliminarBodega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\EliminarBodega.aspx.designer.cs">
+      <DependentUpon>EliminarBodega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\LeerBodega.aspx.cs">
+      <DependentUpon>LeerBodega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Bodega\LeerBodega.aspx.designer.cs">
+      <DependentUpon>LeerBodega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\InventariosD.aspx.cs">
+      <DependentUpon>InventariosD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\InventariosD.aspx.designer.cs">
+      <DependentUpon>InventariosD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\ActualizarInven.aspx.cs">
+      <DependentUpon>ActualizarInven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\ActualizarInven.aspx.designer.cs">
+      <DependentUpon>ActualizarInven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\CrearInven.aspx.cs">
+      <DependentUpon>CrearInven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\CrearInven.aspx.designer.cs">
+      <DependentUpon>CrearInven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\EliminarInven.aspx.cs">
+      <DependentUpon>EliminarInven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\EliminarInven.aspx.designer.cs">
+      <DependentUpon>EliminarInven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\Inventarios.aspx.cs">
+      <DependentUpon>Inventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\Inventarios.aspx.designer.cs">
+      <DependentUpon>Inventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\LeerInven.aspx.cs">
+      <DependentUpon>LeerInven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Inventario\LeerInven.aspx.designer.cs">
+      <DependentUpon>LeerInven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\ActualizarProveedor.aspx.cs">
+      <DependentUpon>ActualizarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\ActualizarProveedor.aspx.designer.cs">
+      <DependentUpon>ActualizarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\CrearProveedor.aspx.cs">
+      <DependentUpon>CrearProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\CrearProveedor.aspx.designer.cs">
+      <DependentUpon>CrearProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\EliminarProveedor.aspx.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\EliminarProveedor.aspx.designer.cs">
+      <DependentUpon>EliminarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\LeerProveedor.aspx.cs">
+      <DependentUpon>LeerProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\LeerProveedor.aspx.designer.cs">
+      <DependentUpon>LeerProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\Proveedor.aspx.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Inventario\Proveedor\Proveedor.aspx.designer.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Auditoria\Auditoria.aspx.cs">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Auditoria\Auditoria.aspx.designer.cs">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\ActualizarDMento.aspx.cs">
+      <DependentUpon>ActualizarDMento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\ActualizarDMento.aspx.designer.cs">
+      <DependentUpon>ActualizarDMento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\CrearDMento.aspx.cs">
+      <DependentUpon>CrearDMento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\CrearDMento.aspx.designer.cs">
+      <DependentUpon>CrearDMento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\Departamento.aspx.cs">
+      <DependentUpon>Departamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\Departamento.aspx.designer.cs">
+      <DependentUpon>Departamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\EliminarDMento.aspx.cs">
+      <DependentUpon>EliminarDMento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\EliminarDMento.aspx.designer.cs">
+      <DependentUpon>EliminarDMento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\LeerDMento.aspx.cs">
+      <DependentUpon>LeerDMento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Departamento\LeerDMento.aspx.designer.cs">
+      <DependentUpon>LeerDMento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\ActualizarMunic.aspx.cs">
+      <DependentUpon>ActualizarMunic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\ActualizarMunic.aspx.designer.cs">
+      <DependentUpon>ActualizarMunic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\CrearMunic.aspx.cs">
+      <DependentUpon>CrearMunic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\CrearMunic.aspx.designer.cs">
+      <DependentUpon>CrearMunic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\EliminarMunic.aspx.cs">
+      <DependentUpon>EliminarMunic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\EliminarMunic.aspx.designer.cs">
+      <DependentUpon>EliminarMunic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\LeerMunic.aspx.cs">
+      <DependentUpon>LeerMunic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\LeerMunic.aspx.designer.cs">
+      <DependentUpon>LeerMunic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\Municipio.aspx.cs">
+      <DependentUpon>Municipio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Municipio\Municipio.aspx.designer.cs">
+      <DependentUpon>Municipio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\ActualizarNav.aspx.cs">
+      <DependentUpon>ActualizarNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\ActualizarNav.aspx.designer.cs">
+      <DependentUpon>ActualizarNav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\CrearNav.aspx.cs">
+      <DependentUpon>CrearNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\CrearNav.aspx.designer.cs">
+      <DependentUpon>CrearNav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\EliminarNav.aspx.cs">
+      <DependentUpon>EliminarNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\EliminarNav.aspx.designer.cs">
+      <DependentUpon>EliminarNav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\LeerNav.aspx.cs">
+      <DependentUpon>LeerNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\LeerNav.aspx.designer.cs">
+      <DependentUpon>LeerNav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\Navegacion.aspx.cs">
+      <DependentUpon>Navegacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Navegacion\Navegacion.aspx.designer.cs">
+      <DependentUpon>Navegacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Parametros.aspx.cs">
+      <DependentUpon>Parametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Parametros.aspx.designer.cs">
+      <DependentUpon>Parametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\ActualizarRol.aspx.cs">
+      <DependentUpon>ActualizarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\ActualizarRol.aspx.designer.cs">
+      <DependentUpon>ActualizarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\CrearRol.aspx.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\CrearRol.aspx.designer.cs">
+      <DependentUpon>CrearRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\EliminarRol.aspx.cs">
+      <DependentUpon>EliminarRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\EliminarRol.aspx.designer.cs">
+      <DependentUpon>EliminarRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\LeerRol.aspx.cs">
+      <DependentUpon>LeerRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\LeerRol.aspx.designer.cs">
+      <DependentUpon>LeerRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Roles\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\ActualizarTDocumento.aspx.cs">
+      <DependentUpon>ActualizarTDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\ActualizarTDocumento.aspx.designer.cs">
+      <DependentUpon>ActualizarTDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\CrearTDocumento.aspx.cs">
+      <DependentUpon>CrearTDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\CrearTDocumento.aspx.designer.cs">
+      <DependentUpon>CrearTDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\EliminarTDocumento.aspx.cs">
+      <DependentUpon>EliminarTDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\EliminarTDocumento.aspx.designer.cs">
+      <DependentUpon>EliminarTDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\LeerTDocumento.aspx.cs">
+      <DependentUpon>LeerTDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\LeerTDocumento.aspx.designer.cs">
+      <DependentUpon>LeerTDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\TipoDocumento.aspx.cs">
+      <DependentUpon>TipoDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\TipoDocumento\TipoDocumento.aspx.designer.cs">
+      <DependentUpon>TipoDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\ActualizarUsuario.aspx.cs">
+      <DependentUpon>ActualizarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\ActualizarUsuario.aspx.designer.cs">
+      <DependentUpon>ActualizarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\CrearUsuario.aspx.cs">
+      <DependentUpon>CrearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\CrearUsuario.aspx.designer.cs">
+      <DependentUpon>CrearUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\EliminarUsuario.aspx.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\EliminarUsuario.aspx.designer.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\LeerUsuario.aspx.cs">
+      <DependentUpon>LeerUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\LeerUsuario.aspx.designer.cs">
+      <DependentUpon>LeerUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Usuario\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\ActualizarCliente.aspx.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\ActualizarCliente.aspx.designer.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\CrearCliente.aspx.cs">
+      <DependentUpon>CrearCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\CrearCliente.aspx.designer.cs">
+      <DependentUpon>CrearCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\EliminarCliente.aspx.cs">
+      <DependentUpon>EliminarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\EliminarCliente.aspx.designer.cs">
+      <DependentUpon>EliminarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\LeerCliente.aspx.cs">
+      <DependentUpon>LeerCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Cliente\LeerCliente.aspx.designer.cs">
+      <DependentUpon>LeerCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\ActualizarCompras.aspx.cs">
+      <DependentUpon>ActualizarCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\ActualizarCompras.aspx.designer.cs">
+      <DependentUpon>ActualizarCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\CrearCompras.aspx.cs">
+      <DependentUpon>CrearCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\CrearCompras.aspx.designer.cs">
+      <DependentUpon>CrearCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\EliminarCompras.aspx.cs">
+      <DependentUpon>EliminarCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\EliminarCompras.aspx.designer.cs">
+      <DependentUpon>EliminarCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\LeerCompras.aspx.cs">
+      <DependentUpon>LeerCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Compras\LeerCompras.aspx.designer.cs">
+      <DependentUpon>LeerCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\ActualizarEquipo.aspx.cs">
+      <DependentUpon>ActualizarEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\ActualizarEquipo.aspx.designer.cs">
+      <DependentUpon>ActualizarEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\CrearEquipo.aspx.cs">
+      <DependentUpon>CrearEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\CrearEquipo.aspx.designer.cs">
+      <DependentUpon>CrearEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\EliminarEquipo.aspx.cs">
+      <DependentUpon>EliminarEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\EliminarEquipo.aspx.designer.cs">
+      <DependentUpon>EliminarEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\Equipo.aspx.cs">
+      <DependentUpon>Equipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\Equipo.aspx.designer.cs">
+      <DependentUpon>Equipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\LeerEquipo.aspx.cs">
+      <DependentUpon>LeerEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Equipo\LeerEquipo.aspx.designer.cs">
+      <DependentUpon>LeerEquipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\ActualizarMmto.aspx.cs">
+      <DependentUpon>ActualizarMmto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\ActualizarMmto.aspx.designer.cs">
+      <DependentUpon>ActualizarMmto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\CrearMmto.aspx.cs">
+      <DependentUpon>CrearMmto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\CrearMmto.aspx.designer.cs">
+      <DependentUpon>CrearMmto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\EliminarMmto.aspx.cs">
+      <DependentUpon>EliminarMmto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\EliminarMmto.aspx.designer.cs">
+      <DependentUpon>EliminarMmto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\LeerMmto.aspx.cs">
+      <DependentUpon>LeerMmto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\LeerMmto.aspx.designer.cs">
+      <DependentUpon>LeerMmto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\Mantenimiento.aspx.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Mantenimiento\Mantenimiento.aspx.designer.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\ActualizarRemis.aspx.cs">
+      <DependentUpon>ActualizarRemis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\ActualizarRemis.aspx.designer.cs">
+      <DependentUpon>ActualizarRemis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\CrearRemis.aspx.cs">
+      <DependentUpon>CrearRemis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\CrearRemis.aspx.designer.cs">
+      <DependentUpon>CrearRemis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\EliminarRemis.aspx.cs">
+      <DependentUpon>EliminarRemis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\EliminarRemis.aspx.designer.cs">
+      <DependentUpon>EliminarRemis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\LeerRemis.aspx.cs">
+      <DependentUpon>LeerRemis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\LeerRemis.aspx.designer.cs">
+      <DependentUpon>LeerRemis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\Remisiones.aspx.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Remisiones\Remisiones.aspx.designer.cs">
+      <DependentUpon>Remisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Servicios.aspx.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Servicios.aspx.designer.cs">
+      <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\ActualizarVentas.aspx.cs">
+      <DependentUpon>ActualizarVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\ActualizarVentas.aspx.designer.cs">
+      <DependentUpon>ActualizarVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\CrearVentas.aspx.cs">
+      <DependentUpon>CrearVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\CrearVentas.aspx.designer.cs">
+      <DependentUpon>CrearVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\EliminarVentas.aspx.cs">
+      <DependentUpon>EliminarVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\EliminarVentas.aspx.designer.cs">
+      <DependentUpon>EliminarVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\LeerVentas.aspx.cs">
+      <DependentUpon>LeerVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\LeerVentas.aspx.designer.cs">
+      <DependentUpon>LeerVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Servicios\Ventas\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -447,6 +1370,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interno.Master.cs">
+      <DependentUpon>Interno.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interno.Master.designer.cs">
+      <DependentUpon>Interno.Master</DependentUpon>
     </Compile>
     <Compile Include="Inventario.cs">
       <DependentUpon>ModelMakroSoft.tt</DependentUpon>

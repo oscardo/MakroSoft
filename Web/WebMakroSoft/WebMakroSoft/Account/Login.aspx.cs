@@ -32,21 +32,27 @@ namespace WebMakroSoft.Account
                 //U.Password = Password.Text.ToString().ToLower();
                 CUsuarios CU = new CUsuarios();
                 var VUsuario = CU.ObtenerUnUsuario(Email.Text.ToLower().ToString(), Password.Text.ToString().ToLower());
-                switch (VUsuario.FKRol)
-                {
-                    case 1:
-                        Response.Redirect(String.Format("/Administracion/Default.aspx"));
-                        //Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
-                        //                                Request.QueryString["ReturnUrl"],
-                        //                                RememberMe.Checked),
-                        //                  true);
-                        break;
-                    default:
-                        FailureText.Text = "Error al ingresar";
-                        ErrorMessage.Visible = true;
-                        break;
+                if (VUsuario != null) {
+                    switch (VUsuario.FKRol)
+                    {
+                        case 1:
+                            Response.Redirect(String.Format("/Administracion/Default.aspx"));
+                            //Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
+                            //                                Request.QueryString["ReturnUrl"],
+                            //                                RememberMe.Checked),
+                            //                  true);
+                            break;
+                        default:
+                            FailureText.Text = "Error al ingresar";
+                            ErrorMessage.Visible = true;
+                            break;
+                    }
                 }
-
+                else
+                {
+                    FailureText.Text = "Error al ingresar";
+                    ErrorMessage.Visible = true;
+                }
 
 
                 //U.Usuario<DatosUsuario>(p => (p.NombreUsuario == User) && (p.Password == Clave));
