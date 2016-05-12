@@ -187,6 +187,7 @@
 
 
                     <asp:MenuItem Text="Parámetros" Value="Parametros" NavigateUrl="~/Administracion/Parametros/Parametros.aspx">
+                        <!--
                         <asp:MenuItem Text="Tipo Documento" Value="TipoDocumento" NavigateUrl="~/Administracion/Parametros/TipoDocumento/TipoDocumento.aspx">
                             <asp:MenuItem Text="Crear TDocumento" Value="CrearTDocumento" NavigateUrl="~/Administracion/Parametros/TipoDocumento/CrearTDocumento.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Leer TDocumento" Value="LeerTDocumento"  NavigateUrl="~/Administracion/Parametros/TipoDocumento/LeerTDocumento.aspx"></asp:MenuItem>
@@ -207,7 +208,7 @@
                             <asp:MenuItem Text="Actualizar Municipio" Value="ActualizarMunic"  NavigateUrl="~/Administracion/Parametros/Municipio/ActualizarMunic.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Eliminar Municipio" Value="EliminarMunic"  NavigateUrl="~/Administracion/Parametros/Municipio/EliminarMunic.aspx"></asp:MenuItem>
                         </asp:MenuItem>
-
+                        -->
                         <asp:MenuItem Text="Usuario" Value="Usuario" NavigateUrl="~/Administracion/Parametros/Usuario/Usuario.aspx">
                             <asp:MenuItem Text="Crear Usuario" Value="CrearUsuario" NavigateUrl="~/Administracion/Parametros/Usuario/CrearUsuario.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Leer Usuario" Value="LeerUsuario"  NavigateUrl="~/Administracion/Parametros/Usuario/LeerUsuario.aspx"></asp:MenuItem>
