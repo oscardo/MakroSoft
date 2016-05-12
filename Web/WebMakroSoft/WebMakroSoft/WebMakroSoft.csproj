@@ -1351,6 +1351,7 @@
     <Compile Include="Administracion\Servicios\Ventas\Ventas.aspx.designer.cs">
       <DependentUpon>Ventas.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\Conexion.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -1371,6 +1372,7 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>ModelMakroSoft.tt</DependentUpon>
     </Compile>
+    <Compile Include="Codigo\Conexion.cs" />
     <Compile Include="Compras.cs">
       <DependentUpon>ModelMakroSoft.tt</DependentUpon>
     </Compile>
@@ -1702,7 +1704,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
