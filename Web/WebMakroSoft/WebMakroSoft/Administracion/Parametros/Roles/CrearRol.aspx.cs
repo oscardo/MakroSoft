@@ -31,15 +31,14 @@ namespace WebMakroSoft.Administracion.Parametros.Roles
             {
                 if (Creacion() == -1)
                 {
-                    this.TxtCodigoMun.Text = string.Empty;
-                    this.txtNombreMunicipio.Text = string.Empty;
-                    this.txtNotas.Text = string.Empty;
-
-                    PKMunicipio = string.Empty;
-                    FKDepartamento = string.Empty;
-                    NombreMunicipio = string.Empty;
+                    PKRol = string.Empty;
+                    Rol = string.Empty;
+                    Activo = string.Empty;
                     Notas = string.Empty;
 
+                    this.txtNotas.Text = string.Empty;
+                    this.txtRol.Text = string.Empty;
+                    
                     lblError.Text = "Ya se ha creado correctamente, puede crear otro?";
                 }
                 else
@@ -54,19 +53,18 @@ namespace WebMakroSoft.Administracion.Parametros.Roles
             int Valor = 0;
             try
             {
-                PKMunicipio = this.TxtCodigoMun.Text.ToString();
-                FKDepartamento = this.DDDepar.SelectedValue.ToString();
-                NombreMunicipio = this.txtNombreMunicipio.Text.ToString();
+                Rol = this.txtRol.Text;
+                Activo = this.cbActivo.Text;
                 Notas = this.txtNotas.Text.ToString();
+                
                 using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
                 {
                     using (SqlCommand cmd = new SqlCommand("SPCrearMunicipios", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@PKMunicipio", SqlDbType.NChar, 10).Value = PKMunicipio;
-                        cmd.Parameters.Add("@FKDepartamento", SqlDbType.NChar, 10).Value = FKDepartamento;
-                        cmd.Parameters.Add("@NombreMunicipio", SqlDbType.NChar, 50).Value = NombreMunicipio;
-                        cmd.Parameters.Add("@Notas", SqlDbType.NChar, 200).Value = Notas;
+                        cmd.Parameters.Add("@Rol", SqlDbType.NChar, 10).Value = Rol;
+                        cmd.Parameters.Add("@Activo", SqlDbType.NChar, 10).Value = Activo;
+                        cmd.Parameters.Add("@Notas", SqlDbType.NChar, 50).Value = Notas;
                         conn.Open();
                         int result = (int)cmd.ExecuteNonQuery();
                         Valor = result;
@@ -106,7 +104,5 @@ namespace WebMakroSoft.Administracion.Parametros.Roles
             }
             return Valor;
         }
-
-        
     }
 }
