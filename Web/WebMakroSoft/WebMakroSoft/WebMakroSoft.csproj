@@ -212,12 +212,12 @@
     <Content Include="Administracion\Estado\EstadosD.aspx" />
     <Content Include="Administracion\Estado\Estado\ActualizarEstado.aspx" />
     <Content Include="Administracion\Estado\Estado\CrearEstado.aspx" />
-    <Content Include="Administracion\Estado\Estado\default.aspx" />
     <Content Include="Administracion\Estado\Estado\EliminarEstado.aspx" />
     <Content Include="Administracion\Estado\Estado\Estados.aspx" />
     <Content Include="Administracion\Estado\Estado\LeerEstado.aspx" />
     <Content Include="Administracion\Estado\Fabricante\ActualizarFabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\CrearFabricante.aspx" />
+    <Content Include="Administracion\Estado\Fabricante\Default.aspx" />
     <Content Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\Fabricante.aspx" />
     <Content Include="Administracion\Estado\Fabricante\LeerFabricante.aspx" />
@@ -568,13 +568,6 @@
     <Compile Include="Administracion\Estado\Estado\CrearEstado.aspx.designer.cs">
       <DependentUpon>CrearEstado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estado\Estado\default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administracion\Estado\Estado\default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Administracion\Estado\Estado\EliminarEstado.aspx.cs">
       <DependentUpon>EliminarEstado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -609,6 +602,13 @@
     </Compile>
     <Compile Include="Administracion\Estado\Fabricante\CrearFabricante.aspx.designer.cs">
       <DependentUpon>CrearFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Fabricante\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Estado\Fabricante\EliminarFabricante.aspx.cs">
       <DependentUpon>EliminarFabricante.aspx</DependentUpon>

@@ -1,0 +1,4 @@
+﻿SET ANSI_NULLS ON\nGO\nSET QUOTED_IDENTIFIER ON\nGO\n-- =============================================\n-- Author:		Oscar Ortiz\n-- Create date: 13/05/2016\n-- Description:	Creación\n-- =============================================\nCREATE PROCEDURE Crear\n	-- Add the parameters for the stored procedure here\n	<@Param1, sysname, @p1> <Datatype_For_Param1, , int> = <Default_Value_For_Param1, , 0>, \n	<@Param2, sysname, @p2> <Datatype_For_Param2, , int> = <Default_Value_For_Param2, , 0>\nAS\nBEGIN\n
+	
+END
+GO
