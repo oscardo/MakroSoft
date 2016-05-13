@@ -212,6 +212,7 @@
     <Content Include="Administracion\Estado\EstadosD.aspx" />
     <Content Include="Administracion\Estado\Estado\ActualizarEstado.aspx" />
     <Content Include="Administracion\Estado\Estado\CrearEstado.aspx" />
+    <Content Include="Administracion\Estado\Estado\default.aspx" />
     <Content Include="Administracion\Estado\Estado\EliminarEstado.aspx" />
     <Content Include="Administracion\Estado\Estado\Estados.aspx" />
     <Content Include="Administracion\Estado\Estado\LeerEstado.aspx" />
@@ -566,6 +567,13 @@
     </Compile>
     <Compile Include="Administracion\Estado\Estado\CrearEstado.aspx.designer.cs">
       <DependentUpon>CrearEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estado\Estado\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Estado\Estado\EliminarEstado.aspx.cs">
       <DependentUpon>EliminarEstado.aspx</DependentUpon>
