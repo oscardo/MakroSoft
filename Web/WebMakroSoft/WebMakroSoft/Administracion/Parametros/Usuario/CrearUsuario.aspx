@@ -3,7 +3,7 @@
 
     <p>
         <br />
-        Creació de Usuarios</p>
+        Crear Usuarios</p>
     <p>
         <table style="width:100%;">
             <tr>

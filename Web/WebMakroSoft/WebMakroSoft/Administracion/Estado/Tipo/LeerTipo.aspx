@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interno.Master" AutoEventWireup="true" CodeBehind="LeerTipo.aspx.cs" Inherits="WebMakroSoft.Administracion.Estado.Tipo.LeerTipo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        Tipos</p>
+        Leer Tipos</p>
     <p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" PageSize="50">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
