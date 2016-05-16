@@ -13,6 +13,7 @@
                 <asp:BoundField DataField="Nombre Fabricante" HeaderText="Nombre Fabricante" ReadOnly="True" SortExpression="Nombre Fabricante" />
                 <asp:BoundField DataField="Nombre Procesador" HeaderText="Nombre Procesador" ReadOnly="True" SortExpression="Nombre Procesador" />
                 <asp:BoundField DataField="Nombre Cliente" HeaderText="Nombre Cliente" ReadOnly="True" SortExpression="Nombre Cliente" />
+                <asp:BoundField DataField="Nombre Equipo" HeaderText="Nombre Equipo" ReadOnly="True" SortExpression="Nombre Equipo" />
                 <asp:BoundField DataField="Sistema Operativo" HeaderText="Sistema Operativo" ReadOnly="True" SortExpression="Sistema Operativo" />
                 <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" ReadOnly="True" SortExpression="Descripcion" />
                 <asp:BoundField DataField="Serial" HeaderText="Serial" ReadOnly="True" SortExpression="Serial" />
