@@ -7,7 +7,7 @@ GO
 -- Create date: 14/05/2016
 -- Description:	Eliminar dentro de la base de datos
 -- =============================================
-CREATE PROCEDURE SPEliminar 
+CREATE PROCEDURE SPEliminarTipoDocumento 
 	@PKTipoDocumento int = 0
 AS
 BEGIN
