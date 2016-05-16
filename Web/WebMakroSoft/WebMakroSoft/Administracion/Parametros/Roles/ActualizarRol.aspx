@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interno.Master" AutoEventWireup="true" CodeBehind="ActualizarRol.aspx.cs" Inherits="WebMakroSoft.Administracion.Parametros.Roles.ActualizarRol" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-    Eliminar Roles</p>
+    Actualizar Roles</p>
 <p>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="50">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />

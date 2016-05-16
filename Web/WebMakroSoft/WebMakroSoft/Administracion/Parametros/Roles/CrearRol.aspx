@@ -4,8 +4,6 @@
     <p>
     Crear Rol</p>
 <p>
-    isnull(PKRol, &#39;&#39;) [Código Rol], isnull(Rol, &#39;&#39;) as Rol, isnull(Activo, &#39;&#39;) Activo, ISNULL(Notas, &#39;&#39;) Notas</p>
-<p>
     <table style="width:100%;">
         <tr>
             <td>Nombre de Rol:</td>

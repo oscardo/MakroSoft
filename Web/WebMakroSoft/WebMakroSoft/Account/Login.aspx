@@ -68,40 +68,7 @@
         </div>
         
         <div class="col-md-4">
-        <!---
-                <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-            -->
-            <br />
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                <Items>
-                    <asp:MenuItem Text="Servicios" Value="Servicios">
-                        <asp:MenuItem Text="Compra" Value="Compra">
-                            <asp:MenuItem Text="Deparr" Value="Deparr">
-                                <asp:MenuItem Text="jdjdjdk" Value="jdjdjdk"></asp:MenuItem>
-                            </asp:MenuItem>
-                            <asp:MenuItem Text="Puweblño" Value="Puweblño"></asp:MenuItem>
-                        </asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="Parametros" Value="Parametros">
-                        <asp:MenuItem Text="Departamento" Value="Departamento">
-                            <asp:MenuItem Text="CrearDMento" Value="CrearDMento"></asp:MenuItem>
-                            <asp:MenuItem Text="EliminarDp" Value="EliminarDp"></asp:MenuItem>
-                        </asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="New" Value="New">
-                        <asp:MenuItem Text="New Item" Value="New Item">
-                            <asp:MenuItem Text="New Item" Value="New Item">
-                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
-                            </asp:MenuItem>
-                        </asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="tem" Value="tem"></asp:MenuItem>
-                </Items>
-            </asp:Menu>
-            <br />
-            <br />
+        <!--aqui iba código-->
         </div>
         
     </div>
