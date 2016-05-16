@@ -1,0 +1,47 @@
+Trabajo
+Dia 1: Instalacion del equipo de computo y puesta a punto del desarrollo.
+•	Creado el perfil en GitHub con el usuario de oscardo2000@hotmail.com para tener el control del código, de la mejor manera.
+•	Instalacion de SQL Server 2012, modo Evaluación para el proyecto.
+•	Fuentes de la base de datos.
+•	En la instalación le deje el usuario: sa y la clave: 123456!"#$%&
+•	Instalación de visual studio 2015.
+•	Instalación del cliente de GIT
+•	Ya esta en el servidor la conexión a la base de datos
+•	Empece a las 8:45 – termine 6:30 pm
+
+Dia 2: cree toda la parte de la entrada y uní sql server y la aplicación mediante entity framework 
+•	Cree un usuario administrador, Oscardo y la clave es 80188514
+•	Cree todo lo que se refiere a la navegacion del sitio web
+•	He generado la tercera version del codigo
+•	He generado la version numero 4
+•	Problema con el controlador de DataSource 
+ 
+•	Trabaje de 8:15 a 5:35 pm 
+
+Dia 3, no pude resolver lo de entity framework 6.0, me toco tomar los acostumbrados
+•	Tengo problemas con la actualizacion de usuarios, tambien dejo aquí lo de la eliminacion de usuarios, prefiero realizar otras tareas. (*)
+•	Cree la version 0.10 del desarrollo.
+•	Se ha validado la creación y la lectura de los usuarios.
+•	Hacer falta el actulizar y eliminar de departamento (*)
+•	Hacer falta el actulizar y eliminar de departamento (*) y en Municipios los separe de a 50
+•	Quite del menu las opciones de crear, modificar, eliminar, solo la unica quedeje es la de ver o consultar.
+•	Codigo quitado de Interno.master 
+•	Municipio, Deparmento, Tarjeta de Identidad, Navegación quitar
+•	Ayer trabaje de 8:15 a 5:30 pm
+Dia 4, ya hice todo lo concerniente a consulta, consulta_select, crear
+•	Creada la estructura, ahora esta revisión del control de actualizar y la eliminación.
+•	Trabaje de 8:15 a 3:00 pm
+ Dia 5, empece a trabajar a las 11 y termine a las 2
+•	Empece a realizar todo los procedimientos almacenados de eliminación y los de actualización, pero solo los primeros los termine, los segundos aun estoy en fase de diseño.
+Dia 6, ya implemente todo lo relacionado con los procedimientos almacenados de eliminación y aun hace falta la parte de actualización.
+•	Realice una copia de seguridad de las 9 am de la base de datos.
+•	Realice una mejora en las copias de seguridad, ahora será por fechas, en ves de por nombre.
+•	Version 25
+•	Version 26
+•	Adicione la característica de @NombreEquipo en todos los procedimientos de Equipo
+•	Adicione la característica de @NombreCompra en todos los procedimientos de Compra
+•	Adicione la característica de @Notas en todos los procedimientos de Ventas
+•	
+
+
+
