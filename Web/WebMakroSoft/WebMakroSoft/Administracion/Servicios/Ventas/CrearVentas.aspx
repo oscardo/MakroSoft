@@ -8,13 +8,13 @@
             <tr>
                 <td style="height: 22px">Vendedor:</td>
                 <td style="height: 22px">
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombrePersona" DataValueField="PKVendedor">
+                    <asp:DropDownList ID="DDVendedor" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombrePersona" DataValueField="PKVendedor">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [NombrePersona], [PKVendedor] FROM [Vendedor]"></asp:SqlDataSource>
                 </td>
                 <td style="height: 22px">Detalle Venta:</td>
                 <td style="height: 22px">
-                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="PKDetalleVenta_Remision">
+                    <asp:DropDownList ID="DDDetalleVenta" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="PKDetalleVenta_Remision">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [PKDetalleVenta_Remision], [Descripcion] FROM [DetalleVenta_Remision]"></asp:SqlDataSource>
                 </td>
@@ -22,21 +22,21 @@
             <tr>
                 <td>Nombre Referencia:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreReferencia" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Nit:</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNit" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="height: 22px">Cedula:</td>
                 <td style="height: 22px">
-                    <asp:TextBox ID="TextBox4" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNumero" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td style="height: 22px">Tipo de Documento:</td>
                 <td style="height: 22px">
-                    <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource3" DataTextField="TipoDocumento" DataValueField="PKTipoDocumento">
+                    <asp:DropDownList ID="DDTipo" runat="server" DataSourceID="SqlDataSource3" DataTextField="TipoDocumento" DataValueField="PKTipoDocumento">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [TipoDocumento], [PKTipoDocumento] FROM [TipoDocumento]"></asp:SqlDataSource>
                 </td>
@@ -44,17 +44,17 @@
             <tr>
                 <td>Teléfono Habitual:</td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono1" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
                 <td>Teléfono Auxiliar:</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono2" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Celular:</td>
                 <td>
-                    <asp:TextBox ID="TextBox7" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtCelular" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Width="547px"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" TextMode="MultiLine" Width="547px"></asp:TextBox>
                 </td>
             </tr>
         </table>
