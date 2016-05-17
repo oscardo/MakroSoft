@@ -231,8 +231,8 @@
                             <asp:MenuItem Text="Eliminar Roles" Value="EliminarRoles"  NavigateUrl="~/Administracion/Parametros/Roles/EliminarRol.aspx"></asp:MenuItem>
                         </asp:MenuItem>
 
-                        <asp:MenuItem Text="Auditoria" Value="Auditoria" NavigateUrl="~/Administracion/Parametros/Auditoria/LeerAuditoria.aspx">
-                            <asp:MenuItem Text="Leer Auditoria" Value="LeerAuditoria"  NavigateUrl="~/Administracion/Parametros/Auditoria/LeerAuditoria.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Auditoria" Value="Auditoria" NavigateUrl="~/Administracion/Parametros/Auditoria/Auditoria.aspx">
+                            <asp:MenuItem Text="Leer Auditoria" Value="LeerAuditoria"  NavigateUrl="~/Administracion/Parametros/Auditoria/Auditoria.aspx"></asp:MenuItem>
                         </asp:MenuItem>
                     </asp:MenuItem>
                     

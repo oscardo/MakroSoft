@@ -26,6 +26,27 @@
             </tr>
         </table>
     </p>
+    <table style="width:100%;">
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="BtnCrearEstado" runat="server" OnClick="BtnCrearEstado_Click" Text="Crear Estado" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblError" runat="server"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
     <br />
 
 </asp:Content>
