@@ -251,5 +251,50 @@ namespace WebMakroSoft.Codigo
             }
         }
 
+
+        //   @FKDepartamento nchar(10)
+        //   ,@FKMunicipio nchar(10)
+        //   ,@FKTipoDocumento int
+        //   ,@NombrePersona nchar(50)
+        //   ,@Direccion nchar(50)
+        //   ,@Telefono1 nchar(15)
+        //   ,@Telefono2 nchar(15)
+        //   ,@Celular nchar(15)
+        //   ,@Fotografia nchar(256)
+        //   ,@Activo bit
+        //   , @Notas nchar(200)
+        public static void CrearVendedor(string FKDepartamento , string FKMunicipio , string FKTipoDocumento , string NroDocumento, string NombrePersona , string Direccion , string Telefono1 , string Telefono2 , string Celular , string Fotografia , bool Activo , string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearVendedor", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@FKDepartamento", SqlDbType.NChar, 10).Value = FKDepartamento;
+                        cmd.Parameters.Add("@fkmunicipio", SqlDbType.NChar, 10).Value = FKMunicipio;
+                        cmd.Parameters.Add("@fktipodocumento", SqlDbType.Int).Value = FKTipoDocumento;
+                        cmd.Parameters.Add("@NroDocumento", SqlDbType.NChar, 50).Value = NroDocumento;
+                        cmd.Parameters.Add("@nombrepersona", SqlDbType.NChar, 50).Value = NombrePersona;
+                        cmd.Parameters.Add("@direccion", SqlDbType.NChar, 50).Value = Direccion;
+                        cmd.Parameters.Add("@telefono1", SqlDbType.NChar, 15).Value = Telefono1;
+                        cmd.Parameters.Add("@telefono2", SqlDbType.NChar, 15).Value = Telefono2;
+                        cmd.Parameters.Add("@celular", SqlDbType.NChar, 15).Value = Celular;
+                        cmd.Parameters.Add("@fotografia", SqlDbType.NChar, 256).Value = Fotografia;
+                        cmd.Parameters.Add("@activo", SqlDbType.Bit).Value = Activo;
+                        cmd.Parameters.Add("@notas", SqlDbType.NChar, 200).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Procesador");
+            }
+        }
+
     }
 }

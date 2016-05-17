@@ -31,6 +31,20 @@
                 </td>
             </tr>
             <tr>
+                <td>Tipo Documento</td>
+                <td>
+                    <asp:DropDownList ID="DDTipoDocumento" runat="server" DataSourceID="SqlDataSource3" DataTextField="TipoDocumento" DataValueField="PKTipoDocumento">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [TipoDocumento], [PKTipoDocumento] FROM [TipoDocumento]"></asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td>Nro Documento:</td>
+                <td>
+                    <asp:TextBox ID="txtNroDocumento" runat="server" MaxLength="50"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
                 <td>Dirección:</td>
                 <td>
                     <asp:TextBox ID="txtDireccion" runat="server" MaxLength="50"></asp:TextBox>
@@ -76,5 +90,11 @@
                 </td>
             </tr>
         </table>
+    </p>
+    <p>
+        <asp:Button ID="BtnCrearVendedor" runat="server" Text="Crear Vendedor" OnClick="BtnCrearVendedor_Click" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
     </p>
 </asp:Content>

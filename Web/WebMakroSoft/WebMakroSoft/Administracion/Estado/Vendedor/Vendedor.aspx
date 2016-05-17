@@ -11,6 +11,7 @@
                 <asp:BoundField DataField="Nombre Departamento" HeaderText="Nombre Departamento" ReadOnly="True" SortExpression="Nombre Departamento" />
                 <asp:BoundField DataField="Nombre Municipio" HeaderText="Nombre Municipio" ReadOnly="True" SortExpression="Nombre Municipio" />
                 <asp:BoundField DataField="Tipo Documento" HeaderText="Tipo Documento" ReadOnly="True" SortExpression="Tipo Documento" />
+                <asp:BoundField DataField="Nro Documento" HeaderText="Nro Documento" ReadOnly="True" SortExpression="Nro Documento" />
                 <asp:BoundField DataField="Nombre Persona" HeaderText="Nombre Persona" ReadOnly="True" SortExpression="Nombre Persona" />
                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" SortExpression="Direccion" />
                 <asp:BoundField DataField="Telefono 1" HeaderText="Telefono 1" ReadOnly="True" SortExpression="Telefono 1" />
