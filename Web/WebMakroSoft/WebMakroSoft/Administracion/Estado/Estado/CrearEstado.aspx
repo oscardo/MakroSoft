@@ -17,7 +17,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="height: 22px">
-                    <asp:TextBox ID="TextBox1" runat="server" MaxLength="190" TextMode="MultiLine" Width="567px"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" TextMode="MultiLine" Width="567px"></asp:TextBox>
                 </td>
             </tr>
             <tr>

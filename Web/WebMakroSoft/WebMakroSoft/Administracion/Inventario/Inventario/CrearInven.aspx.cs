@@ -13,5 +13,7 @@ namespace WebMakroSoft.Administracion.Inventario.Inventario
         {
 
         }
+
+        
     }
 }

@@ -13,13 +13,13 @@ namespace WebMakroSoft.Administracion.Servicios.Mantenimiento {
     public partial class CrearMmto {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DDEquipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DDEquipo;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -31,13 +31,13 @@ namespace WebMakroSoft.Administracion.Servicios.Mantenimiento {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// DDTecnico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList DDTecnico;
         
         /// <summary>
         /// SqlDataSource2 control.
@@ -49,13 +49,13 @@ namespace WebMakroSoft.Administracion.Servicios.Mantenimiento {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// DDEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList DDEstado;
         
         /// <summary>
         /// SqlDataSource3 control.
@@ -67,39 +67,39 @@ namespace WebMakroSoft.Administracion.Servicios.Mantenimiento {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtPlanillaMtto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtPlanillaMtto;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtFecha_Inicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtFecha_Inicio;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaFinal;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtNotas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtNotas;
     }
 }

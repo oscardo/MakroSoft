@@ -7,11 +7,11 @@
             <tr>
                 <td>Nombre Proveedor:</td>
                 <td>
-                    <asp:TextBox ID="TextBox21" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreProveedor" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Nit:</td>
                 <td>
-                    <asp:TextBox ID="TextBox22" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNit" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -35,27 +35,27 @@
             <tr>
                 <td>Teléfono Habitual:</td>
                 <td>
-                    <asp:TextBox ID="TextBox23" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono1" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Teléfono Secundario:</td>
                 <td>
-                    <asp:TextBox ID="TextBox24" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtAuxiliar" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Celular:</td>
                 <td>
-                    <asp:TextBox ID="TextBox25" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtCelular" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Página Web:</td>
                 <td>
-                    <asp:TextBox ID="TextBox26" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtPaginaWeb" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Correo Electrónico:</td>
                 <td>
-                    <asp:TextBox ID="TextBox27" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtCorreoEletronico" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -63,21 +63,21 @@
             <tr>
                 <td>Nombre Contacto 1:</td>
                 <td>
-                    <asp:TextBox ID="TextBox28" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtContacto1" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Nombre Contrato 2:</td>
                 <td>
-                    <asp:TextBox ID="TextBox29" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtContacto2" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Servicio:</td>
                 <td>
-                    <asp:TextBox ID="TextBox30" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtServicio" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Activo:</td>
                 <td>
-                    <asp:RadioButton ID="RadioButton1" runat="server" />
+                    <asp:RadioButton ID="rbActivo" runat="server" />
                 </td>
             </tr>
             <tr>
@@ -88,7 +88,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <asp:TextBox ID="TextBox31" runat="server" MaxLength="50" Width="562px"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" Width="562px" TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>
         </table>

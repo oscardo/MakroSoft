@@ -22,12 +22,12 @@ namespace WebMakroSoft.Administracion.Estado.Estado {
         protected global::System.Web.UI.WebControls.TextBox txtEstado;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtNotas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtNotas;
     }
 }

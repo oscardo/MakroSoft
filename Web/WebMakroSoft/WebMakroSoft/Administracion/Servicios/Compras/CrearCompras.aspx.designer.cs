@@ -58,13 +58,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// DDMunicipio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList DDMunicipio;
         
         /// <summary>
         /// SqlDataSource3 control.
@@ -76,696 +76,687 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
         
         /// <summary>
-        /// TextBox62 control.
+        /// txtNombreCompra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox62;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreCompra;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtFacturaCompra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtFacturaCompra;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtFechaCompra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaCompra;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtGarantia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtGarantia;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtCantidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtGarantiaExt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtGarantiaExt;
         
         /// <summary>
-        /// TextBox6 control.
+        /// FUFoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.FileUpload FUFoto;
         
         /// <summary>
-        /// TextBox52 control.
+        /// txtValorUnidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox52;
+        protected global::System.Web.UI.WebControls.TextBox txtValorUnidad;
         
         /// <summary>
-        /// TextBox53 control.
+        /// txtSubTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox53;
+        protected global::System.Web.UI.WebControls.TextBox txtSubTotal;
         
         /// <summary>
-        /// TextBox54 control.
+        /// txtValorIVA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox54;
+        protected global::System.Web.UI.WebControls.TextBox txtValorIVA;
         
         /// <summary>
-        /// TextBox55 control.
+        /// txtValor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox55;
+        protected global::System.Web.UI.WebControls.TextBox txtValor;
         
         /// <summary>
-        /// TextBox56 control.
+        /// txtCantidadRecibida control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox56;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadRecibida;
         
         /// <summary>
-        /// TextBox57 control.
+        /// txtSaldo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox57;
+        protected global::System.Web.UI.WebControls.TextBox txtSaldo;
         
         /// <summary>
-        /// TextBox58 control.
+        /// txtDescuento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox58;
+        protected global::System.Web.UI.WebControls.TextBox txtDescuento;
         
         /// <summary>
-        /// TextBox59 control.
+        /// txtSubTotal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox59;
+        protected global::System.Web.UI.WebControls.TextBox txtSubTotal1;
         
         /// <summary>
-        /// TextBox60 control.
+        /// txtValorUnidad2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox60;
+        protected global::System.Web.UI.WebControls.TextBox txtValorUnidad2;
         
         /// <summary>
-        /// TextBox61 control.
+        /// txtSubTotal3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox61;
+        protected global::System.Web.UI.WebControls.TextBox txtSubTotal3;
         
         /// <summary>
-        /// TextBox7 control.
+        /// txtIVA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox txtIVA;
         
         /// <summary>
-        /// TextBox8 control.
+        /// txtTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox txtTotal;
         
         /// <summary>
-        /// TextBox9 control.
+        /// txtObservaciones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox txtObservaciones;
         
         /// <summary>
-        /// TextBox10 control.
+        /// rbActivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.RadioButton rbActivo;
         
         /// <summary>
-        /// RadioButton18 control.
+        /// txtNotas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton18;
+        protected global::System.Web.UI.WebControls.TextBox txtNotas;
         
         /// <summary>
-        /// TextBox13 control.
+        /// txtDVDependencia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDependencia;
         
         /// <summary>
-        /// TextBox14 control.
+        /// txtDVContactar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox txtDVContactar;
         
         /// <summary>
-        /// TextBox15 control.
+        /// txtDVFechaEntrada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox txtDVFechaEntrada;
         
         /// <summary>
-        /// TextBox16 control.
+        /// txtDVDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDireccion;
         
         /// <summary>
-        /// TextBox17 control.
+        /// txtDVPiso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox17;
+        protected global::System.Web.UI.WebControls.TextBox txtDVPiso;
         
         /// <summary>
-        /// TextBox18 control.
+        /// txtDVTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox18;
+        protected global::System.Web.UI.WebControls.TextBox txtDVTelefono;
         
         /// <summary>
-        /// TextBox19 control.
+        /// txtDVFechaSalida control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox19;
+        protected global::System.Web.UI.WebControls.TextBox txtDVFechaSalida;
         
         /// <summary>
-        /// TextBox20 control.
+        /// rbDVCPU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox20;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVCPU;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// txtDVCPU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.TextBox txtDVCPU;
         
         /// <summary>
-        /// TextBox21 control.
+        /// rbDVMonitor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox21;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVMonitor;
         
         /// <summary>
-        /// RadioButton3 control.
+        /// txtDVMonitor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
+        protected global::System.Web.UI.WebControls.TextBox txtDVMonitor;
         
         /// <summary>
-        /// TextBox22 control.
+        /// rbDVImpresora control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox22;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVImpresora;
         
         /// <summary>
-        /// RadioButton4 control.
+        /// txtDVImpresora control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton4;
+        protected global::System.Web.UI.WebControls.TextBox txtDVImpresora;
         
         /// <summary>
-        /// TextBox23 control.
+        /// rbDVDVD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox23;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVDVD;
         
         /// <summary>
-        /// RadioButton5 control.
+        /// txtDVDVD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton5;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDVD;
         
         /// <summary>
-        /// TextBox24 control.
+        /// rbDVDD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox24;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVDD;
         
         /// <summary>
-        /// RadioButton6 control.
+        /// txtDVDD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton6;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDD;
         
         /// <summary>
-        /// TextBox25 control.
+        /// rbDVTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox25;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVTeclado;
         
         /// <summary>
-        /// RadioButton7 control.
+        /// txtDVTeclado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton7;
+        protected global::System.Web.UI.WebControls.TextBox txtDVTeclado;
         
         /// <summary>
-        /// TextBox26 control.
+        /// rbDVMouse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox26;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVMouse;
         
         /// <summary>
-        /// RadioButton8 control.
+        /// txtDVMouse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton8;
+        protected global::System.Web.UI.WebControls.TextBox txtDVMouse;
         
         /// <summary>
-        /// TextBox27 control.
+        /// rbDVScanner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox27;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVScanner;
         
         /// <summary>
-        /// RadioButton9 control.
+        /// txtDVScanner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton9;
+        protected global::System.Web.UI.WebControls.TextBox txtDVScanner;
         
         /// <summary>
-        /// TextBox28 control.
+        /// rbDVOffice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox28;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVOffice;
         
         /// <summary>
-        /// RadioButton10 control.
+        /// txtDVOffice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton10;
+        protected global::System.Web.UI.WebControls.TextBox txtDVOffice;
         
         /// <summary>
-        /// TextBox29 control.
+        /// txtDVSerialOffice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox29;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSerialOffice;
         
         /// <summary>
-        /// TextBox30 control.
+        /// rbDVMemoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox30;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVMemoria;
         
         /// <summary>
-        /// RadioButton11 control.
+        /// txtDVMemoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton11;
+        protected global::System.Web.UI.WebControls.TextBox txtDVMemoria;
         
         /// <summary>
-        /// TextBox31 control.
+        /// rbDVSO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox31;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVSO;
         
         /// <summary>
-        /// RadioButton12 control.
+        /// txtDVSO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton12;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSO;
         
         /// <summary>
-        /// TextBox32 control.
+        /// txtDVSerialSO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox32;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSerialSO;
         
         /// <summary>
-        /// TextBox33 control.
+        /// rbDVCorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox33;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVCorreo;
         
         /// <summary>
-        /// RadioButton13 control.
+        /// txtDVCorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton13;
+        protected global::System.Web.UI.WebControls.TextBox txtDVCorreo;
         
         /// <summary>
-        /// TextBox34 control.
+        /// rbDVAntivirus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox34;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVAntivirus;
         
         /// <summary>
-        /// RadioButton14 control.
+        /// txtDVAntivirus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton14;
+        protected global::System.Web.UI.WebControls.TextBox txtDVAntivirus;
         
         /// <summary>
-        /// TextBox35 control.
+        /// txtDVSerialAntivirus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox35;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSerialAntivirus;
         
         /// <summary>
-        /// TextBox36 control.
+        /// rbDVConexionRed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox36;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVConexionRed;
         
         /// <summary>
-        /// RadioButton15 control.
+        /// txtDVOtros control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton15;
+        protected global::System.Web.UI.WebControls.TextBox txtDVOtros;
         
         /// <summary>
-        /// TextBox37 control.
+        /// txtDVOtro2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox37;
+        protected global::System.Web.UI.WebControls.TextBox txtDVOtro2;
         
         /// <summary>
-        /// TextBox38 control.
+        /// txtDVNombreReporta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox38;
+        protected global::System.Web.UI.WebControls.TextBox txtDVNombreReporta;
         
         /// <summary>
-        /// TextBox39 control.
+        /// txtDVDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox39;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDescripcion;
         
         /// <summary>
-        /// TextBox40 control.
+        /// txtDVDescripcionDet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox40;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDescripcionDet;
         
         /// <summary>
-        /// TextBox41 control.
+        /// rbDVPreventivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox41;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVPreventivo;
         
         /// <summary>
-        /// RadioButton16 control.
+        /// rbDVCorrectivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton16;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVCorrectivo;
         
         /// <summary>
-        /// RadioButton17 control.
+        /// txtDVObservaciones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton17;
+        protected global::System.Web.UI.WebControls.TextBox txtDVObservaciones;
         
         /// <summary>
-        /// TextBox42 control.
+        /// txtDVValorUnidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox42;
+        protected global::System.Web.UI.WebControls.TextBox txtDVValorUnidad;
         
         /// <summary>
-        /// TextBox43 control.
+        /// txtDVIVAUnidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox43;
+        protected global::System.Web.UI.WebControls.TextBox txtDVIVAUnidad;
         
         /// <summary>
-        /// TextBox44 control.
+        /// txtDVRetencionUnidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox44;
+        protected global::System.Web.UI.WebControls.TextBox txtDVRetencionUnidad;
         
         /// <summary>
-        /// TextBox45 control.
+        /// txtDVValorTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox45;
+        protected global::System.Web.UI.WebControls.TextBox txtDVValorTotal;
         
         /// <summary>
-        /// TextBox46 control.
+        /// txtDVIVATotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox46;
+        protected global::System.Web.UI.WebControls.TextBox txtDVIVATotal;
         
         /// <summary>
-        /// TextBox47 control.
+        /// txtDVIVATOTAL2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox47;
+        protected global::System.Web.UI.WebControls.TextBox txtDVIVATOTAL2;
         
         /// <summary>
-        /// TextBox48 control.
+        /// txtDVSubtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox48;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSubtotal;
         
         /// <summary>
-        /// TextBox49 control.
+        /// txtDVRetencionTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox49;
+        protected global::System.Web.UI.WebControls.TextBox txtDVRetencionTotal;
         
         /// <summary>
-        /// TextBox50 control.
+        /// txtDVNotas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox50;
-        
-        /// <summary>
-        /// TextBox51 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox51;
+        protected global::System.Web.UI.WebControls.TextBox txtDVNotas;
     }
 }

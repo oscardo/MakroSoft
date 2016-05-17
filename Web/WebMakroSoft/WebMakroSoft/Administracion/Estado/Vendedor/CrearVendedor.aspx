@@ -57,7 +57,7 @@
             <tr>
                 <td>Fotografia:</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" MaxLength="256"></asp:TextBox>
+                    <asp:FileUpload ID="FUFoto" runat="server" />
                 </td>
             </tr>
             <tr>
@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" Height="46px" TextMode="MultiLine" Width="359px"></asp:TextBox>
                 </td>
             </tr>
         </table>

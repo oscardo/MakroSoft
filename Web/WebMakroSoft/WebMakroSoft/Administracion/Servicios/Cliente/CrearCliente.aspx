@@ -8,11 +8,11 @@
             <tr>
                 <td>Nombre Cliente:</td>
                 <td>
-                    <asp:TextBox ID="TextBox22" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtCliente" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>NIT o Documento:</td>
                 <td>
-                    <asp:TextBox ID="TextBox23" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtDocumento" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -24,7 +24,7 @@
                 </td>
                 <td>Municipio:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="NombreMunicipio" DataValueField="PKMunicipio">
+                    <asp:DropDownList ID="DDMunicipio" runat="server" DataSourceID="SqlDataSource2" DataTextField="NombreMunicipio" DataValueField="PKMunicipio">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [NombreMunicipio], [PKMunicipio] FROM [Municipio] WHERE ([FKDepartamento] = @FKDepartamento)">
                         <SelectParameters>
@@ -36,45 +36,47 @@
             <tr>
                 <td>Teléfono Habitual (*): </td>
                 <td>
-                    <asp:TextBox ID="TextBox24" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono1" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
                 <td>Teléfono Auxiliar:</td>
                 <td>
-                    <asp:TextBox ID="TextBox25" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono2" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Celular:</td>
                 <td>
-                    <asp:TextBox ID="TextBox26" runat="server" MaxLength="15"></asp:TextBox>
+                    <asp:TextBox ID="txtCelular" runat="server" MaxLength="15"></asp:TextBox>
                 </td>
                 <td>Dirección:</td>
                 <td>
-                    <asp:TextBox ID="TextBox27" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtDireccion" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Nombre Representante Legal:</td>
                 <td>
-                    <asp:TextBox ID="TextBox28" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtRepLegal" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td>Fecha:</td>
                 <td>
-                    <asp:TextBox ID="TextBox29" runat="server" MaxLength="50" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="txtFecha" runat="server" MaxLength="50" TextMode="Date"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Correo Electrónico:</td>
                 <td>
-                    <asp:TextBox ID="TextBox30" runat="server" MaxLength="50" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="txtCorreo" runat="server" MaxLength="50" TextMode="Email"></asp:TextBox>
                 </td>
                 <td>Página web:</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="txtPaginaweb" runat="server" MaxLength="50" TextMode="Email"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td>Activo:</td>
                 <td>
-                    <asp:RadioButton ID="RadioButton1" runat="server" />
+                    <asp:RadioButton ID="rbActivo" runat="server" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -87,7 +89,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <asp:TextBox ID="TextBox31" runat="server" MaxLength="190" TextMode="MultiLine" Width="750px"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" TextMode="MultiLine" Width="750px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
