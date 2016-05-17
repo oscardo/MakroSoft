@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using WebMakroSoft.Models;
+using WebMakroSoft.Codigo;
 
 namespace WebMakroSoft.Account
 {
@@ -36,11 +37,8 @@ namespace WebMakroSoft.Account
                     switch (VUsuario.FKRol)
                     {
                         case 1:
+                            HttpCookie Cookie = CookieMacrosoft.CrearCookie(VUsuario);
                             Response.Redirect(String.Format("/Administracion/Default.aspx"));
-                            //Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
-                            //                                Request.QueryString["ReturnUrl"],
-                            //                                RememberMe.Checked),
-                            //                  true);
                             break;
                         default:
                             FailureText.Text = "Error al ingresar";
