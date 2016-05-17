@@ -34,19 +34,8 @@
             </td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td>
+        </table>
                 <asp:Label ID="lblError" runat="server"></asp:Label>
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
     <br />
 
 </asp:Content>

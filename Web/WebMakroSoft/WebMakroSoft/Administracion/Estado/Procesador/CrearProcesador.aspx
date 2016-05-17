@@ -22,6 +22,9 @@
             </tr>
         </table>
     </p>
+    <asp:Button ID="BtnCrearProcesador" runat="server" OnClick="BtnCrearProcesador_Click" Text="Crear Procesador" />
+    <br />
+    <asp:Label ID="lblError" runat="server"></asp:Label>
     <br />
 
 </asp:Content>

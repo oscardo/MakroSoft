@@ -42,6 +42,9 @@ namespace WebMakroSoft.Codigo
             return Valor;
         }
 
+
+
+
         /// <summary>
         /// crea Auditoria 
         /// </summary>
@@ -70,6 +73,181 @@ namespace WebMakroSoft.Codigo
             catch (Exception e)
             {
                 Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Auditoria");
+            }
+        }
+
+        /// <summary>
+        /// Creacion de Estado
+        /// </summary>
+        /// <param name="Estado">Nombre del estado</param>
+        /// <param name="Notas">Parametro</param>
+        public static void CrearEstado(string Estado, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearEstado", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Estado", SqlDbType.Text).Value = Estado;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Estado");
+            }
+        }
+
+        /// <summary>
+        /// crea fabricante
+        /// </summary>
+        /// <param name="Fabricante"></param>
+        /// <param name="Notas"></param>
+        public static void CrearFabricante(string Fabricante, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearFabricante", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Fabricante", SqlDbType.Text).Value = Fabricante;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Fabricante");
+            }
+        }
+        
+        /// <summary>
+        /// Procesador
+        /// </summary>
+        /// <param name="NombreProcesador">Nombre del procesador</param>
+        /// <param name="Notas">notas útiles</param>
+        public static void CrearProcesador(string NombreProcesador, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearProcesador", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@NombreProcesador", SqlDbType.Text).Value = NombreProcesador;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Procesador");
+            }
+        }
+
+        /// <summary>
+        /// Crea Técnico
+        /// </summary>
+        /// <param name="NombreTecnico">Nombre Tecnico</param>
+        /// <param name="Activo">Activo o no</param>
+        /// <param name="Notas">útiles</param>
+        public static void CrearTecnico(string NombreTecnico,bool Activo, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearTecnico", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Nombre", SqlDbType.NChar, 50).Value = NombreTecnico;
+                        cmd.Parameters.Add("@Activo", SqlDbType.Bit).Value = Activo;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Técnico");
+            }
+        }
+
+        /// <summary>
+        /// Crear Tipo
+        /// </summary>
+        /// <param name="NombreTipo">Definido</param>
+        /// <param name="Notas">útiles</param>
+        public static void CrearTipo(string NombreTipo, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearTipo", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Nombre", SqlDbType.NChar, 50).Value = NombreTipo;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Tipo");
+            }
+        }
+
+
+        /// <summary>
+        /// Crear Transaccion
+        /// </summary>
+        /// <param name="Equipo">Nro Equipo</param>
+        /// <param name="Remision">Nro Remision</param>
+        /// <param name="Ventas">Nro Venta</param>
+        /// <param name="Notas">útiles</param>
+        public static void CrearTransaccion(string Equipo, string Remision, string Ventas, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearTransaccion", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@FKEquipo", SqlDbType.Int).Value = Equipo;
+                        cmd.Parameters.Add("@FKRemision", SqlDbType.Int).Value = Remision;
+                        cmd.Parameters.Add("@FKVentas", SqlDbType.Int).Value = Ventas;
+                        cmd.Parameters.Add("@Notas", SqlDbType.NChar, 200).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "CrearTransaccion");
             }
         }
 

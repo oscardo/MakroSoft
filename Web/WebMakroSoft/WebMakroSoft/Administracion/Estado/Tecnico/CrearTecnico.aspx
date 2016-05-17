@@ -27,4 +27,12 @@
             </tr>
         </table>
     </p>
+    <p>
+        <asp:Button ID="BtnCrearTecnico" runat="server" OnClick="BtnCrearTecnico_Click" Text="Crear Técnico" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </p>
+    <p>
+        &nbsp;</p>
 </asp:Content>

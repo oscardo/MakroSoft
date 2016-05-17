@@ -21,4 +21,10 @@
             </tr>
         </table>
     </p>
+    <p>
+        <asp:Button ID="BtnCrear" runat="server" OnClick="BtnCrear_Click" Text="Crear Tipo" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </p>
 </asp:Content>

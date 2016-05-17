@@ -18,7 +18,10 @@ namespace WebMakroSoft.Administracion.Estado.Estado
         {
             if (BD.ValidarInformacion("SPConsultaEstado_Valida", "@Estado", this.txtEstado.Text.ToString()) == false)
             {
-
+                BD.CrearEstado(this.txtEstado.Text.ToString(), this.txtNotas.Text.ToString());
+                this.txtEstado.Text = string.Empty;
+                this.txtNotas.Text = string.Empty;
+                lblError.Text = "La referencia se ha creado satisfactoriamente";
             }
             else {
                 lblError.Text = "La Referencia ya existe";

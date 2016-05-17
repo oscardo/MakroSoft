@@ -41,4 +41,9 @@
         </table>
     </p>
 
+    <br />
+    <asp:Button ID="BtnCrearTransaccion" runat="server" OnClick="BtnCrearTransaccion_Click" Text="Crear Transacción" />
+    <br />
+    <asp:Label ID="lblError" runat="server"></asp:Label>
+
 </asp:Content>

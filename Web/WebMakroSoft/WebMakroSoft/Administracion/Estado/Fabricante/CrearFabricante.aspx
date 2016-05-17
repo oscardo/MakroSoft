@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interno.Master" AutoEventWireup="true" CodeBehind="CrearFabricante.aspx.cs" Inherits="WebMakroSoft.Administracion.Estado.Fabricante.CrearFabricante" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Interno.Master" AutoEventWireup="true" CodeBehind="CrearFabricante.aspx.cs" Inherits="WebMakroSoft.Administracion.Estado.Fabricante.CrearFabricante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <p>
@@ -25,8 +26,10 @@
     <p>
         &nbsp;</p>
     <p>
-        &nbsp;</p>
+        <asp:Button ID="BtnCrear" runat="server" OnClick="BtnCrear_Click" Text="Crear Fabricante" />
+    </p>
     <p>
-        &nbsp;</p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </p>
 
 </asp:Content>
