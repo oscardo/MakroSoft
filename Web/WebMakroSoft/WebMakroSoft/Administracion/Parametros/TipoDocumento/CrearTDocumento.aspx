@@ -8,7 +8,7 @@
             <tr>
                 <td>Tipo de Documento:</td>
                 <td>
-                    <asp:TextBox ID="TextBox22" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtTipoDocumento" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -17,10 +17,16 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:TextBox ID="TextBox21" runat="server" MaxLength="190" TextMode="MultiLine" Width="390px"></asp:TextBox>
+                    <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" TextMode="MultiLine" Width="390px"></asp:TextBox>
                 </td>
             </tr>
         </table>
+    </p>
+    <p>
+        <asp:Button ID="BtnCrearDocumento" runat="server" OnClick="BtnCrearDocumento_Click" Text="Crear Documento" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
     </p>
 
 </asp:Content>

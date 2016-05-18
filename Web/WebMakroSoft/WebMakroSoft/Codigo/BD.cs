@@ -218,6 +218,81 @@ namespace WebMakroSoft.Codigo
             }
         }
 
+        /// <summary>
+        /// Crear Rol
+        /// </summary>
+        /// <param name="Rol">Rol</param>
+        /// <param name="Activo">Activo</param>
+        /// <param name="Notas">Notas</param>
+        public static void CrearRol(string Rol,bool Activo, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearRoles", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Rol", SqlDbType.NChar, 50).Value = Rol;
+                        cmd.Parameters.Add("@Activo", SqlDbType.Bit).Value = Activo;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Tipo");
+            }
+        }
+
+
+           
+        public static void CrearUsuario(
+            string FKDepartamento 
+           ,string FKMunicipio 
+           ,string FKRol 
+           ,string NombreUsuario 
+           ,string Password 
+           ,string Telefono1 
+           ,string Celular 
+           ,string Ubicacion 
+           ,bool Activo 
+           ,string CorreoElectronico 
+           ,string Notas 
+            )
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearUsuario", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@FKDepartamento", SqlDbType.NChar, 10).Value = FKDepartamento;
+                        cmd.Parameters.Add("@FKMunicipio", SqlDbType.NChar, 10).Value = FKMunicipio;
+                        cmd.Parameters.Add("@FKRol", SqlDbType.Int).Value = FKRol;
+                        cmd.Parameters.Add("@NombreUsuario", SqlDbType.NChar, 20).Value = NombreUsuario;
+                        cmd.Parameters.Add("@Password", SqlDbType.NChar, 15).Value = Password;
+                        cmd.Parameters.Add("@Telefono1", SqlDbType.NChar, 15).Value = Telefono1;
+                        cmd.Parameters.Add("@Celular", SqlDbType.NChar, 15).Value = Celular;
+                        cmd.Parameters.Add("@Ubicacion", SqlDbType.NChar, 50).Value = Ubicacion;
+                        cmd.Parameters.Add("@Activo", SqlDbType.Bit).Value = Activo;
+                        cmd.Parameters.Add("@CorreoElectronico", SqlDbType.NChar, 50).Value = CorreoElectronico;
+                        cmd.Parameters.Add("@Notas", SqlDbType.NChar, 200).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Crear Usuario");
+            }
+        }
 
         /// <summary>
         /// Crear Transaccion
@@ -252,17 +327,21 @@ namespace WebMakroSoft.Codigo
         }
 
 
-        //   @FKDepartamento nchar(10)
-        //   ,@FKMunicipio nchar(10)
-        //   ,@FKTipoDocumento int
-        //   ,@NombrePersona nchar(50)
-        //   ,@Direccion nchar(50)
-        //   ,@Telefono1 nchar(15)
-        //   ,@Telefono2 nchar(15)
-        //   ,@Celular nchar(15)
-        //   ,@Fotografia nchar(256)
-        //   ,@Activo bit
-        //   , @Notas nchar(200)
+        /// <summary>
+        /// Crear Vendedor
+        /// </summary>
+        /// <param name="FKDepartamento">Departamento</param>
+        /// <param name="FKMunicipio">Municipio</param>
+        /// <param name="FKTipoDocumento">Tipo Documento</param>
+        /// <param name="NroDocumento">Nro Documento</param>
+        /// <param name="NombrePersona">Nombre Persona</param>
+        /// <param name="Direccion">Direccion</param>
+        /// <param name="Telefono1">Telefono</param>
+        /// <param name="Telefono2">Telefono</param>
+        /// <param name="Celular">Celular</param>
+        /// <param name="Fotografia">Fotografia</param>
+        /// <param name="Activo">Activo</param>
+        /// <param name="Notas">Notas</param>
         public static void CrearVendedor(string FKDepartamento , string FKMunicipio , string FKTipoDocumento , string NroDocumento, string NombrePersona , string Direccion , string Telefono1 , string Telefono2 , string Celular , string Fotografia , bool Activo , string Notas)
         {
             try
@@ -293,6 +372,156 @@ namespace WebMakroSoft.Codigo
             catch (Exception e)
             {
                 Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Procesador");
+            }
+        }
+
+        /// <summary>
+        /// Crear Bodega
+        /// </summary>
+        /// <param name="FKDepartamento">Departamento</param>
+        /// <param name="FKMunicipio">Municipio</param>
+        /// <param name="NombreBodega">Nombre Bodega</param>
+        /// <param name="Direccion">Direccion</param>
+        /// <param name="Responsable1">Responsable1</param>
+        /// <param name="Responsable2">Responsable2</param>
+        /// <param name="Telefono1">Telefono1</param>
+        /// <param name="Telefono2">Telefono2</param>
+        /// <param name="Celular">Celular</param>
+        /// <param name="Notas">Notas</param>
+        public static void CrearBodega(
+             string FKDepartamento 
+           , string FKMunicipio 
+           , string NombreBodega 
+           , string Direccion 
+           , string Responsable1 
+           , string Responsable2 
+           , string Telefono1 
+           , string Telefono2 
+           , string Celular 
+           , string Notas 
+            )
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearBodega", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@FKDepartamento", SqlDbType.NChar, 10).Value = FKDepartamento;
+                        cmd.Parameters.Add("@FKMunicipio", SqlDbType.NChar,10).Value = FKMunicipio;
+                        cmd.Parameters.Add("@NombreBodega", SqlDbType.NChar,50).Value = NombreBodega;
+                        cmd.Parameters.Add("@Direccion", SqlDbType.NChar,50).Value = Direccion;
+                        cmd.Parameters.Add("@Responsable1", SqlDbType.NChar,50).Value = Responsable1;
+                        cmd.Parameters.Add("@Responsable2", SqlDbType.NChar,50).Value = Responsable2;
+                        cmd.Parameters.Add("@Telefono1", SqlDbType.NChar,15).Value = Telefono1;
+                        cmd.Parameters.Add("@Telefono2", SqlDbType.NChar,15).Value = Telefono2;
+                        cmd.Parameters.Add("@Celular", SqlDbType.NChar,15).Value = Celular;
+                        cmd.Parameters.Add("@Notas", SqlDbType.NChar,200).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "CrearBodega");
+            }
+        }
+
+        /// <summary>
+        /// Crear Proveedor
+        /// </summary>
+        /// <param name="FKDepartamento">Departamento</param>
+        /// <param name="FKMunicipio">Municipio</param>
+        /// <param name="NombreProveedor">Nombre Proveedor</param>
+        /// <param name="Nit">nit</param>
+        /// <param name="Telefono1">Telefono 1</param>
+        /// <param name="Telefono2">Telefono 2</param>
+        /// <param name="Celular">Celular</param>
+        /// <param name="NombreContacto">Nombre Contacto</param>
+        /// <param name="NombreContacto2">Nombre Contacto</param>
+        /// <param name="Servicios">Servicios</param>
+        /// <param name="CorreoElectronico">Correo Electronico</param>
+        /// <param name="Paginaweb">Pagina web</param>
+        /// <param name="Activo">Activo</param>
+        /// <param name="Notas">Notas</param>
+        public static void CrearProveedor(
+             string FKDepartamento 
+           , string FKMunicipio 
+           , string NombreProveedor 
+           , string Nit 
+           , string Telefono1 
+           , string Telefono2 
+           , string Celular 
+           , string NombreContacto 
+           , string NombreContacto2 
+           , string Servicios 
+           , string CorreoElectronico 
+           , string Paginaweb 
+           , bool Activo 
+           , string Notas 
+            )
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearProveedor", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@FKDepartamento", SqlDbType.NChar, 10).Value = FKDepartamento;
+                        cmd.Parameters.Add("@FKMunicipio", SqlDbType.NChar, 10).Value = FKMunicipio;
+                        cmd.Parameters.Add("@NombreProveedor", SqlDbType.NChar, 50).Value = NombreProveedor;
+                        cmd.Parameters.Add("@Nit", SqlDbType.NChar, 15).Value = Nit;
+                        cmd.Parameters.Add("@Telefono1", SqlDbType.NChar, 15).Value = Telefono1;
+                        cmd.Parameters.Add("@Telefono2", SqlDbType.NChar, 15).Value = Telefono2;
+                        cmd.Parameters.Add("@Celular", SqlDbType.NChar, 15).Value = Celular;
+                        cmd.Parameters.Add("@NombreContacto", SqlDbType.NChar, 50).Value = NombreContacto;
+                        cmd.Parameters.Add("@NombreContacto2", SqlDbType.NChar, 50).Value = NombreContacto2;
+                        cmd.Parameters.Add("@Servicios", SqlDbType.NChar, 200).Value = Servicios;
+                        cmd.Parameters.Add("@CorreoElectronico", SqlDbType.NChar, 50).Value = CorreoElectronico;
+                        cmd.Parameters.Add("@Paginaweb", SqlDbType.NChar, 50).Value = Paginaweb;
+                        cmd.Parameters.Add("@Activo", SqlDbType.Bit).Value = Activo;
+                        cmd.Parameters.Add("@Notas", SqlDbType.NChar, 200).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "CrearProveedor");
+            }
+        }
+
+        /// <summary>
+        /// Crear Tipo Documento
+        /// </summary>
+        /// <param name="TipoDocumento">Tipo Documento</param>
+        /// <param name="Notas">Notas</param>
+        public static void CrearTipoDocumento(string TipoDocumento, string Notas)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SPCrearTipoDocumento", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@TipoDocumento", SqlDbType.NChar, 50).Value = TipoDocumento;
+                        cmd.Parameters.Add("@Notas", SqlDbType.Text).Value = Notas;
+                        conn.Open();
+                        int result = (int)cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Crear TipoDocumento");
             }
         }
 

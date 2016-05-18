@@ -9,7 +9,7 @@
             <tr>
                 <td>Nombre del Bodega:</td>
                 <td>
-                    <asp:TextBox ID="txtVendedor" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreBodega" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -78,5 +78,9 @@
                 </td>
             </tr>
         </table>
+    <asp:Button ID="BtnCrearBodega" runat="server" OnClick="BtnCrearBodega_Click" Text="Crear Bodega" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
     </p>
 </asp:Content>

@@ -13,13 +13,13 @@ namespace WebMakroSoft.Administracion.Inventario.Bodega {
     public partial class CrearBodega {
         
         /// <summary>
-        /// txtVendedor control.
+        /// txtNombreBodega control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVendedor;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreBodega;
         
         /// <summary>
         /// DDDepartamento control.
@@ -119,5 +119,23 @@ namespace WebMakroSoft.Administracion.Inventario.Bodega {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNotas;
+        
+        /// <summary>
+        /// BtnCrearBodega control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCrearBodega;
+        
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

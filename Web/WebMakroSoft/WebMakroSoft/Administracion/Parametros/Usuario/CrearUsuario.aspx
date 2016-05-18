@@ -35,7 +35,10 @@
                 <td>
                     <asp:DropDownList ID="DDMunicipio" runat="server" DataSourceID="SqlDataSource2" DataTextField="NombreMunicipio" DataValueField="PKMunicipio">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [PKMunicipio], [NombreMunicipio] FROM [Municipio]">
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [PKMunicipio], [NombreMunicipio] FROM [Municipio] WHERE ([FKDepartamento] = @FKDepartamento)">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="DDDepartamento" DefaultValue="01" Name="FKDepartamento" PropertyName="SelectedValue" Type="String" />
+                        </SelectParameters>
                     </asp:SqlDataSource>
                 </td>
             </tr>
@@ -111,7 +114,7 @@
                     <br />
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtRepiteClave" ControlToValidate="txtClave" Display="Dynamic" ErrorMessage="Error en la Clave"></asp:CompareValidator>
                     <br />
-                    <asp:Label ID="Label11" runat="server"></asp:Label>
+                    <asp:Label ID="lblError" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>
