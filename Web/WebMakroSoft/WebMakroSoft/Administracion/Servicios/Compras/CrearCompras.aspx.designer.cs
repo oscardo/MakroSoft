@@ -22,13 +22,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.Wizard wzInventario;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DDProveedor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList DDProveedor;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -272,6 +272,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNotas;
+        
+        /// <summary>
+        /// BtnCrearCompra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCrearCompra;
+        
+        /// <summary>
+        /// lblErrorCompra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorCompra;
         
         /// <summary>
         /// txtDVDependencia control.

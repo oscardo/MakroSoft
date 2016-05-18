@@ -15,7 +15,7 @@
                         <tr>
                             <td style="height: 47px">Proveedor:</td>
                             <td style="height: 47px">
-                                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreProveedor" DataValueField="PKProveedor">
+                                <asp:DropDownList ID="DDProveedor" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreProveedor" DataValueField="PKProveedor">
                                 </asp:DropDownList>
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [NombreProveedor], [PKProveedor] FROM [Proveedor]"></asp:SqlDataSource>
                             </td>
@@ -148,8 +148,8 @@
                         </tr>
                         <tr>
                             <td style="height: 13px">
-                            </td>
-                            <td style="height: 13px">Activo:<asp:RadioButton ID="rbActivo" runat="server" />
+                                Activo:</td>
+                            <td style="height: 13px"><asp:RadioButton ID="rbActivo" runat="server" />
                             </td>
                             <td style="height: 13px; ">&nbsp;</td>
                             <td style="height: 13px">
@@ -167,6 +167,10 @@
                             </td>
                         </tr>
                     </table>
+                    <br />
+                    <asp:Button ID="BtnCrearCompra" runat="server" OnClick="BtnCrearCompra_Click" Text="Crear Compra" />
+                    <br />
+                    <asp:Label ID="lblErrorCompra" runat="server"></asp:Label>
                 </asp:WizardStep>
                 <asp:WizardStep runat="server" title="Referencia">
                     
@@ -180,6 +184,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVContactar" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Fecha Entrada:</td>
@@ -190,6 +198,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVDireccion" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Piso:</td>
@@ -200,6 +212,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVTelefono" runat="server" MaxLength="15"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Fecha Salida:</td>
@@ -207,6 +223,10 @@
                                 <asp:TextBox ID="txtDVFechaSalida" runat="server" MaxLength="50" TextMode="Date"></asp:TextBox>
                             </td>
                             <td style="width: 90px">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
@@ -218,6 +238,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVCPU" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>Serie:</td>
+                            <td>[Serie]</td>
+                            <td>Placa</td>
+                            <td>[Placa]</td>
                         </tr>
                         <tr>
                             <td>Monitor</td>
@@ -228,6 +252,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVMonitor" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Impresora:</td>
@@ -238,6 +266,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVImpresora" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>DVD</td>
@@ -248,6 +280,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVDVD" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Disco Duro:</td>
@@ -258,6 +294,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVDD" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Teclado:</td>
@@ -268,6 +308,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVTeclado" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Mouse:</td>
@@ -278,6 +322,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVMouse" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Scanner:</td>
@@ -288,6 +336,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVScanner" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 13px">Office:</td>
@@ -297,6 +349,10 @@
                             <td style="height: 13px">
                                 <asp:TextBox ID="txtDVOffice" runat="server" MaxLength="50" ></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Serial Office:</td>
@@ -304,6 +360,10 @@
                                 <asp:TextBox ID="txtDVSerialOffice" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
                             <td style="width: 90px">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
@@ -315,6 +375,10 @@
                             <td style="height: 13px">
                                 <asp:TextBox ID="txtDVMemoria" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Sistema Operativo:</td>
@@ -325,6 +389,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVSO" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Serial SO:</td>
@@ -332,6 +400,10 @@
                                 <asp:TextBox ID="txtDVSerialSO" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
                             <td style="width: 90px">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
@@ -343,6 +415,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVCorreo" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Antivirus:</td>
@@ -353,6 +429,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVAntivirus" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Serial Antivirus:</td>
@@ -361,6 +441,10 @@
                             </td>
                             <td style="width: 90px">&nbsp;</td>
                             <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Conexión de Red</td>
@@ -368,6 +452,10 @@
                                 <asp:RadioButton ID="rbDVConexionRed" runat="server" />
                             </td>
                             <td style="width: 90px">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
@@ -379,6 +467,10 @@
                             <td style="height: 13px">
                                 <asp:TextBox ID="txtDVOtro2" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Nombre Reporta:</td>
@@ -389,6 +481,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVDescripcion" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 18px">Descripción Detallada:</td>
@@ -397,6 +493,10 @@
                             </td>
                             <td style="width: 90px; height: 18px;"></td>
                             <td style="height: 18px"></td>
+                            <td style="height: 18px">&nbsp;</td>
+                            <td style="height: 18px">&nbsp;</td>
+                            <td style="height: 18px">&nbsp;</td>
+                            <td style="height: 18px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Preventivo:</td>
@@ -407,6 +507,10 @@
                             <td>
                                 <asp:RadioButton ID="rbDVCorrectivo" runat="server" />
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 13px">Observaciones:</td>
@@ -415,6 +519,10 @@
                             </td>
                             <td style="height: 13px; width: 90px;"></td>
                             <td style="height: 13px"></td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 13px">Valor Unidad:</td>
@@ -425,6 +533,10 @@
                             <td style="height: 13px">
                                 <asp:TextBox ID="txtDVIVAUnidad" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 13px">Retención Unidad:</td>
@@ -435,6 +547,10 @@
                             <td style="height: 13px">
                                 <asp:TextBox ID="txtDVValorTotal" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>IVA Total:</td>
@@ -445,6 +561,10 @@
                             <td>
                                 <asp:TextBox ID="txtDVIVATOTAL2" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Sibtotal Total:</td>
@@ -455,22 +575,38 @@
                             <td>
                                 <asp:TextBox ID="txtDVRetencionTotal" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Notas:</td>
                             <td>&nbsp;</td>
                             <td style="width: 90px">&nbsp;</td>
                             <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td style="height: 13px" colspan="4">
                                 <asp:TextBox ID="txtDVNotas" runat="server" MaxLength="190" Width="375px"></asp:TextBox>
                             </td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px">&nbsp;</td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                             <td style="width: 90px">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                     </table>

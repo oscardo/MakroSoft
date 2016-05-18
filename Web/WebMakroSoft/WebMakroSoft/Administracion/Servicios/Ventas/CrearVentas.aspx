@@ -32,11 +32,11 @@
             <tr>
                 <td style="height: 22px">Cedula:</td>
                 <td style="height: 22px">
-                    <asp:TextBox ID="txtNumero" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtDocumento" runat="server" MaxLength="50"></asp:TextBox>
                 </td>
                 <td style="height: 22px">Tipo de Documento:</td>
                 <td style="height: 22px">
-                    <asp:DropDownList ID="DDTipo" runat="server" DataSourceID="SqlDataSource3" DataTextField="TipoDocumento" DataValueField="PKTipoDocumento">
+                    <asp:DropDownList ID="DDTipoDocumento" runat="server" DataSourceID="SqlDataSource3" DataTextField="TipoDocumento" DataValueField="PKTipoDocumento">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [TipoDocumento], [PKTipoDocumento] FROM [TipoDocumento]"></asp:SqlDataSource>
                 </td>
@@ -73,27 +73,10 @@
         </table>
     </p>
 
-    <br />
-    <table style="width:100%;">
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-                <asp:Button ID="Button1" runat="server" Text="Crear XXXX" />
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>
+                <asp:Button ID="btnVentas" runat="server" Text="Crear Ventas" OnClick="btnVentas_Click" />
+            <br />
                 <asp:Label ID="lblError" runat="server"></asp:Label>
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
 
+    <br />
+    
 </asp:Content>

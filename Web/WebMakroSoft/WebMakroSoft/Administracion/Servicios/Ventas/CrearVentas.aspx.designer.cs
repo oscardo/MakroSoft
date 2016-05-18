@@ -67,22 +67,22 @@ namespace WebMakroSoft.Administracion.Servicios.Ventas {
         protected global::System.Web.UI.WebControls.TextBox txtNit;
         
         /// <summary>
-        /// txtNumero control.
+        /// txtDocumento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumero;
+        protected global::System.Web.UI.WebControls.TextBox txtDocumento;
         
         /// <summary>
-        /// DDTipo control.
+        /// DDTipoDocumento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDTipo;
+        protected global::System.Web.UI.WebControls.DropDownList DDTipoDocumento;
         
         /// <summary>
         /// SqlDataSource3 control.
@@ -130,13 +130,13 @@ namespace WebMakroSoft.Administracion.Servicios.Ventas {
         protected global::System.Web.UI.WebControls.TextBox txtNotas;
         
         /// <summary>
-        /// Button1 control.
+        /// btnVentas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnVentas;
         
         /// <summary>
         /// lblError control.

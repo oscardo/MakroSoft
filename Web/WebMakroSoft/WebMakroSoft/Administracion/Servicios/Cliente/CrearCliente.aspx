@@ -70,7 +70,7 @@
                 </td>
                 <td>Página web:</td>
                 <td>
-                    <asp:TextBox ID="txtPaginaweb" runat="server" MaxLength="50" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="txtPaginaweb" runat="server" MaxLength="50" TextMode="Url">https://</asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -99,6 +99,12 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
+    </p>
+    <p>
+        <asp:Button ID="BtnCrearCliente" runat="server" OnClick="BtnCrearCliente_Click" Text="Crear Cliente" />
+    </p>
+    <p>
+        <asp:Label ID="lblError" runat="server"></asp:Label>
     </p>
 
 </asp:Content>

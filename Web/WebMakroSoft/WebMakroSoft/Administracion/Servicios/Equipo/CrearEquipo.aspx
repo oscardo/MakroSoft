@@ -74,17 +74,17 @@
             <tr>
                 <td>RAM</td>
                 <td>
-                    <asp:TextBox ID="txtRAM" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtRAM" runat="server" MaxLength="10"></asp:TextBox>
                 </td>
                 <td>Disco Duro</td>
                 <td>
-                    <asp:TextBox ID="txtDD" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtDD" runat="server" MaxLength="10"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Mouse</td>
                 <td>
-                    <asp:TextBox ID="txtMouse" runat="server" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtMouse" runat="server" MaxLength="10"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -149,27 +149,10 @@
         </table>
     </p>
     <p>
-        &nbsp;</p>
-    <table style="width:100%;">
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-                <asp:Button ID="Button1" runat="server" Text="Crear XXXX" />
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>
+        <asp:Button ID="BtnCrearEquipo" runat="server" OnClick="BtnCrearEquipo_Click" Text="Crear Equipo" />
+    </p>
+    <p>
                 <asp:Label ID="lblError" runat="server"></asp:Label>
-            </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-
+            </p>
+    
 </asp:Content>
