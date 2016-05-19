@@ -3,7 +3,7 @@
     <p>
         Crear Compras</p>
     <p>
-        <asp:Wizard ID="wzInventario" runat="server" ActiveStepIndex="1" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" FinishCompleteButtonText="Finalizar" FinishPreviousButtonText="Previo" StartNextButtonText="Siguiente">
+        <asp:Wizard ID="wzInventario" runat="server" ActiveStepIndex="0" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" FinishCompleteButtonText="Finalizar" FinishPreviousButtonText="Previo" StartNextButtonText="Siguiente">
             <HeaderStyle BackColor="#284E98" BorderColor="#EFF3FB" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" />
             <NavigationButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
             <SideBarButtonStyle BackColor="#507CD1" Font-Names="Verdana" ForeColor="White" />
@@ -339,7 +339,7 @@
                         </tr>
                         <tr>
                             <td style="height: 13px"></td>
-                            <td style="height: 13px">Memoria:<asp:RadioButton ID="rbDVMemoria0" runat="server" />
+                            <td style="height: 13px">Memoria:<asp:RadioButton ID="rbDVMemoria1" runat="server" />
                             </td>
                             <td style="height: 13px; width: 90px"></td>
                             <td style="height: 13px">Nombre Memoria:<asp:TextBox ID="txtDVMemoria0" runat="server" MaxLength="50"></asp:TextBox>

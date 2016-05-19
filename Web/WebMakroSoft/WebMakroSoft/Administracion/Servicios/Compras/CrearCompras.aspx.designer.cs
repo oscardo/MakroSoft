@@ -571,13 +571,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtPlacaScanner;
         
         /// <summary>
-        /// rbDVMemoria0 control.
+        /// rbDVMemoria1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbDVMemoria0;
+        protected global::System.Web.UI.WebControls.RadioButton rbDVMemoria1;
         
         /// <summary>
         /// txtDVMemoria0 control.
