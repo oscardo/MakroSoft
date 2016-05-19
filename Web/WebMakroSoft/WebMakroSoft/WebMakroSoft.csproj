@@ -1382,8 +1382,11 @@
       <DependentUpon>ModelMakroSoft.tt</DependentUpon>
     </Compile>
     <Compile Include="Codigo\BD.cs" />
+    <Compile Include="Codigo\Cabecera.cs" />
     <Compile Include="Codigo\Conexion.cs" />
     <Compile Include="Codigo\CookieMacrosoft.cs" />
+    <Compile Include="Codigo\Detalle.cs" />
+    <Compile Include="Codigo\Obtener.cs" />
     <Compile Include="Codigo\Utils.cs" />
     <Compile Include="Compras.cs">
       <DependentUpon>ModelMakroSoft.tt</DependentUpon>

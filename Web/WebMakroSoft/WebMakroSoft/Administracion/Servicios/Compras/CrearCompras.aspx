@@ -3,7 +3,7 @@
     <p>
         Crear Compras</p>
     <p>
-        <asp:Wizard ID="wzInventario" runat="server" ActiveStepIndex="0" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" FinishCompleteButtonText="Finalizar" FinishPreviousButtonText="Previo" StartNextButtonText="Siguiente">
+        <asp:Wizard ID="wzInventario" runat="server" ActiveStepIndex="1" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" FinishCompleteButtonText="Finalizar" FinishPreviousButtonText="Previo" StartNextButtonText="Siguiente">
             <HeaderStyle BackColor="#284E98" BorderColor="#EFF3FB" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" />
             <NavigationButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
             <SideBarButtonStyle BackColor="#507CD1" Font-Names="Verdana" ForeColor="White" />
@@ -172,9 +172,22 @@
                     <br />
                     <asp:Label ID="lblErrorCompra" runat="server"></asp:Label>
                 </asp:WizardStep>
-                <asp:WizardStep runat="server" title="Referencia">
+                <asp:WizardStep runat="server" title="Detalle">
                     
                     <table style="width:100%;">
+                        <tr>
+                            <td style="height: 13px">Compra:</td>
+                            <td style="height: 13px">
+                                <asp:TextBox ID="txtTransaccion" runat="server" MaxLength="50" ReadOnly="True"></asp:TextBox>
+                            </td>
+                            <td style="width: 90px; height: 13px;"></td>
+                            <td style="height: 13px">
+                            </td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
+                        </tr>
                         <tr>
                             <td>Dependecia:</td>
                             <td>
@@ -218,161 +231,162 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>Fecha Salida:</td>
-                            <td>
+                            <td style="height: 18px">Fecha Salida:</td>
+                            <td style="height: 18px">
                                 <asp:TextBox ID="txtDVFechaSalida" runat="server" MaxLength="50" TextMode="Date"></asp:TextBox>
                             </td>
-                            <td style="width: 90px">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td style="width: 90px; height: 18px;"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
                         </tr>
                         <tr>
-                            <td>CPU</td>
-                            <td>
-                                <asp:RadioButton ID="rbDVCPU" runat="server" />
+                            <td style="height: 22px">CPU</td>
+                            <td style="height: 22px">
+                                <asp:CheckBox ID="cbCPU" runat="server" AutoPostBack="True" OnCheckedChanged="cbCPU_CheckedChanged" />
                             </td>
-                            <td style="width: 90px">Nombre CPU</td>
-                            <td>
-                                <asp:TextBox ID="txtDVCPU" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="width: 90px; height: 22px;">Nombre CPU</td>
+                            <td style="height: 22px">
+                                <asp:TextBox ID="txtDVCPU" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>Serie:</td>
-                            <td>
-                                <asp:TextBox ID="txtSerieCPU" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 22px">Serie:</td>
+                            <td style="height: 22px">
+                                <asp:TextBox ID="txtSerieCPU" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>Placa:</td>
-                            <td>
-                                <asp:TextBox ID="txtPlacaCPU" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 22px">Placa:</td>
+                            <td style="height: 22px">
+                                <asp:TextBox ID="txtPlacaCPU" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td>Monitor</td>
                             <td>
-                                <asp:RadioButton ID="rbDVMonitor" runat="server" />
+                                <asp:CheckBox ID="cbMonitor" runat="server" AutoPostBack="True" OnCheckedChanged="cbMonitor_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre Monitor:</td>
                             <td>
-                                <asp:TextBox ID="txtDVMonitor" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVMonitor" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Serie:</td>
                             <td>
-                                <asp:TextBox ID="txtSerieMonitor" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtSerieMonitor" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Placa:</td>
                             <td>
-                                <asp:TextBox ID="txtPlacaMonitor" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtPlacaMonitor" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td>Impresora:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVImpresora" runat="server" />
+                                <asp:CheckBox ID="cbImpresora" runat="server" AutoPostBack="True" OnCheckedChanged="cbImpresora_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre Impresora:</td>
                             <td>
-                                <asp:TextBox ID="txtDVImpresora" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVImpresora" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Serie:</td>
                             <td>
-                                <asp:TextBox ID="txtSerieImpresora" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtSerieImpresora" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Placa:</td>
                             <td>
-                                <asp:TextBox ID="TextBox6" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtPlacaImpresora" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td>DVD</td>
                             <td>
-                                <asp:RadioButton ID="rbDVDVD" runat="server" />
+                                <asp:CheckBox ID="cbDVD" runat="server" AutoPostBack="True" OnCheckedChanged="cbDVD_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre DVD:</td>
                             <td>
-                                <asp:TextBox ID="txtDVDVD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVDVD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Serie:</td>
                             <td>
-                                <asp:TextBox ID="txtSeriaDVD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtSeriaDVD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Placa:</td>
                             <td>
-                                <asp:TextBox ID="txtPlacaDVD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtPlacaDVD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td style="height: 22px">Disco Duro:</td>
                             <td style="height: 22px">
-                                <asp:RadioButton ID="rbDVDD" runat="server" />
+                                <asp:CheckBox ID="cbDD" runat="server" AutoPostBack="True" OnCheckedChanged="cbDD_CheckedChanged" />
                             </td>
                             <td style="width: 90px; height: 22px;">Nombre DD:</td>
                             <td style="height: 22px">
-                                <asp:TextBox ID="txtDVDD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVDD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td style="height: 22px">Serie:</td>
                             <td style="height: 22px">
-                                <asp:TextBox ID="txtSerieDD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtSerieDD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td style="height: 22px">Placa:</td>
                             <td style="height: 22px">
-                                <asp:TextBox ID="txtPlacaDD" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtPlacaDD" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td>Scanner:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVScanner" runat="server" />
+                                <asp:CheckBox ID="cbScanner" runat="server" AutoPostBack="True" OnCheckedChanged="cbScanner_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre Scanner:</td>
                             <td>
-                                <asp:TextBox ID="txtDVScanner" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVScanner" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Serie:</td>
                             <td>
-                                <asp:TextBox ID="txtSerieScanner" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtSerieScanner" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>Placa:</td>
                             <td>
-                                <asp:TextBox ID="txtPlacaScanner" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtPlacaScanner" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td style="height: 13px"></td>
-                            <td style="height: 13px">Memoria:<asp:RadioButton ID="rbDVMemoria1" runat="server" />
+                            <td style="height: 13px">Memoria:</td>
+                            <td style="height: 13px">
+                                <asp:CheckBox ID="cbMemoria" runat="server" AutoPostBack="True" OnCheckedChanged="cbMemoria_CheckedChanged" />
                             </td>
-                            <td style="height: 13px; width: 90px"></td>
-                            <td style="height: 13px">Nombre Memoria:<asp:TextBox ID="txtDVMemoria0" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 13px; width: 90px">Nombre Memoria:</td>
+                            <td style="height: 13px"><asp:TextBox ID="txtDVMemoria" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td></td>
-                            <td>Serie:<asp:TextBox ID="txtSerieMemoria" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 13px">Serie:</td>
+                            <td style="height: 13px"><asp:TextBox ID="txtSerieMemoria" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td></td>
-                            <td>Placa:<asp:TextBox ID="txtPlacaMemoria" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 13px">Placa:</td>
+                            <td style="height: 13px"><asp:TextBox ID="txtPlacaMemoria" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td>Teclado:</td>
-                            <td>
-                                <asp:RadioButton ID="rbDVTeclado" runat="server" />
+                            <td style="height: 22px">Teclado:</td>
+                            <td style="height: 22px">
+                                <asp:CheckBox ID="cbTeclado" runat="server" AutoPostBack="True" OnCheckedChanged="cbTeclado_CheckedChanged" />
                             </td>
-                            <td style="width: 90px;">Nombre de Teclado:</td>
-                            <td>
-                                <asp:TextBox ID="txtDVTeclado" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="width: 90px; height: 22px;">Nombre de Teclado:</td>
+                            <td style="height: 22px">
+                                <asp:TextBox ID="txtDVTeclado" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td style="height: 22px"></td>
+                            <td style="height: 22px"></td>
+                            <td style="height: 22px"></td>
+                            <td style="height: 22px"></td>
                         </tr>
                         <tr>
                             <td>Mouse:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVMouse" runat="server" />
+                                <asp:CheckBox ID="cbMouse" runat="server" AutoPostBack="True" OnCheckedChanged="cbMouse_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre Mouse:</td>
                             <td>
-                                <asp:TextBox ID="txtDVMouse" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVMouse" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -381,17 +395,16 @@
                         </tr>
                         <tr>
                             <td style="height: 13px">Office:</td>
-                            <td style="height: 13px"><asp:RadioButton ID="rbDVOffice" runat="server" />
+                            <td style="height: 13px">
+                                <asp:CheckBox ID="cbOffice" runat="server" AutoPostBack="True" OnCheckedChanged="cbOffice_CheckedChanged" />
                             </td>
                             <td style="height: 13px; width: 90px">Office:</td>
                             <td style="height: 13px">
-                                <asp:TextBox ID="txtDVOffice" runat="server" MaxLength="50" ></asp:TextBox>
+                                <asp:TextBox ID="txtDVOffice" runat="server" MaxLength="50" Enabled="False" ></asp:TextBox>
                             </td>
-                            <td>Serial
-                                <br />
-                                Office:</td>
+                            <td>Serial Office:</td>
                             <td>
-                                <asp:TextBox ID="txtDVSerialOffice0" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVSerialOffice" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td style="height: 13px">&nbsp;</td>
                             <td style="height: 13px">&nbsp;</td>
@@ -399,51 +412,51 @@
                         <tr>
                             <td>Sistema Operativo:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVSO" runat="server" />
+                                <asp:CheckBox ID="cbSO" runat="server" AutoPostBack="True" OnCheckedChanged="cbSO_CheckedChanged" />
                             </td>
                             <td style="width: 90px">Nombre SO:</td>
                             <td>
-                                <asp:TextBox ID="txtDVSO" runat="server" MaxLength="50"></asp:TextBox>
+                                <asp:TextBox ID="txtDVSO" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>&nbsp;<br />SO:</td>
-                            <td>Serial<asp:TextBox ID="txtDVSerialSO0" runat="server" MaxLength="50"></asp:TextBox>
+                            <td><br />SO Serial:</td>
+                            <td><asp:TextBox ID="txtDVSerialSO" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>Correo Electrónico:</td>
-                            <td>
-                                <asp:RadioButton ID="rbDVCorreo" runat="server" />
+                            <td style="height: 18px">Correo Electrónico:</td>
+                            <td style="height: 18px">
+                                <asp:CheckBox ID="cbCorreo" runat="server" AutoPostBack="True" OnCheckedChanged="cbCorreo_CheckedChanged" />
                             </td>
-                            <td style="width: 90px">Nombre Correo:</td>
-                            <td>
-                                <asp:TextBox ID="txtDVCorreo" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="width: 90px; height: 18px;">Nombre Correo:</td>
+                            <td style="height: 18px">
+                                <asp:TextBox ID="txtDVCorreo" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
+                            <td style="height: 18px"></td>
                         </tr>
                         <tr>
-                            <td>Antivirus:</td>
-                            <td>
-                                <asp:RadioButton ID="rbDVAntivirus" runat="server" />
+                            <td style="height: 24px">Antivirus:</td>
+                            <td style="height: 24px">
+                                <asp:CheckBox ID="cbAntivirus" runat="server" AutoPostBack="True" OnCheckedChanged="cbAntivirus_CheckedChanged" />
                             </td>
-                            <td style="width: 90px">Nombre Antivirus:</td>
-                            <td>
-                                <asp:TextBox ID="txtDVAntivirus" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="width: 90px; height: 24px;">Nombre Antivirus:</td>
+                            <td style="height: 24px">
+                                <asp:TextBox ID="txtDVAntivirus" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>&nbsp;<br />Antivirus:</td>
-                            <td>Serial<asp:TextBox ID="txtDVSerialAntivirus" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 24px"><br />Antivirus Serial:</td>
+                            <td style="height: 24px"><asp:TextBox ID="txtDVSerialAntivirus" runat="server" MaxLength="50" Enabled="False"></asp:TextBox>
                             </td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td style="height: 24px"></td>
+                            <td style="height: 24px"></td>
                         </tr>
                         <tr>
                             <td>Conexión de Red</td>
                             <td>
-                                <asp:RadioButton ID="rbDVConexionRed" runat="server" />
+                                <asp:CheckBox ID="cbConexionRed" runat="server" AutoPostBack="True" OnCheckedChanged="cbAntivirus_CheckedChanged" />
                             </td>
                             <td style="width: 90px">&nbsp;</td>
                             <td>&nbsp;</td>
@@ -475,8 +488,8 @@
                             <td>
                                 <asp:TextBox ID="txtDVDescripcion" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
-                            <td style="height: 18px">&nbsp;<br />Detallada:</td>
-                            <td style="height: 18px">Descripción<asp:TextBox ID="txtDVDescripcionDet1" runat="server" MaxLength="50"></asp:TextBox>
+                            <td style="height: 18px"><br />Detallada Descripción:</td>
+                            <td style="height: 18px"><asp:TextBox ID="txtDVDescripcionDet1" runat="server" MaxLength="50"></asp:TextBox>
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -484,11 +497,11 @@
                         <tr>
                             <td>Preventivo:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVPreventivo" runat="server" />
+                                <asp:CheckBox ID="cbPreventivo" runat="server" />
                             </td>
                             <td style="width: 90px">Correctivo:</td>
                             <td>
-                                <asp:RadioButton ID="rbDVCorrectivo" runat="server" />
+                                <asp:CheckBox ID="cbCorrectivo" runat="server" />
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -577,10 +590,10 @@
                             <td style="height: 13px" colspan="4">
                                 <asp:TextBox ID="txtDVNotas" runat="server" MaxLength="190" Width="375px" TextMode="MultiLine"></asp:TextBox>
                             </td>
-                            <td style="height: 13px">&nbsp;</td>
-                            <td style="height: 13px">&nbsp;</td>
-                            <td style="height: 13px">&nbsp;</td>
-                            <td style="height: 13px">&nbsp;</td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
+                            <td style="height: 13px"></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -588,11 +601,17 @@
                             <td style="width: 90px">&nbsp;</td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td>
+                                <asp:Button ID="BtnCrearDetalle" runat="server" OnClick="BtnCrearDetalle_Click" Text="Crear Detalle" />
+                            </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                         </tr>
                     </table>
+
+
+                    <br />
+                    <asp:Label ID="lblErrorDetalle" runat="server"></asp:Label>
 
 
                 </asp:WizardStep>
