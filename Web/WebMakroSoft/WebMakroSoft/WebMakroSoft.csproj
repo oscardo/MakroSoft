@@ -1386,6 +1386,7 @@
     <Compile Include="Codigo\Conexion.cs" />
     <Compile Include="Codigo\CookieMacrosoft.cs" />
     <Compile Include="Codigo\Detalle.cs" />
+    <Compile Include="Codigo\Nulo.cs" />
     <Compile Include="Codigo\Obtener.cs" />
     <Compile Include="Codigo\Utils.cs" />
     <Compile Include="Compras.cs">

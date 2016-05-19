@@ -23,24 +23,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras
                 , DDDepartamento.SelectedValue.ToString()
                 , DDMunicipio.SelectedValue.ToString()
                 , ObtenerDetalleVenta_Remision()
-                , ObtenerTransaccion()
-                , txtNombreCompra.Text
-                , txtFechaCompra.Text.ToString()
-                , txtObservaciones.Text
-                , txtGarantia.Text
-                , txtGarantiaExt.Text
-                , txtFacturaCompra.Text
+                , 1 //ObtenerTransaccion()
+                , Nulo.Cadena(txtNombreCompra.Text)
+                , Nulo.Cadena(txtFechaCompra.Text.ToString())
+                , Nulo.Cadena(txtObservaciones.Text)
+                , Nulo.Cadena(txtGarantia.Text)
+                , Nulo.Cadena(txtGarantiaExt.Text)
+                , Nulo.Cadena(txtFacturaCompra.Text)
                 , ""
-                , int.Parse(this.txtCantidad.Text)
-                , float.Parse(txtValorUnidad.Text)
-                , float.Parse(txtSubTotal.Text)
-                , float.Parse(txtIVA.Text)
-                , float.Parse(txtTotal.Text)
-                , int.Parse(txtCantidadRecibida.Text)
-                , float.Parse(txtSaldo.Text)
-                , float.Parse(txtDescuento.Text)
-                , rbActivo.Checked
-                , txtNotas.Text);
+                , int.Parse(Nulo.Entero_positivo(this.txtCantidad.Text))
+                , float.Parse(Nulo.Flotante(txtValorUnidad.Text))
+                , float.Parse(Nulo.Flotante(txtSubTotal.Text))
+                , float.Parse(Nulo.Flotante(txtIVA.Text))
+                , float.Parse(Nulo.Flotante(txtTotal.Text))
+                , int.Parse(Nulo.Entero_positivo(txtCantidadRecibida.Text))
+                , float.Parse(Nulo.Flotante(txtSaldo.Text))
+                , float.Parse(Nulo.Flotante(txtDescuento.Text))
+                , Nulo.Boleano(rbActivo.Checked)
+                , Nulo.Cadena(txtNotas.Text));
 
                 this.txtNombreCompra.Text = string.Empty;
                 this.txtFechaCompra.Text = string.Empty;
@@ -381,76 +381,73 @@ namespace WebMakroSoft.Administracion.Servicios.Compras
             DateTime FechaSistema = DateTime.Now;
             Detalle.CrearDetalleVenta_Remision(
                    int.Parse(txtTransaccion.Text)
-                 , txtDVDependencia.Text
-                 , txtDVContactar.Text
+                 , Nulo.Cadena(txtDVDependencia.Text)
+                 , Nulo.Cadena(txtDVContactar.Text)
                  , DateTime.Parse(txtDVFechaEntrada.Text)
-                 , txtDVDireccion.Text
-                 , txtDVPiso.Text
-                 , txtDVTelefono.Text
+                 , Nulo.Cadena(txtDVDireccion.Text)
+                 , Nulo.Cadena(txtDVPiso.Text)
+                 , Nulo.Cadena(txtDVTelefono.Text)
                  , DateTime.Parse(txtDVFechaSalida.Text)
-                 , cbCPU.Checked
-                 , txtDVCPU.Text
-                 , txtSerieCPU.Text
-                 , txtPlacaCPU.Text
-                 , cbMonitor.Checked
-                 , txtDVMonitor.Text
-                 , txtSerieMonitor.Text
-                 , txtPlacaMonitor.Text
-                 , cbImpresora.Checked
-                 , txtDVImpresora.Text
-                 , txtSerieImpresora.Text
-                 , txtPlacaImpresora.Text
-                 , cbDVD.Checked
-                 , this.txtDVDVD.Text
-                 , txtSeriaDVD.Text
-                 , txtPlacaDVD.Text
-                 , cbDD.Checked
-                 , txtDVDD.Text
-                 , txtSerieDD.Text
-                 , txtPlacaDD.Text
-                 , cbTeclado.Checked
-                 , txtDVTeclado.Text
-                 , cbMouse.Checked
-                 , txtDVMouse.Text
-                 , cbScanner.Checked
-                 , txtDVScanner.Text
-                 , txtSerieScanner.Text
-                 , txtPlacaScanner.Text
-                 , cbOffice.Checked
-                 , txtDVOffice.Text
-                 , txtDVSerialOffice.Text
-                 , cbMemoria.Checked
-                 , txtDVMemoria.Text
-                 , cbSO.Checked
-                 , txtDVSO.Text
-                 , txtDVSerialSO.Text
-                 , cbCorreo.Checked
-                 , txtDVCorreo.Text
-                 , cbAntivirus.Checked
-                 , txtDVAntivirus.Text
-                 , txtDVSerialAntivirus.Text
-                 , cbConexionRed.Checked
-                 , txtDVOtros.Text
-                 , txtDVOtro2.Text
-                 , txtDVNombreReporta.Text
-                 , txtDVDescripcion.Text
-                 , txtDVDescripcionDet1.Text
-                 , cbPreventivo.Checked
-                 , cbCorrectivo.Checked
-                 , txtDVObservaciones.Text
+                 , Nulo.Boleano(cbCPU.Checked)
+                 , Nulo.Cadena(txtDVCPU.Text)
+                 , Nulo.Cadena(txtSerieCPU.Text)
+                 , Nulo.Cadena(txtPlacaCPU.Text)
+                 , Nulo.Boleano(cbMonitor.Checked)
+                 , Nulo.Cadena(txtDVMonitor.Text)
+                 , Nulo.Cadena(txtSerieMonitor.Text)
+                 , Nulo.Cadena(txtPlacaMonitor.Text)
+                 , Nulo.Boleano(cbImpresora.Checked)
+                 , Nulo.Cadena(txtDVImpresora.Text)
+                 , Nulo.Cadena(txtSerieImpresora.Text)
+                 , Nulo.Cadena(txtPlacaImpresora.Text)
+                 , Nulo.Boleano(cbDVD.Checked)
+                 , Nulo.Cadena(txtDVDVD.Text)
+                 , Nulo.Cadena(txtSeriaDVD.Text)
+                 , Nulo.Cadena(txtPlacaDVD.Text)
+                 , Nulo.Boleano(cbDD.Checked)
+                 , Nulo.Cadena(txtDVDD.Text)
+                 , Nulo.Cadena(txtSerieDD.Text)
+                 , Nulo.Cadena(txtPlacaDD.Text)
+                 , Nulo.Boleano(cbTeclado.Checked)
+                 , Nulo.Cadena(txtDVTeclado.Text)
+                 , Nulo.Boleano(cbMouse.Checked)
+                 , Nulo.Cadena(txtDVMouse.Text)
+                 , Nulo.Boleano(cbScanner.Checked)
+                 , Nulo.Cadena(txtDVScanner.Text)
+                 , Nulo.Cadena(txtSerieScanner.Text)
+                 , Nulo.Cadena(txtPlacaScanner.Text)
+                 , Nulo.Boleano(cbOffice.Checked)
+                 , Nulo.Cadena(txtDVOffice.Text)
+                 , Nulo.Cadena(txtDVSerialOffice.Text)
+                 , Nulo.Boleano(cbMemoria.Checked)
+                 , Nulo.Cadena(txtDVMemoria.Text)
+                 , Nulo.Boleano(cbSO.Checked)
+                 , Nulo.Cadena(txtDVSO.Text)
+                 , Nulo.Cadena(txtDVSerialSO.Text)
+                 , Nulo.Boleano(cbCorreo.Checked)
+                 , Nulo.Cadena(txtDVCorreo.Text)
+                 , Nulo.Boleano(cbAntivirus.Checked)
+                 , Nulo.Cadena(txtDVAntivirus.Text)
+                 , Nulo.Cadena(txtDVSerialAntivirus.Text)
+                 , Nulo.Boleano(cbConexionRed.Checked)
+                 , Nulo.Cadena(txtDVOtros.Text)
+                 , Nulo.Cadena(txtDVOtro2.Text)
+                 , Nulo.Cadena(txtDVNombreReporta.Text)
+                 , Nulo.Cadena(txtDVDescripcion.Text)
+                 , Nulo.Cadena(txtDVDescripcionDet1.Text)
+                 , Nulo.Boleano(cbPreventivo.Checked)
+                 , Nulo.Boleano(cbCorrectivo.Checked)
+                 , Nulo.Cadena(txtDVObservaciones.Text)
                  , FechaSistema
-                 , float.Parse(txtDVValorUnidad.Text)
-                 , float.Parse(txtDVIVAUnidad.Text)
-                 , float.Parse(txtDVRetencionUnidad.Text)
-                 , float.Parse(txtDVValorTotal.Text)
-                 , float.Parse(txtDVIVATotal.Text)
-                 , float.Parse(txtDVSubtotal.Text)
-                 , float.Parse(txtDVRetencionTotal.Text)
-                 , txtDVNotas.Text
+                 , float.Parse(Nulo.Flotante(txtDVValorUnidad.Text))
+                 , float.Parse(Nulo.Flotante(txtDVIVAUnidad.Text))
+                 , float.Parse(Nulo.Flotante(txtDVRetencionUnidad.Text))
+                 , float.Parse(Nulo.Flotante(txtDVValorTotal.Text))
+                 , float.Parse(Nulo.Flotante(txtDVIVATotal.Text))
+                 , float.Parse(Nulo.Flotante(txtDVSubtotal.Text))
+                 , float.Parse(Nulo.Flotante(txtDVRetencionTotal.Text))
+                 , Nulo.Cadena(txtDVNotas.Text)
                 );
-
-
-
 
                  txtTransaccion.Text = string.Empty;
                  txtDVDependencia.Text = string.Empty;

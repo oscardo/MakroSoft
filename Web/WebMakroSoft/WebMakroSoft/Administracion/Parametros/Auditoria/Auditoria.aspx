@@ -9,6 +9,7 @@
             <Columns>
                 <asp:BoundField DataField="Nro Auditoria" HeaderText="Nro Auditoria" ReadOnly="True" SortExpression="Nro Auditoria" />
                 <asp:BoundField DataField="Accion" HeaderText="Accion" ReadOnly="True" SortExpression="Accion" />
+                <asp:BoundField DataField="Fecha" HeaderText="Fecha" ReadOnly="True" SortExpression="Fecha" />
                 <asp:BoundField DataField="Notas" HeaderText="Notas" ReadOnly="True" SortExpression="Notas" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
