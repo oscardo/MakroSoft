@@ -68,7 +68,7 @@ namespace WebMakroSoft.Codigo
         }
 
         /// <summary>
-        /// Obtiene el Valor almacenado en esa tabla
+        /// obtiene el último número generado
         /// </summary>
         /// <returns></returns>
         public static int ObtenerTransaccion()
@@ -90,10 +90,38 @@ namespace WebMakroSoft.Codigo
             }
             catch (Exception e)
             {
-                BD.Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Obtener Transaccion");
+                BD.Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Obtener Transacción");
             }
             return Valor;
         }
+
+        ///// <summary>
+        ///// Obtiene el Valor almacenado en esa tabla
+        ///// </summary>
+        ///// <returns></returns>
+        //public static int ObtenerTransaccion()
+        //{
+        //    int Valor = 0;
+        //    try
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(Codigo.Conexion.DBConexion))
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("spObtenerTransaccion", conn))
+        //            {
+        //                cmd.CommandType = CommandType.StoredProcedure;
+        //                conn.Open();
+        //                int result = (int)cmd.ExecuteScalar();
+        //                Valor = result;
+        //                conn.Close();
+        //            }
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        BD.Auditoria(e.Data.ToString(), e.Message.ToString(), e.Source.ToString(), "Obtener Transaccion");
+        //    }
+        //    return Valor;
+        //}
 
     }
 }

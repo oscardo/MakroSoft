@@ -22,11 +22,19 @@
                 </td>
             </tr>
             <tr>
-                <td>Nro Ventas:</td>
-                <td>
+                <td style="height: 62px">Nro Ventas:</td>
+                <td style="height: 62px">
                     <asp:DropDownList ID="DDVentas" runat="server" DataSourceID="SqlDataSource3" DataTextField="NombreReferencia" DataValueField="PKVentas">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [PKVentas], [NombreReferencia] FROM [Ventas]"></asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 62px">Nro Compras:</td>
+                <td style="height: 62px">
+                    <asp:DropDownList ID="DDCompra" runat="server" DataSourceID="SqlDataSource4" DataTextField="FKCompra" DataValueField="PKTransaccion">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SELECT [FKCompra], [PKTransaccion] FROM [Transaccion]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>

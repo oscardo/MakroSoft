@@ -42,22 +42,22 @@ namespace WebMakroSoft.Administracion.Servicios.Compras
                 , rbActivo.Checked
                 , txtNotas.Text);
 
-            this.txtNombreCompra.Text = string.Empty;
-            this.txtFechaCompra.Text = string.Empty;
-            this.txtObservaciones.Text = string.Empty;
-            this.txtGarantia.Text = string.Empty;
-            this.txtGarantiaExt.Text = string.Empty;
-            this.txtFacturaCompra.Text = string.Empty;
-            this.txtCantidad.Text = string.Empty;
-            this.txtValorUnidad.Text = string.Empty;
-            this.txtSubTotal.Text = string.Empty;
-            this.txtIVA.Text = string.Empty;
-            this.txtTotal.Text = string.Empty;
-            this.txtCantidadRecibida.Text = string.Empty;
-            this.txtSaldo.Text = string.Empty;
-            this.txtDescuento.Text = string.Empty;
-            this.rbActivo.Checked = false;
-            this.txtNotas.Text = string.Empty;
+                this.txtNombreCompra.Text = string.Empty;
+                this.txtFechaCompra.Text = string.Empty;
+                this.txtObservaciones.Text = string.Empty;
+                this.txtGarantia.Text = string.Empty;
+                this.txtGarantiaExt.Text = string.Empty;
+                this.txtFacturaCompra.Text = string.Empty;
+                this.txtCantidad.Text = string.Empty;
+                this.txtValorUnidad.Text = string.Empty;
+                this.txtSubTotal.Text = string.Empty;
+                this.txtIVA.Text = string.Empty;
+                this.txtTotal.Text = string.Empty;
+                this.txtCantidadRecibida.Text = string.Empty;
+                this.txtSaldo.Text = string.Empty;
+                this.txtDescuento.Text = string.Empty;
+                this.rbActivo.Checked = false;
+                this.txtNotas.Text = string.Empty;
 
 
             this.txtTransaccion.Text = ObtenerCompras().ToString();
@@ -449,8 +449,79 @@ namespace WebMakroSoft.Administracion.Servicios.Compras
                  , txtDVNotas.Text
                 );
 
-            
 
+
+
+                 txtTransaccion.Text = string.Empty;
+                 txtDVDependencia.Text = string.Empty;
+                 txtDVContactar.Text = string.Empty;
+                 txtDVFechaEntrada.Text = string.Empty;
+                 txtDVDireccion.Text = string.Empty;
+                 txtDVPiso.Text = string.Empty;
+                 txtDVTelefono.Text = string.Empty;
+                 txtDVFechaSalida.Text = string.Empty;
+                 cbCPU.Checked = false;
+                 txtDVCPU.Text = string.Empty;
+                 txtSerieCPU.Text = string.Empty;
+                 txtPlacaCPU.Text = string.Empty;
+                 cbMonitor.Checked = false;
+                 txtDVMonitor.Text = string.Empty;
+                 txtSerieMonitor.Text = string.Empty;
+                 txtPlacaMonitor.Text = string.Empty;
+                 cbImpresora.Checked = false;
+                 txtDVImpresora.Text = string.Empty;
+                 txtSerieImpresora.Text = string.Empty;
+                 txtPlacaImpresora.Text = string.Empty;
+                 cbDVD.Checked = false;
+                 this.txtDVDVD.Text = string.Empty;
+                 txtSeriaDVD.Text = string.Empty;
+                 txtPlacaDVD.Text = string.Empty;
+                 cbDD.Checked = false;
+                 txtDVDD.Text = string.Empty;
+                 txtSerieDD.Text = string.Empty;
+                 txtPlacaDD.Text = string.Empty;
+                 cbTeclado.Checked = false;
+                 txtDVTeclado.Text = string.Empty;
+                 cbMouse.Checked = false;
+                 txtDVMouse.Text = string.Empty;
+                 cbScanner.Checked = false;
+                 txtDVScanner.Text = string.Empty;
+                 txtSerieScanner.Text = string.Empty;
+                 txtPlacaScanner.Text = string.Empty;
+                 cbOffice.Checked = false;
+                 txtDVOffice.Text = string.Empty;
+                 txtDVSerialOffice.Text = string.Empty;
+                 cbMemoria.Checked = false;
+                 txtDVMemoria.Text = string.Empty;
+                 cbSO.Checked = false;
+                 txtDVSO.Text = string.Empty;
+                 txtDVSerialSO.Text = string.Empty;
+                 cbCorreo.Checked = false;
+                 txtDVCorreo.Text = string.Empty;
+                 cbAntivirus.Checked = false;
+                 txtDVAntivirus.Text = string.Empty;
+                 txtDVSerialAntivirus.Text = string.Empty;
+                 cbConexionRed.Checked = false;
+                 txtDVOtros.Text = string.Empty;
+                 txtDVOtro2.Text = string.Empty;
+                 txtDVNombreReporta.Text = string.Empty;
+                 txtDVDescripcion.Text = string.Empty;
+                 txtDVDescripcionDet1.Text = string.Empty;
+                 cbPreventivo.Checked = false;
+                 cbCorrectivo.Checked = false;
+                 txtDVObservaciones.Text = string.Empty;
+                 txtDVValorUnidad.Text = string.Empty;
+                 txtDVIVAUnidad.Text = string.Empty;
+                 txtDVRetencionUnidad.Text = string.Empty;
+                 txtDVValorTotal.Text = string.Empty;
+                 txtDVIVATotal.Text = string.Empty;
+                 txtDVSubtotal.Text = string.Empty;
+                 txtDVRetencionTotal.Text = string.Empty;
+                 txtDVNotas.Text = string.Empty;
+
+            int intCompras = Obtener.ObtenerCompras();
+            BD.CrearTransaccion("0", "0", "0", intCompras.ToString(), "Compras");
+            int stTransaccion = Obtener.ObtenerTransaccion();
         }
     }
 }

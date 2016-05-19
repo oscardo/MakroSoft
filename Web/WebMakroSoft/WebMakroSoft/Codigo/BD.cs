@@ -571,7 +571,7 @@ namespace WebMakroSoft.Codigo
         /// <param name="Remision">Nro Remision</param>
         /// <param name="Ventas">Nro Venta</param>
         /// <param name="Notas">útiles</param>
-        public static void CrearTransaccion(string Equipo, string Remision, string Ventas, string Notas)
+        public static void CrearTransaccion(string Equipo, string Remision, string Ventas,string Compras, string Notas)
         {
             try
             {
@@ -580,9 +580,10 @@ namespace WebMakroSoft.Codigo
                     using (SqlCommand cmd = new SqlCommand("SPCrearTransaccion", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@FKEquipo", SqlDbType.Int).Value = Equipo;
-                        cmd.Parameters.Add("@FKRemision", SqlDbType.Int).Value = Remision;
-                        cmd.Parameters.Add("@FKVentas", SqlDbType.Int).Value = Ventas;
+                        cmd.Parameters.Add("@FKEquipo", SqlDbType.Int).Value = int.Parse(Equipo);
+                        cmd.Parameters.Add("@FKRemision", SqlDbType.Int).Value = int.Parse(Remision);
+                        cmd.Parameters.Add("@FKVentas", SqlDbType.Int).Value = int.Parse(Ventas);
+                        cmd.Parameters.Add("@FKCompra", SqlDbType.Int).Value = int.Parse(Compras);
                         cmd.Parameters.Add("@Notas", SqlDbType.NChar, 200).Value = Notas;
                         conn.Open();
                         int result = (int)cmd.ExecuteNonQuery();

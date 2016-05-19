@@ -17,10 +17,11 @@ namespace WebMakroSoft.Administracion.Estado.Transaccion
 
         protected void BtnCrearTransaccion_Click(object sender, EventArgs e)
         {
-                BD.CrearTransaccion(this.DDEquipo.SelectedValue.ToString(), this.DDRemision.SelectedValue.ToString(), this.DDVentas.SelectedValue.ToString(), this.txtNotas.Text.ToString());
+                BD.CrearTransaccion(this.DDEquipo.SelectedValue.ToString(), this.DDRemision.SelectedValue.ToString(), this.DDVentas.SelectedValue.ToString(),this.DDCompra.SelectedValue.ToString(), this.txtNotas.Text.ToString());
                 this.DDEquipo.SelectedIndex = 1;
                 this.DDRemision.SelectedIndex = 1;
                 this.DDVentas.SelectedIndex = 1;
+                this.DDCompra.SelectedIndex = 1;
                 this.txtNotas.Text = string.Empty;
                 lblError.Text = "La referencia se ha creado satisfactoriamente";
         }
