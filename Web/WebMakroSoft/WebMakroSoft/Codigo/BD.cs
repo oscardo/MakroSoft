@@ -192,7 +192,7 @@ namespace WebMakroSoft.Codigo
                         cmd.Parameters.Add("@FKDetalleVenta_Remision", SqlDbType.Int).Value = FKDetalleVenta_Remision;
                         cmd.Parameters.Add("@FKTransaccion", SqlDbType.Int).Value = FKTransaccion;
                         cmd.Parameters.Add("@NombreCompra", SqlDbType.NChar, 50).Value = NombreCompra;
-                        cmd.Parameters.Add("@Fecha_Compra", SqlDbType.DateTime).Value = Fecha_Compra;
+                        cmd.Parameters.Add("@Fecha_Compra", SqlDbType.DateTime).Value = DateTime.Parse(Fecha_Compra);
                         cmd.Parameters.Add("@Observaciones", SqlDbType.NChar,200).Value = Observaciones;
                         cmd.Parameters.Add("@Garantia", SqlDbType.NChar,50).Value = Garantia;
                         cmd.Parameters.Add("@Exterdida_Garantia", SqlDbType.NChar,50).Value = Exterdida_Garantia;

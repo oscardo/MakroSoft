@@ -25,7 +25,7 @@ namespace WebMakroSoft.Administracion.Servicios.Compras
                 , ObtenerDetalleVenta_Remision()
                 , ObtenerTransaccion()
                 , txtNombreCompra.Text
-                , txtFechaCompra.Text
+                , txtFechaCompra.Text.ToString()
                 , txtObservaciones.Text
                 , txtGarantia.Text
                 , txtGarantiaExt.Text

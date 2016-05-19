@@ -373,6 +373,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVCPU;
         
         /// <summary>
+        /// txtSerieCPU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieCPU;
+        
+        /// <summary>
+        /// txtPlacaCPU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaCPU;
+        
+        /// <summary>
         /// rbDVMonitor control.
         /// </summary>
         /// <remarks>
@@ -389,6 +407,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDVMonitor;
+        
+        /// <summary>
+        /// txtSerieMonitor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieMonitor;
+        
+        /// <summary>
+        /// txtPlacaMonitor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaMonitor;
         
         /// <summary>
         /// rbDVImpresora control.
@@ -409,6 +445,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVImpresora;
         
         /// <summary>
+        /// txtSerieImpresora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieImpresora;
+        
+        /// <summary>
+        /// TextBox6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        
+        /// <summary>
         /// rbDVDVD control.
         /// </summary>
         /// <remarks>
@@ -427,6 +481,24 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVDVD;
         
         /// <summary>
+        /// txtSeriaDVD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSeriaDVD;
+        
+        /// <summary>
+        /// txtPlacaDVD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaDVD;
+        
+        /// <summary>
         /// rbDVDD control.
         /// </summary>
         /// <remarks>
@@ -443,6 +515,96 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDVDD;
+        
+        /// <summary>
+        /// txtSerieDD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieDD;
+        
+        /// <summary>
+        /// txtPlacaDD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaDD;
+        
+        /// <summary>
+        /// rbDVScanner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbDVScanner;
+        
+        /// <summary>
+        /// txtDVScanner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDVScanner;
+        
+        /// <summary>
+        /// txtSerieScanner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieScanner;
+        
+        /// <summary>
+        /// txtPlacaScanner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaScanner;
+        
+        /// <summary>
+        /// rbDVMemoria0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbDVMemoria0;
+        
+        /// <summary>
+        /// txtDVMemoria0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDVMemoria0;
+        
+        /// <summary>
+        /// txtSerieMemoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerieMemoria;
+        
+        /// <summary>
+        /// txtPlacaMemoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlacaMemoria;
         
         /// <summary>
         /// rbDVTeclado control.
@@ -481,24 +643,6 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVMouse;
         
         /// <summary>
-        /// rbDVScanner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbDVScanner;
-        
-        /// <summary>
-        /// txtDVScanner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVScanner;
-        
-        /// <summary>
         /// rbDVOffice control.
         /// </summary>
         /// <remarks>
@@ -517,31 +661,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVOffice;
         
         /// <summary>
-        /// txtDVSerialOffice control.
+        /// txtDVSerialOffice0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVSerialOffice;
-        
-        /// <summary>
-        /// rbDVMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbDVMemoria;
-        
-        /// <summary>
-        /// txtDVMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVMemoria;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSerialOffice0;
         
         /// <summary>
         /// rbDVSO control.
@@ -562,13 +688,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVSO;
         
         /// <summary>
-        /// txtDVSerialSO control.
+        /// txtDVSerialSO0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVSerialSO;
+        protected global::System.Web.UI.WebControls.TextBox txtDVSerialSO0;
         
         /// <summary>
         /// rbDVCorreo control.
@@ -661,13 +787,13 @@ namespace WebMakroSoft.Administracion.Servicios.Compras {
         protected global::System.Web.UI.WebControls.TextBox txtDVDescripcion;
         
         /// <summary>
-        /// txtDVDescripcionDet control.
+        /// txtDVDescripcionDet1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVDescripcionDet;
+        protected global::System.Web.UI.WebControls.TextBox txtDVDescripcionDet1;
         
         /// <summary>
         /// rbDVPreventivo control.
