@@ -421,7 +421,9 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -1386,6 +1388,7 @@
     <Compile Include="Codigo\Conexion.cs" />
     <Compile Include="Codigo\CookieMacrosoft.cs" />
     <Compile Include="Codigo\Detalle.cs" />
+    <Compile Include="Codigo\Eliminar.cs" />
     <Compile Include="Codigo\Nulo.cs" />
     <Compile Include="Codigo\Obtener.cs" />
     <Compile Include="Codigo\Utils.cs" />
