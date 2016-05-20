@@ -76,6 +76,15 @@ namespace WebMakroSoft.Administracion.Estado.Estado {
         protected global::System.Web.UI.WebControls.TextBox txtNotas;
         
         /// <summary>
+        /// lblEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEstado;
+        
+        /// <summary>
         /// btnActualizar control.
         /// </summary>
         /// <remarks>

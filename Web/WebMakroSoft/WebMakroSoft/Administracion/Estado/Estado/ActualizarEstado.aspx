@@ -3,7 +3,7 @@
 <p>
         Actualizar Estado</p>
     <p>
-        <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0">
+        <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="1" FinishCompleteButtonText="" FinishPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick">
             <WizardSteps>
                 <asp:WizardStep ID="WizardStep1" runat="server" Title="Cabecera">
                     <asp:GridView ID="gvEstado" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" PageSize="50" OnSelectedIndexChanging="gvEstado_SelectedIndexChanging">
@@ -50,8 +50,9 @@
                             <td>&nbsp;</td>
                         </tr>
                     </table>
+                    <asp:Label ID="lblEstado" runat="server" Visible="False"></asp:Label>
                     <br />
-                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" />
+                    <asp:Button ID="btnActualizar" runat="server" OnClick="btnActualizar_Click" Text="Actualizar" />
                     <br />
                     <asp:Label ID="lblError" runat="server"></asp:Label>
                 </asp:WizardStep>
