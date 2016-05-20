@@ -13,5 +13,15 @@ namespace WebMakroSoft.Administracion.Estado.Estado
         {
 
         }
+
+        protected void gvEstado_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            
+        }
+
+        protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+        {
+
+        }
     }
 }

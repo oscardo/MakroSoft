@@ -3,9 +3,13 @@
 <p>
         Actualizar Estado</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" PageSize="50">
+        <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="0">
+            <WizardSteps>
+                <asp:WizardStep ID="WizardStep1" runat="server" Title="Cabecera">
+                    <asp:GridView ID="gvEstado" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" PageSize="50" OnSelectedIndexChanging="gvEstado_SelectedIndexChanging">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="Número de Estado" HeaderText="Número de Estado" ReadOnly="True" SortExpression="Número de Estado" />
                 <asp:BoundField DataField="Estado" HeaderText="Estado" ReadOnly="True" SortExpression="Estado" />
                 <asp:BoundField DataField="Notas" HeaderText="Notas" ReadOnly="True" SortExpression="Notas" />
@@ -22,6 +26,41 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MakroSoftDB2ConnectionString %>" SelectCommand="SPConsultaEstados" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+                </asp:WizardStep>
+                <asp:WizardStep ID="WizardStep2" runat="server" Title="Detalle">
+                    <table style="width:100%;">
+                        <tr>
+                            <td>Nombre Estado:</td>
+                            <td>
+                                <asp:TextBox ID="txtEstado" runat="server" MaxLength="50"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Notas:</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height: 22px">
+                                <asp:TextBox ID="txtNotas" runat="server" MaxLength="190" TextMode="MultiLine" Width="567px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" />
+                    <br />
+                    <asp:Label ID="lblError" runat="server"></asp:Label>
+                </asp:WizardStep>
+            </WizardSteps>
+        </asp:Wizard>
     </p>
+    <p>
+    
+            
+    
 
 </asp:Content>
